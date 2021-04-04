@@ -12,7 +12,7 @@ site-twitter: #if your site has a twitter account, enter it here
 author: Michał Machniak # add your name
 author-img: david-freeman.jpg # add your photo
 about-author: Technologiami informacyjnymi pasjonuję się od ponad 20 lat, jest to moje hobby oraz mój zawód. Na co dzień pracuję jako System Administrator /Architekt oraz DevOps, buduję oraz wdrażam projekty w oparciu o rozwiązania firmy Microsoft. W pracy codziennej używam Windows Server, SQL Server, Powershell, Azure, Office 365, Sharepoint, Teams, Azure DevOps, Git… i wielu innych narzędzi, które pozwalają na wykonanie zadania i osiągnięcie celu! # add description
-social-twitter: michal.machniak # add your Twitter handle
+social-twitter: MichalMachniak # add your Twitter handle
 social-facebook: michal.machniak # add your Facebook handle
 social-github: mimachniak # add your Github handle
 social-linkedin: michal-machniak # add your Linkedin handle
