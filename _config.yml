@@ -1,20 +1,23 @@
 title: Hello, world! I'm David Freeman
 description: > # this means to ignore newlines until "baseurl:"
-Technologiami informacyjnymi pasjonuję się od ponad 20 lat, jest to moje hobby oraz mój zawód.
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 permalink: ':title/'
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://mimachniak.github.io/sysopslife " # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Michał Machniak # add your name
 author-img: david-freeman.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
-social-twitter: MichalMachniak # add your Twitter handle
+about-author: Technologiami informacyjnymi pasjonuję się od ponad 20 lat, jest to moje hobby oraz mój zawód. 
+Na co dzień pracuję jako System Administrator /Architekt oraz DevOps, buduję oraz wdrażam projekty w oparciu o rozwiązania firmy Microsoft. W pracy codziennej używam Windows Server, SQL Server, Powershell, Azure, Office 365, Sharepoint, Teams, Azure DevOps, Git… i wielu innych narzędzi, które pozwalają na wykonanie zadania i osiągnięcie celu. # add description
+social-twitter: michal.machniak # add your Twitter handle
 social-facebook: michal.machniak # add your Facebook handle
 social-github: mimachniak # add your Github handle
-social-linkedin: michal-machniak # add your Linkedin handle
-social-email: mmachniak@oulook.com # add your Email address
+social-linkedin: # add your Linkedin handle
+social-email: # add your Email address
 
 # Disqus
 discus-identifier: mr-brown # add your discus identifier
