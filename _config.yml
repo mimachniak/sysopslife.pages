@@ -1,15 +1,6 @@
 title: Hello, world! I'm David Freeman
 description: > # this means to ignore newlines until "baseurl:"
-Technologiami informacyjnymi pasjonuję się od ponad 20 lat, jest to moje hobby oraz mój zawód. 
-
-Na co dzień pracuję jako System Administrator /Architekt oraz DevOps, buduję oraz wdrażam projekty w oparciu o rozwiązania firmy Microsoft. 
-W pracy codziennej używam Windows Server, SQL Server, Powershell, 
-Azure, Office 365, Sharepoint, Teams, 
-Azure DevOps, Git… 
-i wielu innych narzędzi, które pozwalają na wykonanie zadania i osiągnięcie celu! 
-
-Jestem zwolennikiem automatyzacji … 
-
+Technologiami informacyjnymi pasjonuję się od ponad 20 lat, jest to moje hobby oraz mój zawód.
 permalink: ':title/'
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://mimachniak.github.io/sysopslife " # the base hostname & protocol for your site, e.g. http://example.com
