@@ -13,5 +13,5 @@ A place to include any other types of information that you'd like to include abo
 ### Contact me
 
 Mail : [mmachniak@outlook.com](mailto:mmachniak@outlook.com)  
-Twitter:  
+Twitter: https://twitter.com/MichalMachniak  
 LinkedIn: https://www.linkedin.com/feed/ 
