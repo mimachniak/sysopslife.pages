@@ -15,35 +15,36 @@ timezone: Asia/Shanghai
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # --------------------------
-title: sysOps /devOps daily life...with Michal Machniak                         # the main title
+title: Chirpy                          # the main title
 
-tagline: I have been passionate about information technology for over 20 years, it is my hobby and my profession. I work as MCT (Certificate owned) / SysOps / Architect / DevOps with customers form different sectors like FinTech, E-commerce, Banking and many more. On my daily work I am building and implementing solutions based on Microsoft technology. In my daily work I use Windows Server, SQL Server, PowerShell, Azure, Office 365, SharePoint, Teams, Azure DevOps, Git ... and many other tools that allow me to complete the task and achieve the goal. # it will display as the sub-title
+tagline: A text-focused Jekyll theme   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  Blog dedicated to Microsoft technologies, based on my daily 
-  experience of working as MCT / SysOps / DevOps / System Architect.
+  A minimal, portfolio, sidebar,
+  bootstrap Jekyll theme with responsive web design
+  and focuses on text presentation.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://mimachniak.github.io/sysopslife'
+url: ''
 
 github:
-  username: mimachniak             # change to your github username
+  username: github_username             # change to your github username
 
 twitter:
-  username: MichalMachniak           # change to your twitter username
+  username: twitter_username            # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Michal Machniak
-  email: mmachniak@outlook.com             # change to your email address
+  name: your_full_name
+  email: example@doamin.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/MichalMachniak # change to your twitter homepage
-    - https://github.com/mimachniak       # change to your github homepage
+    - https://twitter.com/username      # change to your twitter homepage
+    - https://github.com/username       # change to your github homepage
     # Uncomment below to add more social links
-    - https://www.facebook.com/michal.machniak
-    - https://www.linkedin.com/in/michal-machniak
+    # - https://www.facebook.com/username
+    # - https://www.linkedin.com/in/username
 
 google_site_verification: google_meta_tag_verification # change to your verification string
 # --------------------------
@@ -70,7 +71,7 @@ google_analytics:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode: light   # [light|dark]
+theme_mode:   # [light|dark]
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
