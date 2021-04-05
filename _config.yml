@@ -10,7 +10,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Michał Machniak # add your name
 author-img: michal-machniak.PNG # add your photo
-about-author: I have been passionate about information technology for over 20 years, it is my hobby and my profession. On a daily basis I work as MCT / SysOps / Architekt / DevOps, I build and implement projects based on Microsoft solutions. In my daily work I use Windows Server, SQL Server, Powershell, Azure, Office 365, Sharepoint, Teams, Azure DevOps, Git ... and many other tools that allow me to complete the task and achieve the goal! # add description
+about-author: I have been passionate about information technology for over 20 years, it is my hobby and my profession. I work as MCT (Certificate owned) / SysOps / Architect / DevOps with customers form different sectors like FinTech, E-commerce, Banking and many more. On my daily work I am building and implementing solutions based on Microsoft technology. In my daily work I use Windows Server, SQL Server, PowerShell, Azure, Office 365, SharePoint, Teams, Azure DevOps, Git ... and many other tools that allow me to complete the task and achieve the goal. # add description
 social-twitter: MichalMachniak # add your Twitter handle
 social-facebook: michal.machniak # add your Facebook handle
 social-github: mimachniak # add your Github handle
