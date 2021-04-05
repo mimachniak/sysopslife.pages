@@ -1,32 +1,24 @@
-title: Hello, world! I'm David Freeman
+title: sysOps life ... with Michal Machniak
 description: > # this means to ignore newlines until "baseurl:"
-Technologiami informacyjnymi pasjonuję się od ponad 20 lat, jest to moje hobby oraz mój zawód. 
-
-Na co dzień pracuję jako System Administrator /Architekt oraz DevOps, buduję oraz wdrażam projekty w oparciu o rozwiązania firmy Microsoft. 
-W pracy codziennej używam Windows Server, SQL Server, Powershell, 
-Azure, Office 365, Sharepoint, Teams, 
-Azure DevOps, Git… 
-i wielu innych narzędzi, które pozwalają na wykonanie zadania i osiągnięcie celu! 
-
-Jestem zwolennikiem automatyzacji … 
-
+  Blog poświecony technologiom Microsoftu, oparty o codzienne 
+  doświadczenie pracy jako sysOps/ devOps / Architek.
 permalink: ':title/'
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://mimachniak.github.io/sysopslife " # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mimachniak.github.io/sysopslife" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Michał Machniak # add your name
-author-img: david-freeman.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
+author-img: michal-machniak.PNG # add your photo
+about-author: Technologiami informacyjnymi pasjonuję się od ponad 20 lat, jest to moje hobby oraz mój zawód. Na co dzień pracuję jako System Administrator /Architekt oraz DevOps, buduję oraz wdrażam projekty w oparciu o rozwiązania firmy Microsoft. W pracy codziennej używam Windows Server, SQL Server, Powershell, Azure, Office 365, Sharepoint, Teams, Azure DevOps, Git… i wielu innych narzędzi, które pozwalają na wykonanie zadania i osiągnięcie celu! # add description
 social-twitter: MichalMachniak # add your Twitter handle
 social-facebook: michal.machniak # add your Facebook handle
 social-github: mimachniak # add your Github handle
 social-linkedin: michal-machniak # add your Linkedin handle
-social-email: mmachniak@oulook.com # add your Email address
+social-email: mmachniak@outlook.com # add your Email address
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier: mmachniak # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
