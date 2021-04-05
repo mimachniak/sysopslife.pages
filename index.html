@@ -1,42 +1,19 @@
 ---
-layout: post-index
-title: Latest Posts
-description: "Describe this nonsense."
-tags: [Jekyll, theme, themes, responsive, blog, modern]
-comments: false
-image:
-  feature: abstract-1.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+layout: main
 ---
-
 {% for post in paginator.posts %}
-<article class="hentry">
-  <header>
-    {% if post.image.feature %}
-      <div class="entry-image-index">
-        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}"></a>
-      </div><!-- /.entry-image -->
-    {% endif %}
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
-      {% if site.reading_time %}
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        {% include read-time-index.html %}
-      </span><!-- /.entry-reading-time -->
-      {% endif %}
-    </div><!-- /.entry-meta -->
-    {% if post.link %}
-      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
-    {% else %}
-      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
-    {% endif %}
-  </header>
-  <div class="entry-content">
-    {{ post.content }}
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
+<article class="post">
+  {% if post.img %}
+    <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>
+  {% else %}
+  {% endif %}
+  <div class="post-content">
+    <h2 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
+    <p>{{ post.content | strip_html | truncatewords: 15 }}</p>
+    <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+    <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
+  </div>
+</article>
 {% endfor %}
 
 {% include pagination.html %}

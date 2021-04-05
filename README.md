@@ -1,31 +1,36 @@
-# HPSTR Jekyll Theme
+# Flexible-Jekyll is a simple and clean theme for Jekyll
 
-* Modern and minimal design.
-* Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
-* Gracefully degrades in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
-* Sweet animated menu with support for drop-downs.
-* Optional [Disqus](http://disqus.com) comments and social sharing links.
-* [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
-* Simple [custom 404 page](http://mmistakes.github.io/jekyll-theme-hpstr/404.html) to get you started.
-* [Syntax highlighting](http://mmistakes.github.io/jekyll-theme-hpstr/code-highlighting-post/) stylesheet to make your code examples look snazzy
-* [Available in Spanish](https://github.com/cruznick/hpstr-jekyll-theme/tree/es). Thanks [@cruznick](https://github.com/cruznick)!
+![](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/promo-img.jpg?raw=true)
 
-![HPSTR Theme Preview screenshot](http://mmistakes.github.io/jekyll-theme-hpstr/images/jekyll-theme-hpstr-preview.jpg)
+## Demo
 
----
+Check the theme in action [Demo](https://artemsheludko.github.io/flexible-jekyll/)
 
-## Getting Started
+The main page would look like this:
 
-HPSTR takes advantage of SCSS and data files to make customizing easier. This theme requires Jekyll 3.x and will not work with older versions properly.
+![Main page preview](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/home-page.jpg?raw=true)
 
-To learn how to install and use this theme check out the [Setup Guide](https://mmistakes.github.io/jekyll-theme-hpstr/theme-setup/) for more information.
+The post page would look like this:
 
----
+![Post page preview](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/post-example.jpg?raw=true)
 
-## More Jekyll Themes
+## Features
 
-Check out my more popular Jekyll themes, available as Ruby gems and 100% GitHub Pages compatible.
+- [Google Fonts](https://fonts.google.com/)
+- [Font Awesome](http://fontawesome.io/)
+- [Disqus](https://disqus.com/)
+- [Analytics](https://analytics.google.com/analytics/web/)
+- Support Emoji
 
-* [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes)
-* [So Simple](https://github.com/mmistakes/so-simple-theme)
-* [Basically Basic](https://github.com/mmistakes/jekyll-theme-basically-basic)
+## Installation:
+
+Fork the ``master`` branch and follow the [Jekyll Installation Documentation](https://jekyllrb.com/docs/installation/).
+
+## License
+
+GNU General Public License v3.0
+
+## Donate
+
+<p>If you like the themes that I create you can become my sponsor on <a href="https://www.patreon.com/artemsheludko" target="_blank">Patreon</a>.
+<p align="center"><b>Thank you for your support ❤️</b></p>
