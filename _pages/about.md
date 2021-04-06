@@ -8,7 +8,7 @@ toc: true
 
 Hello my name is **Michal Machniak**
 
-I have been passionate about information technology for over 20 years, it is my hobby and my profession. I work as MCT / SysOps / Architect / DevOps with customers form different sectors like FinTech, E-commerce, Banking and many more. On my daily work I am building and implementing solutions based on Microsoft technology. In my daily work I use Windows Server, SQL Server, PowerShell, Azure, Office 365, SharePoint, Teams, Azure DevOps, Git … and many other tools that allow me to complete the task and achieve the goal.
+I have been passionate about information technology for over 20 years, it is my hobby and my profession. In those days I work as MCT / SysOps / Architect / DevOps with customers form different sectors like FinTech, E-commerce, Banking, logistics and many more. I am building and implementing solutions based on Microsoft technology when I use:  Windows Server, SQL Server, PowerShell, Azure, Office 365, SharePoint, Teams, Azure DevOps, Git … and many other tools that allow me to complete the task and achieve the goal.
 
 ## Certificates
 
