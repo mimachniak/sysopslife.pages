@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "SysOps / DevOps daily life with Microsoft Technology ... with Michal Machniak"
+title                    : "SysOps/DevOps - daily life with Microsoft Technology - ... with Michal Machniak"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Michal Machniak"
