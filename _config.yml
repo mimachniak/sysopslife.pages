@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 locale                   : "en-US"
 title                    : "SysOps/DevOps"
 title_separator          : "-"
-subtitle                 : "daily life with Microsoft Technology" # site tagline that appears below site title in masthead
+subtitle                 : "Daily life with Microsoft Technology" # site tagline that appears below site title in masthead
 name                     : "Michal Machniak"
 description              : "Blog dedicated to Microsoft technologies, based on my daily experience of working as sysOps / devOps / System Architect."
 url                      : https://mimachniak.github.io/sysopslife # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -96,7 +96,7 @@ analytics:
 author:
   name             : "Michal Machniak"
   avatar           : /assets/images/michal-machniak.jpg # path of avatar image, e.g. "/assets/images/michal-machniak.PNG"
-  bio              : "I have been passionate about information technology for over 20 years, it is my hobby and my profession. I work as MCT (Certificate owned) / SysOps / Architect / DevOps with customers form different sectors like FinTech, E-commerce, Banking and many more. On my daily work I am building and implementing solutions based on Microsoft technology. In my daily work I use Windows Server, SQL Server, PowerShell, Azure, Office 365, SharePoint, Teams, Azure DevOps, Git ... and many other tools that allow me to complete the task and achieve the goal."
+  bio              : "MCT/MCSE/MCSA SysOps and DevOps working in IT over 15 years."
   location         : "Poland"
   email            : mmachniak@outlook.com
   links:
