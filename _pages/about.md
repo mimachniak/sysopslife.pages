@@ -12,9 +12,5 @@ I have been passionate about information technology for over 20 years, it is my 
 
 ## Certyficates
 
-![](/assets/images/Certs/MCT-Microsoft_Certified_Trainer.png)![]
-![](/assets/images/Certs/MCSE-Cloud-Platform-Infrastructure-2018.png)![]
-![](/assets/images/Certs/MCSA-Cloud-Platform-2018.png)![]
-![](/assets/images/Certs/MCSA_Windows_Server_2016_2017-01.png)![]
-![](/assets/images/Certs/CERT-Associate-Microsoft365-Teams-Administrator.png)![]
-![](/assets/images/Certs/azure-administrator-associate.png)![]
+![](/assets/images/Certs/MCT-Microsoft_Certified_Trainer.png) ![](/assets/images/Certs/MCSE-Cloud-Platform-Infrastructure-2018.png) ![](/assets/images/Certs/MCSA-Cloud-Platform-2018.png)
+![](/assets/images/Certs/MCSA_Windows_Server_2016_2017-01.png) ![](/assets/images/Certs/CERT-Associate-Microsoft365-Teams-Administrator.png) ![](/assets/images/Certs/azure-administrator-associate.png)
