@@ -97,12 +97,12 @@ author:
   name             : "Michal Machniak"
   avatar           : /assets/images/michal-machniak.jpg # path of avatar image, e.g. "/assets/images/michal-machniak.PNG"
   bio              : "I have been passionate about information technology for over 20 years, it is my hobby and my profession. I work as MCT (Certificate owned) / SysOps / Architect / DevOps with customers form different sectors like FinTech, E-commerce, Banking and many more. On my daily work I am building and implementing solutions based on Microsoft technology. In my daily work I use Windows Server, SQL Server, PowerShell, Azure, Office 365, SharePoint, Teams, Azure DevOps, Git ... and many other tools that allow me to complete the task and achieve the goal."
-  location         : "Rzeszow"
+  location         : "Poland"
   email            : mmachniak@outlook.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:mmachniak@outlook.com"
+      # url: "mailto:mmachniak@outlook.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
