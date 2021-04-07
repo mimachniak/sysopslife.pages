@@ -82,7 +82,7 @@ Pricing and features of EMS: [Enterprise Mobility + Security](https://www.micros
 **Step 1:** Create DNS entries
 
 | Type | Name  | Value | TTL | Description |
-| ------------- | ------------- | ---- | ---- | ------------- |
+| ---| -- | ---- | ---- | ------------- |
 | CANME | EnterpriseEnrollment.CustomDomainName.com  | EnterpriseEnrollment.manage.microsoft.com | 3600 | To simplify enrollment, create a domain name server (DNS) alias (CNAME record type) that redirects enrollment requests to Intune servers. Otherwise, users trying to connect to Intune must enter the Intune server name during enrollment. |
 | CANME | EnterpriseRegistration.CustomDomainName.com | EnterpriseRegistration.windows.net | 3600 | Azure Active Directory has a different CNAME that it uses for device registration for iOS/iPadOS, Android, and Windows devices. Intune conditional access requires devices to be registered, also called "workplace joined". |
 
