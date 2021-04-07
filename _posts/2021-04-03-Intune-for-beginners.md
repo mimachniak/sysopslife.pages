@@ -16,6 +16,8 @@ tags:
 
 Intune is a 100% cloud-based mobile device management (MDM) and mobile application management (MAM) provider for your apps and devices. It lets you control features and settings 
 
+![](/assets/images/Intune/intunearchitecture_wh.svg)
+
 ## Devices and Operating System that can be controlled by Intune (Endpoint Manager)
 
 ### Apple
