@@ -71,7 +71,11 @@ Example with price found on Microsft sites:
 | ------------- | ------------- | ------------- |
 | Cost | 8.80 $   | 8 $ |
 
-Pricing and features of EMS: [Enterprise Mobility + Security](https://www.microsoft.com/pl-pl/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing "link title")
+Pricing and features of EMS: [Enterprise Mobility + Security](https://www.microsoft.com/pl-pl/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing "link title")  
+
+      
+       
+`Note: If your company won't buy bundle license please consider buying Azure Active Directory Premium 1 to enabled "Conditional access features"`
 
 ## Steps for first configuration
 
@@ -98,3 +102,5 @@ Edit existing **Custom Domain Name** and follow wizard
 Add NEW **Custom Domain Name** and follow wizard
 
 ![](/assets/images/Intune/Intune-dns-4.png)
+
+### Azure Active Directory configuration
