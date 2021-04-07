@@ -1,6 +1,7 @@
 ---
 title: "[EN] Intune (Endpoint Manager) - How to start the implementation and what to pay attention to."
 classes: wide
+excerpt: "[EN] Intune (Endpoint Manager) - How to start the implementation and what to pay attention to"
 toc: true
 header:
   image: /assets/images/Intune/Intune-1.png
@@ -45,7 +46,7 @@ Intune is a 100% cloud-based mobile device management (MDM) and mobile applicati
 ### Choosing license
 
 Intune as a part of M365 is added licensing bundles to deliver all products that are necessary to manage organization.  
-List of licences bundles that contain Intune User License.
+List of licences bundles that contain Intune (Endpoint Manager) User License.
 
 * Microsoft 365 Bussines Premium
 * Microsoft 365 E3 and E5
@@ -58,7 +59,16 @@ Standalone Intune licences
 * User licenses in Microsoft Intune
 * Device licenses in Microsoft Intune
 
+`Note: Device licenses limits`
+* Limits: Intune app protection policies
+* Limits: Conditional access
+* Limits: User-based management features, such as email and calendaring.
 
+Bundle licences are more cost effective and give additional features to services.  
+Example with price found on Microsft sites: 
 
+| Type | EMS - E3  | User licenses in Microsoft Intune |
+| ------------- | ------------- | ------------- |
+| Cost | 8.80 $   | 8 $ |
 
 
