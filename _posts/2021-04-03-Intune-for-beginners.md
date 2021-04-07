@@ -43,7 +43,7 @@ Intune is a 100% cloud-based mobile device management (MDM) and mobile applicati
 * Windows 10 1709 (RS3) and later, 
 * Windows 8.1 RT, PCs running Windows 8.1 (Sustaining mode)
 
-### Choosing license
+## Choosing license
 
 Intune as a part of M365 is added licensing bundles to deliver all products that are necessary to manage organization.  
 List of licences bundles that contain Intune (Endpoint Manager) User License.
@@ -72,3 +72,11 @@ Example with price found on Microsft sites:
 | Cost | 8.80 $   | 8 $ |
 
 Pricing and features of EMS: [Enterprise Mobility + Security](https://www.microsoft.com/pl-pl/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing "link title")
+
+## Steps for first configuration
+
+### DNS configuration in Office Admin Panel
+
+`Note: To perform this task you need to have access to DNS Server or host provider.`
+
+#### Prerequisites 
