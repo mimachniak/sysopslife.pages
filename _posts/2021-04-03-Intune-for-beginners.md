@@ -73,8 +73,7 @@ Example with price found on Microsft sites:
 
 Pricing and features of EMS: [Enterprise Mobility + Security](https://www.microsoft.com/pl-pl/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing "link title")  
 
-      
-       
+
 `Note: If your company won't buy bundle license please consider buying Azure Active Directory Premium 1 to enabled "Conditional access features"`
 
 ## Steps for first configuration
@@ -85,10 +84,13 @@ Pricing and features of EMS: [Enterprise Mobility + Security](https://www.micros
 
 **Step 1:** Create DNS entries
 
-| Type | Name  | Value | TTL | Description |
-| ---| -- | ---- | ---- | ------------- |
-| CANME | EnterpriseEnrollment.CustomDomainName.com  | EnterpriseEnrollment.manage.microsoft.com | 3600 | To simplify enrollment, create a domain name server (DNS) alias (CNAME record type) that redirects enrollment requests to Intune servers. Otherwise, users trying to connect to Intune must enter the Intune server name during enrollment. |
-| CANME | EnterpriseRegistration.CustomDomainName.com | EnterpriseRegistration.windows.net | 3600 | Azure Active Directory has a different CNAME that it uses for device registration for iOS/iPadOS, Android, and Windows devices. Intune conditional access requires devices to be registered, also called "workplace joined". |
+| Type | Name  | Value | TTL |
+| ---| -- | ---- | ---- |
+| CANME | EnterpriseEnrollment.CustomDomainName.com  | EnterpriseEnrollment.manage.microsoft.com | 3600 |
+| CANME | EnterpriseRegistration.CustomDomainName.com | EnterpriseRegistration.windows.net | 3600 |
+
+> EnterpriseEnrollment - To simplify enrollment, create a domain name server (DNS) alias (CNAME record type) that redirects enrollment requests to Intune servers. Otherwise, users trying to connect to Intune must enter the Intune server name during enrollment.  
+> EnterpriseRegistration - Azure Active Directory has a different CNAME that it uses for device registration for iOS/iPadOS, Android, and Windows devices. Intune conditional access requires devices to be registered, also called "workplace joined".
 
 Example:   
 ![](/assets/images/Intune/Intune-dns-2.png)
