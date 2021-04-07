@@ -65,7 +65,7 @@ Standalone Intune licences
 * Limits: User-based management features, such as email and calendaring.
 
 Bundle licences are more cost effective and give additional features to services.  
-Example with price found on Microsft sites: 
+Example with price found on Microsoft sites: 
 
 | Type | EMS - E3  | User licenses in Microsoft Intune |
 | ------------- | ------------- | ------------- |
@@ -74,7 +74,7 @@ Example with price found on Microsft sites:
 Pricing and features of EMS: [Enterprise Mobility + Security](https://www.microsoft.com/pl-pl/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing "link title")  
 
 
-`Note: If your company won't buy bundle license please consider buying Azure Active Directory Premium 1 to enabled "Conditional access features"`
+`Note: If your company won't buy bundle license please consider buying Azure Active Directory Premium 1 to enabled "Conditional access features" and auto enrollment devices when they join Azure Active Directory`
 
 ## Steps for first configuration
 
@@ -95,7 +95,7 @@ Pricing and features of EMS: [Enterprise Mobility + Security](https://www.micros
 Example:   
 ![](/assets/images/Intune/Intune-dns-2.png)
 
-**Step 3:** Log on to Office 365 admin cneter byr URL: [https://admin.microsoft.com](https://admin.microsoft.com)  
+**Step 3:** Log on to Office 365 admin center by URL: [https://admin.microsoft.com](https://admin.microsoft.com)  
 **Step 4:** On left navigation menu go to:  **Setup** --> **Domains**  
 Edit existing **Custom Domain Name** and follow wizard
 
@@ -106,3 +106,19 @@ Add NEW **Custom Domain Name** and follow wizard
 ![](/assets/images/Intune/Intune-dns-4.png)
 
 ### Azure Active Directory configuration
+
+**Step 1:** Log on to Azure Active Directory admin center by URL: [https://aad.portal.azure.com/](https://aad.portal.azure.com/)
+
+![](/assets/images/Intune/intune-aad-1.png)
+
+**Step 2:** On left navigation menu go to **"Azure Active Directory"**
+
+![](/assets/images/Intune/intune-aad-2.png)
+
+**Step 3:** In options navigate to **"Mobility (MDM and MAM)"**
+
+![](/assets/images/Intune/intune-aad-3.png)
+
+**Step 4:** Select **"Microsoft Intune"**
+
+![](/assets/images/Intune/intune-aad-4.png)
