@@ -12,12 +12,6 @@ tags:
   - Licences
 ---
 
-**Table of Contents**
-
-[TOCM]
-
-[TOC]
-
 ## Whats is Intune or with new name Endpoint Manager
 
 Intune is a 100% cloud-based mobile device management (MDM) and mobile application management (MAM) provider for your apps and devices. It lets you control features and settings 
