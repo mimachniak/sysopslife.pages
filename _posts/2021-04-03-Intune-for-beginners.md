@@ -1,6 +1,7 @@
 ---
 title: "[EN] Intune (Endpoint Manager) - How to start the implementation and what to pay attention to."
 classes: wide
+toc: true
 header:
   image: /assets/images/Intune/Intune-1.png
 categories:
@@ -43,6 +44,21 @@ Intune is a 100% cloud-based mobile device management (MDM) and mobile applicati
 
 ### Choosing license
 
-Intune as a part of M365 is added licensing bundles to deliver all products that are necessary to manage organization. 
+Intune as a part of M365 is added licensing bundles to deliver all products that are necessary to manage organization.  
+List of licences bundles that contain Intune User License.
+
+* Microsoft 365 Bussines Premium
+* Microsoft 365 E3 and E5
+
+Extension bundle for Office 365 packed.
+* Enterprise Mobility Suite E3 and E5
+
+Standalone Intune licences
+
+* User licenses in Microsoft Intune
+* Device licenses in Microsoft Intune
+
+
+
 
 
