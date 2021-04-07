@@ -71,4 +71,4 @@ Example with price found on Microsft sites:
 | ------------- | ------------- | ------------- |
 | Cost | 8.80 $   | 8 $ |
 
-
+Pricing and features of EMS: [Enterprise Mobility + Security](https://www.microsoft.com/pl-pl/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing "link title")
