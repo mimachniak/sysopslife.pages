@@ -90,7 +90,7 @@ Example:
 ![](/assets/images/Intune/Intune-dns-2.png)
 
 **Step 3:** Log on to Office 365 admin cneter byr URL: [https://admin.microsoft.com](https://admin.microsoft.com)  
-**Step 3:** On left navigation menu go to:  **Setup** --> **Domains**  
+**Step 4:** On left navigation menu go to:  **Setup** --> **Domains**  
 Edit existing **Custom Domain Name** and follow wizard
 
 ![](/assets/images/Intune/Intune-dns-3.png)
