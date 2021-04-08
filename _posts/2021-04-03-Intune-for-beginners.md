@@ -14,7 +14,9 @@ tags:
   - MDM
   - Licences
 ---
+## Why I write this article
 
+This guide is create to help other IT pros that are starting with Office 365 / Intune services to help with base configuration of Intune and don't make the same mistake. Fallow this guide you will have configure Intune that is ready for device enrollment with base practice in one place. 
 ## Whats is Intune or with new name Endpoint Manager
 
 Intune is a 100% cloud-based mobile device management (MDM) and mobile application management (MAM) provider for your apps and devices. It lets you control features and settings 
@@ -159,3 +161,13 @@ All - All users can automatically enroll their Windows 10 devices
 
 
 [What is MAM - Mobile Application Management](https://docs.microsoft.com/en-us/mem/intune/apps/app-management) 
+
+### Intune (Endpoint Manager) Console
+
+To access Intune (Endpoint Manager) web console you will need support browser (Edge, FireFox, Chrome ... not Internet Explorer) and we have 3 options to go
+
+1. In web browser typ URL: [https://endpoint.microsoft.com/](https://endpoint.microsoft.com/) 
+2. Office 365 Admin Center:  [https://admin.microsoft.com](https://admin.microsoft.com), on left navigation menu choose **"Endpoint Manager"** and you will be redirected to option 1.
+3. Portal Azure: [https://portal.azure.com](https://portal.azure.com) in global search field type **"Intune"** and you will be redirected to option 1.
+
+## Tenant Administration - Customization
