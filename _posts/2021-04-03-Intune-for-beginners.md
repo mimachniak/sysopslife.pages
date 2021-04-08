@@ -256,3 +256,20 @@ So IT pros need to change with operationg systems are allowed.
 `Note: Best practice number of devices 5`  
 
 ### Device clean-up rules - remove devices that are not used any more
+
+Intune (Endpoint Manager) create new device object  with new GUID number each enrollment event if is the same devices after wipe after some time organization can have many devices that are 
+* not used, 
+* stole , 
+* wpied and enroll, 
+* user of devices change,   
+In this scenrios we will have dubel or triple number of devices with the same IMEI or SN. To handle this scenarios we don't have write PowerShell scripts or do it manually by review IT pros need to Enable auto cleaning rules for devices that did not connect over period of time.
+
+**Step 1:** Go to Devices --> Device clean-up rules
+
+![](/assets/images/Intune/Intune-em-11.png) 
+
+**Step 1:** Enable feature and setup number of days for devices taht didn't checked.
+
+`Note: Best practice set number of days to 90`
+
+![](/assets/images/Intune/Intune-em-12.png) 
