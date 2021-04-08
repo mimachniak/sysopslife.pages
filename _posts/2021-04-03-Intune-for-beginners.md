@@ -210,5 +210,9 @@ Partners:
   - Apple Business Store
   - Google Managed Play Store
   - Microsoft Business Store
-1. **Certificate connectors** - 
+2. **Certificate connectors** - Install on your on-premises server to connect you local **"Certificate Authority"**, with this integration we can use our own certificates templates on mobile devices and desktop devices that are not connected over any VPN to local datacenter. Certificates will be delivre by Intune.
+Why use this integration:
+  - ADFS authentication with certificates.
+  - RADIUS / NPS server authentication with certificates.
+  - Secure access to servers that use oure CA for HTTPS.
 
