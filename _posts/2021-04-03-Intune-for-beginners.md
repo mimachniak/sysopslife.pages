@@ -114,18 +114,18 @@ Add NEW **Custom Domain Name** and follow wizard
 
 **Step 2:** On left navigation menu go to **"Azure Active Directory"**
 
-![](/assets/images/Intune/intune-aad-2.PNG)
-
 **Step 3:** In options navigate to **"Mobility (MDM and MAM)"**
 
-![](/assets/images/Intune/intune-aad-3.PNG)
+![](/assets/images/Intune/intune-aad-2.PNG)
 
 
 **Step 4:** Select **"Microsoft Intune"**
 
-![](/assets/images/Intune/intune-aad-4.PNG)
+![](/assets/images/Intune/intune-aad-3.PNG)
 
 **Step 5:** Select **"Microsoft Intune configuration MDM and MAM"**
+
+![](/assets/images/Intune/intune-aad-4.PNG)
 
 Prerequisites
 
