@@ -227,3 +227,12 @@ Prerequisites:
 - Intune product license assigned to Intune administrator account. 
 
 ![](/assets/images/Intune/Intune-em-7.png) 
+
+### Enrollment restrictions - who can enroll devices to Intune
+
+Intune (Endpoint Manager) administrator, you can create and manage enrollment restrictions that define what devices can enroll into management with Intune with options and lmitations.
+
+* Number of devices.
+* Operating systems and versions.
+
+`Note: You can create multiple restrictions and apply them to different user groups`
