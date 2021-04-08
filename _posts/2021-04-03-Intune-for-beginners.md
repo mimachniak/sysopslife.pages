@@ -230,7 +230,7 @@ Prerequisites:
 
 ### Enrollment restrictions - who can enroll devices to Intune
 
-Intune (Endpoint Manager) administrator, you can create and manage enrollment restrictions that define what devices can enroll into management with Intune with options and lmitations.
+Intune (Endpoint Manager) administrator, can create and manage enrollment restrictions that define what devices can enroll into management with Intune with options and lmitations.
 
 * Number of devices.
 * Operating systems and versions.
@@ -244,7 +244,12 @@ By default all operating systems are allowed to be enrolled and all types of dev
 - Corporated Owned  
 So IT pros need to change with operationg systems are allowed.
 
-> Best practice:  
-> **Edit:** Default Device type restrictions that is assigned for **"All devices"** and block all types.
->
-> **Edit:** Default Device limit restrictions that is assigned for **"All devices"** and change to 1.
+![](/assets/images/Intune/Intune-em-10.png) 
+
+**Step 2:** **Edit:** Default Device type restrictions that is assigned for **"All devices"** and block all types.  
+`Note: Best practice`  
+**Step 3:** **Edit:** Default Device limit restrictions that is assigned for **"All devices"** and change to 1.  
+`Note: Best practice`  
+**Step 3:** **Create:** new Device type restrictions that is assigned for dedicated group of users or devices **"All devices"** and allow operating system that you will be using in organization.
+
+![](/assets/images/Intune/Intune-em-9.png) 
