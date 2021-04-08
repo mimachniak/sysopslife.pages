@@ -189,7 +189,7 @@ In this section we will configure how end user will see **"Company Portal"** on 
 
 `Note: This is the default customization that's applied to all users and devices. It can be edited, but not deleted`
 
-![](/assets/images/Intune/intune-em-3.png)
+![](/assets/images/Intune/intune-em-2.png)
 
 How End user will see oure settings to check this we can go to URL: [https://portal.manage.microsoft.com/](https://portal.manage.microsoft.com/). In **"Company Portal"** End user have:
 
@@ -199,8 +199,8 @@ How End user will see oure settings to check this we can go to URL: [https://por
 * HelpDesk contact information
 
 
-![](/assets/images/Intune/intune-em-4.png)  
-![](/assets/images/Intune/intune-em-5.png)  
-![](/assets/images/Intune/intune-em-6.png)  
+![](/assets/images/Intune/intune-em-2.png) 
 
 ### Tenant Administration - – Connectors and tokens
+
+Intune (Endpoint Manager) configuration can be extent of integration of with other partners to deliver better business solution for end user experience and allow IT pros to setup same business value like on personal devices but with all benefits of security. 
