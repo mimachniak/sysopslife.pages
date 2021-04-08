@@ -193,6 +193,7 @@ In this section we will configure how end user will see **"Company Portal"** on 
 
 `Note: This is the default customization that's applied to all users and devices. It can be edited, but not deleted`
 
+![](/assets/images/Intune/Intune-em-8.png)  
 
 How End user will see oure settings to check this we can go to URL: [https://portal.manage.microsoft.com/](https://portal.manage.microsoft.com/). In **"Company Portal"** End user have:
 
