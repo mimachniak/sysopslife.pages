@@ -223,7 +223,7 @@ Why use this integration:
   - Secure access to servers that use oure CA for HTTPS.
 3. **TeamViewer connector** - With this connection you user will be prompt in **"Company Portal"** to allow remote access to devices, no other software is required. With this integration you have remote access to mobile and dekstop devices. For integration follow this article [TeamViewer User Guide for Intune](https://community.teamviewer.com/English/kb/articles/45766-teamviewer-user-guide-for-intune)  
 Prerequisites:
-- Valid TeamViewer account with eligible license. To sign up, please visit: https://login.teamviewer.com
+- Valid TeamViewer account with eligible license. To sign up, please visit: [https://login.teamviewer.com](https://login.teamviewer.com)
 - Intune product license assigned to Intune administrator account. 
 
 ![](/assets/images/Intune/Intune-em-7.png) 
@@ -235,4 +235,16 @@ Intune (Endpoint Manager) administrator, you can create and manage enrollment re
 * Number of devices.
 * Operating systems and versions.
 
-`Note: You can create multiple restrictions and apply them to different user groups`
+`Note: You can create multiple restrictions and apply them to different user groups`  
+
+**Step 1:** Go to Devices --> Enrollment restrictions
+
+By default all operating systems are allowed to be enrolled and all types of devices. 
+- Personal
+- Corporated Owned  
+So IT pros need to change with operationg systems are allowed.
+
+> Best practice:  
+> **Edit:** Default Device type restrictions that is assigned for **"All devices"** and block all types.
+>
+> **Edit:** Default Device limit restrictions that is assigned for **"All devices"** and change to 1.
