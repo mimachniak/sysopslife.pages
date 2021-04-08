@@ -121,6 +121,12 @@ Add NEW **Custom Domain Name** and follow wizard
 ![](/assets/images/Intune/intune-aad-3.PNG)
 
 
+**Step 4:** Select **"Microsoft Intune"**
+
+![](/assets/images/Intune/intune-aad-4.PNG)
+
+**Step 5:** Select **"Microsoft Intune configuration MDM and MAM"**
+
 Prerequisites
 
 * Azure Active Directory Premium mini Plan 1  
@@ -153,7 +159,3 @@ All - All users can automatically enroll their Windows 10 devices
 
 
 [What is MAM - Mobile Application Management](https://docs.microsoft.com/en-us/mem/intune/apps/app-management) 
-
-**Step 4:** Select **"Microsoft Intune"**
-
-![](/assets/images/Intune/intune-aad-4.PNG)
