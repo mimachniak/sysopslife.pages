@@ -109,16 +109,16 @@ Add NEW **Custom Domain Name** and follow wizard
 
 **Step 1:** Log on to Azure Active Directory admin center by URL: [https://aad.portal.azure.com/](https://aad.portal.azure.com/)
 
-![](/assets/images/Intune/intune-aad-1.png)
+![](/assets/images/Intune/intune-aad-1.PNG)
 
 **Step 2:** On left navigation menu go to **"Azure Active Directory"**
 
-![](/assets/images/Intune/intune-aad-2.png)
+![](/assets/images/Intune/intune-aad-2.PNG)
 
 **Step 3:** In options navigate to **"Mobility (MDM and MAM)"**
 
-![](/assets/images/Intune/intune-aad-3.png)
+![](/assets/images/Intune/intune-aad-3.PNG)
 
 **Step 4:** Select **"Microsoft Intune"**
 
-![](/assets/images/Intune/intune-aad-4.png)
+![](/assets/images/Intune/intune-aad-4.PNG)
