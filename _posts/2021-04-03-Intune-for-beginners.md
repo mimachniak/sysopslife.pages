@@ -244,10 +244,15 @@ So IT pros need to change with operationg systems are allowed.
 ![](/assets/images/Intune/Intune-em-10.png) 
 
 **Step 2:** **Edit:** Default Device type restrictions that is assigned for **"All devices"** and block all types.  
+
 > Best practice:  Action in step  
+
 **Step 3:** **Edit:** Default Device limit restrictions that is assigned for **"All devices"** and change to 1.  
-> Best practice:  Action in step    
+
+> Best practice:  Action in step  
+  
 **Step 4:** **Create:** new Device type restrictions that is assigned for dedicated group of users or devices **"All devices"** and allow operating system that you will be using in organization.  
+
 > Best practice: Windows 10 need to have option personal "Allow" even for "Corporate" enrollment, this can be block if organization is using Auto Pilot in other wise enrollment of Windows 10 devices will faild with error 0800*******.  
 
 ![](/assets/images/Intune/Intune-em-9.png) 
@@ -258,10 +263,11 @@ So IT pros need to change with operationg systems are allowed.
 ### Device clean-up rules - remove devices that are not used any more
 
 Intune (Endpoint Manager) create new device object  with new GUID number each enrollment event if is the same devices after wipe after some time organization can have many devices that are 
-* not used, 
-* stole , 
-* wpied and enroll, 
-* user of devices change,   
+* not used
+* stole
+* wpied and enroll
+* user of devices change  
+
 In this scenrios we will have dubel or triple number of devices with the same IMEI or SN. To handle this scenarios we don't have write PowerShell scripts or do it manually by review IT pros need to Enable auto cleaning rules for devices that did not connect over period of time.
 
 **Step 1:** Go to Devices --> Device clean-up rules
