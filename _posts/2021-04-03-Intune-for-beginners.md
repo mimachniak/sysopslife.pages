@@ -225,3 +225,4 @@ Prerequisites:
 - Valid TeamViewer account with eligible license. To sign up, please visit: https://login.teamviewer.com
 - Intune product license assigned to Intune administrator account. 
 
+![](/assets/images/Intune/Intune-em-7.png) 
