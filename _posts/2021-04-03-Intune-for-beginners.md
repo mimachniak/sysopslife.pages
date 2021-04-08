@@ -162,7 +162,7 @@ All - All users can automatically enroll their Windows 10 devices
 
 [What is MAM - Mobile Application Management](https://docs.microsoft.com/en-us/mem/intune/apps/app-management) 
 
-### Intune (Endpoint Manager) Console
+## Intune (Endpoint Manager) Console
 
 To access Intune (Endpoint Manager) web console you will need support browser (Edge, FireFox, Chrome ... not Internet Explorer) and we have 3 options to go
 
@@ -172,8 +172,21 @@ To access Intune (Endpoint Manager) web console you will need support browser (E
 
 ![](/assets/images/Intune/intune-em-1.png)
 
-## Tenant Administration - Customization
+### Tenant Administration - Customization
 
 **Step 1:** Go to Tenant Administration in Endpoint Manager web console
 
 ![](/assets/images/Intune/intune-em-2.png)
+
+**Step 2:** On navigation menu go to **"Customizations"**
+
+In this section we will configure how end user will see **"Company Portal"** on Web / Mobile or Desktop. In customization we have few options to adjust look up to our company layout. We can customize
+* Organization name​
+* Theme color
+* Support information
+* Configuration allowed by **"Company Portal"**
+
+
+`Note: This is the default customization that's applied to all users and devices. It can be edited, but not deleted`
+
+![](/assets/images/Intune/intune-em-3.png)
