@@ -170,13 +170,13 @@ To access Intune (Endpoint Manager) web console you will need support browser (E
 2. Office 365 Admin Center:  [https://admin.microsoft.com](https://admin.microsoft.com), on left navigation menu choose **"Endpoint Manager"** and you will be redirected to option 1.
 3. Portal Azure: [https://portal.azure.com](https://portal.azure.com) in global search field type **"Intune"** and you will be redirected to option 1.
 
-![](/assets/images/Intune/intune-em-1.png)
+![](/assets/images/Intune/intune-aad-4.PNG)
 
 ### Tenant Administration - Customization
 
 **Step 1:** Go to Tenant Administration in Endpoint Manager web console
 
-![](/assets/images/Intune/intune-em-2.png)
+![](/assets/images/Intune/Intune-em-1.png)
 
 **Step 2:** On navigation menu go to **"Customizations"**
 
@@ -203,4 +203,12 @@ How End user will see oure settings to check this we can go to URL: [https://por
 
 ### Tenant Administration - – Connectors and tokens
 
-Intune (Endpoint Manager) configuration can be extent of integration of with other partners to deliver better business solution for end user experience and allow IT pros to setup same business value like on personal devices but with all benefits of security. 
+Intune (Endpoint Manager) configuration can be extent of integration of with other partners to deliver better business solution for end user experience and allow IT pros to setup same business value like on personal devices but with all benefits of security.  
+Key benefits of those integrations:
+1. **Applications** - This integration allow to deliver for example delivre applications directly from partner store, so all updates of this application will be delivre automatically the same way. So end user experience is the same as on personal device.  
+Partners:  
+  - Apple Business Store
+  - Google Managed Play Store
+  - Microsoft Business Store
+1. **Certificate connectors** - 
+
