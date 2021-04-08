@@ -208,7 +208,7 @@ How End user will see oure settings to check this we can go to URL: [https://por
 
 ### Tenant Administration - – Connectors and tokens
 
-Intune (Endpoint Manager) configuration can be extent of integration of with other partners to deliver better business solution for end user experience and allow IT pros to setup same business value like on personal devices but with all benefits of security.  
+Intune (Endpoint Manager) configuration can be extend by integration of with other partners to deliver better business solution and value for end user experience and allow IT pros to setup as secure and protected environment.  
 Key benefits of those integrations:
 1. **Applications** - This integration allow to deliver for example delivre applications directly from partner store, so all updates of this application will be delivre automatically the same way. So end user experience is the same as on personal device.  
 Partners:  
