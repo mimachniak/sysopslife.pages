@@ -274,7 +274,7 @@ In this scenrios we will have dubel or triple number of devices with the same IM
 
 ![](/assets/images/Intune/Intune-em-11.png) 
 
-**Step 1:** Enable feature and setup number of days for devices taht didn't checked.
+**Step 2:** Enable feature and setup number of days for devices taht didn't checked.
 
 > Best practice: set number of days to 90  
 
