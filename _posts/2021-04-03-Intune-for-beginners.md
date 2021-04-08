@@ -89,8 +89,9 @@ Pricing and features of EMS: [Enterprise Mobility + Security](https://www.micros
 | CANME | EnterpriseEnrollment.CustomDomainName.com  | EnterpriseEnrollment.manage.microsoft.com | 3600 |
 | CANME | EnterpriseRegistration.CustomDomainName.com | EnterpriseRegistration.windows.net | 3600 |
 
-> EnterpriseEnrollment - To simplify enrollment, create a domain name server (DNS) alias (CNAME record type) that redirects enrollment requests to Intune servers. Otherwise, users trying to connect to Intune must enter the Intune server name during enrollment.  
-> EnterpriseRegistration - Azure Active Directory has a different CNAME that it uses for device registration for iOS/iPadOS, Android, and Windows devices. Intune conditional access requires devices to be registered, also called "workplace joined".
+> **EnterpriseEnrollment** - To simplify enrollment, create a domain name server (DNS) alias (CNAME record type) that redirects enrollment requests to Intune servers. Otherwise, users trying to connect to Intune must enter the Intune server name during enrollment.  
+>
+> **EnterpriseRegistration**- Azure Active Directory has a different CNAME that it uses for device registration for iOS/iPadOS, Android, and Windows devices. Intune conditional access requires devices to be registered, also called "workplace joined".
 
 Example:   
 ![](/assets/images/Intune/Intune-dns-2.png)
@@ -118,6 +119,40 @@ Add NEW **Custom Domain Name** and follow wizard
 **Step 3:** In options navigate to **"Mobility (MDM and MAM)"**
 
 ![](/assets/images/Intune/intune-aad-3.PNG)
+
+
+Prerequisites
+
+* Azure Active Directory Premium mini Plan 1  
+* Microsoft Intune subscription
+
+`Note: Microsoft 365: Premium, E3, E5 and Enterprise Mobility Suite E3 and E5 contian Azure Active Directory Premium 1`
+
+**MDM user scope**
+
+This section configure auto enrollment registered devices to Intune (EndPoint Manager). Auto Enrollment will be run in background task if: 
+
+* Users add their work account to their personally owned devices
+* Users join corporate-owned devices to Azure Active Directory
+
+None - MDM automatic enrollment disabled  
+Some - Select the Groups for Azure Active Directory (Synchronized groups from local Active Directory) that can automatically enroll their Windows 10 devices  
+All - All users can automatically enroll their Windows 10 devices 
+
+`Note: For pilot implementation limit to group`  
+`Note: Azure AD join in hybrid model require additional configuration`  
+
+> **Important and when use the same group for MDM and MAM**  
+>
+> If both the [MAM](https://docs.microsoft.com/en-us/mem/intune/apps/app-management) user scope and the MDM user scope (automatic MDM enrollment) are enabled for all users (or the same groups of users). The device will not be MDM enrolled, and Windows Information Protection (WIP) Policies will be applied if you have configured them.
+>
+>If your intent is to enable automatic enrollment for Windows BYOD devices to an MDM: configure the MDM user scope to All (or Some, and specify a group) and configure the MAM user scope to None (or Some, and specify a group – ensuring that users are not members of a group targeted by both MDM and [MAM](https://docs.microsoft.com/en-us/mem/intune/apps/app-management) user scopes).
+>
+> For corporate devices, the MDM user scope takes precedence if both MDM and [MAM](https://docs.microsoft.com/en-us/mem/intune/apps/app-management) user scopes are enabled. The device will get automatically enrolled in the configured MDM.  
+>  
+
+
+[What is MAM - Mobile Application Management](https://docs.microsoft.com/en-us/mem/intune/apps/app-management) 
 
 **Step 4:** Select **"Microsoft Intune"**
 
