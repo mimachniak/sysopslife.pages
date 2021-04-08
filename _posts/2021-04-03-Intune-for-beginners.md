@@ -250,7 +250,7 @@ So IT pros need to change with operationg systems are allowed.
 **Step 3:** **Edit:** Default Device limit restrictions that is assigned for **"All devices"** and change to 1.  
 
 > Best practice:  Action in step  
-  
+
 **Step 4:** **Create:** new Device type restrictions that is assigned for dedicated group of users or devices **"All devices"** and allow operating system that you will be using in organization.  
 
 > Best practice: Windows 10 need to have option personal "Allow" even for "Corporate" enrollment, this can be block if organization is using Auto Pilot in other wise enrollment of Windows 10 devices will faild with error 0800*******.  
@@ -279,3 +279,12 @@ In this scenrios we will have dubel or triple number of devices with the same IM
 > Best practice: set number of days to 90  
 
 ![](/assets/images/Intune/Intune-em-12.png) 
+
+## Next part ... Compliance policies and Configuration profiles
+
+* Compliance policies | Policies
+* Devices | Configuration profiles
+
+![](/assets/images/Intune/Intune-em-13.png) 
+
+
