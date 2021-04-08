@@ -202,3 +202,5 @@ How End user will see oure settings to check this we can go to URL: [https://por
 ![](/assets/images/Intune/intune-em-4.png)  
 ![](/assets/images/Intune/intune-em-5.png)  
 ![](/assets/images/Intune/intune-em-6.png)  
+
+### Tenant Administration - – Connectors and tokens
