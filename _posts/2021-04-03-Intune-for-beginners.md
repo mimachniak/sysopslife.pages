@@ -174,11 +174,15 @@ To access Intune (Endpoint Manager) web console you will need support browser (E
 
 ### Tenant Administration - Customization
 
+
+
 **Step 1:** Go to Tenant Administration in Endpoint Manager web console
 
 ![](/assets/images/Intune/Intune-em-1.png)
 
 **Step 2:** On navigation menu go to **"Customizations"**
+
+![](/assets/images/Intune/Intune-em-3.png)
 
 In this section we will configure how end user will see **"Company Portal"** on Web / Mobile or Desktop. In customization we have few options to adjust look up to our company layout. We can customize
 * Organization name​
@@ -189,7 +193,6 @@ In this section we will configure how end user will see **"Company Portal"** on 
 
 `Note: This is the default customization that's applied to all users and devices. It can be edited, but not deleted`
 
-![](/assets/images/Intune/Intune-em-2.png)
 
 How End user will see oure settings to check this we can go to URL: [https://portal.manage.microsoft.com/](https://portal.manage.microsoft.com/). In **"Company Portal"** End user have:
 
@@ -198,8 +201,10 @@ How End user will see oure settings to check this we can go to URL: [https://por
 * Notifications
 * HelpDesk contact information
 
+![](/assets/images/Intune/Intune-em-4.png)  
+![](/assets/images/Intune/Intune-em-5.png)  
+![](/assets/images/Intune/Intune-em-6.png)  
 
-![](/assets/images/Intune/Intune-em-3.png)
 
 ### Tenant Administration - – Connectors and tokens
 
@@ -207,7 +212,7 @@ Intune (Endpoint Manager) configuration can be extent of integration of with oth
 Key benefits of those integrations:
 1. **Applications** - This integration allow to deliver for example delivre applications directly from partner store, so all updates of this application will be delivre automatically the same way. So end user experience is the same as on personal device.  
 Partners:  
-  - Apple Business Store
+  - Apple Business Store (Apple VPP Tokens)
   - Google Managed Play Store
   - Microsoft Business Store
 2. **Certificate connectors** - Install on your on-premises server to connect you local **"Certificate Authority"**, with this integration we can use our own certificates templates on mobile devices and desktop devices that are not connected over any VPN to local datacenter. Certificates will be delivre by Intune.
@@ -215,4 +220,8 @@ Why use this integration:
   - ADFS authentication with certificates.
   - RADIUS / NPS server authentication with certificates.
   - Secure access to servers that use oure CA for HTTPS.
+3. **TeamViewer connector** - With this connection you user will be prompt in **"Company Portal"** to allow remote access to devices, no other software is required. With this integration you have remote access to mobile and dekstop devices. For integration follow this article [TeamViewer User Guide for Intune](https://community.teamviewer.com/English/kb/articles/45766-teamviewer-user-guide-for-intune)  
+Prerequisites:
+- Valid TeamViewer account with eligible license. To sign up, please visit: https://login.teamviewer.com
+- Intune product license assigned to Intune administrator account. 
 
