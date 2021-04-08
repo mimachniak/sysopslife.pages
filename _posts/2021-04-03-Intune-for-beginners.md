@@ -170,15 +170,12 @@ To access Intune (Endpoint Manager) web console you will need support browser (E
 2. Office 365 Admin Center:  [https://admin.microsoft.com](https://admin.microsoft.com), on left navigation menu choose **"Endpoint Manager"** and you will be redirected to option 1.
 3. Portal Azure: [https://portal.azure.com](https://portal.azure.com) in global search field type **"Intune"** and you will be redirected to option 1.
 
-![](/assets/images/Intune/intune-aad-4.PNG)
+![](/assets/images/Intune/Intune-em-1.png)
 
 ### Tenant Administration - Customization
 
 
-
 **Step 1:** Go to Tenant Administration in Endpoint Manager web console
-
-![](/assets/images/Intune/Intune-em-1.png)
 
 **Step 2:** On navigation menu go to **"Customizations"**
 
@@ -207,7 +204,7 @@ How End user will see oure settings to check this we can go to URL: [https://por
 ![](/assets/images/Intune/Intune-em-6.png)  
 
 
-### Tenant Administration - – Connectors and tokens
+### Tenant Administration – Connectors and tokens
 
 Intune (Endpoint Manager) configuration can be extend by integration of with other partners to deliver better business solution and value for end user experience and allow IT pros to setup as secure and protected environment.  
 Key benefits of those integrations:
@@ -257,3 +254,5 @@ So IT pros need to change with operationg systems are allowed.
 
 **Step 5:** **Create:** new Device limit restrictions that is assigned for dedicated group of users or devices **"All devices"** with allowed number of devices.  
 `Note: Best practice number of devices 5`  
+
+### Device clean-up rules - remove devices that are not used any more
