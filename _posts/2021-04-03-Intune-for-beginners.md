@@ -47,16 +47,16 @@ Intune is a 100% cloud-based mobile device management (MDM) and mobile applicati
 
 ## Choosing license
 
-Intune as a part of M365 is added licensing bundles to deliver all products that are necessary to manage organization.  
+Intune as a part of M365 is added to licensing bundles allowing organization manager whole platform and devices connected.  
 List of licences bundles that contain Intune (Endpoint Manager) User License.
 
 * Microsoft 365 Bussines Premium
 * Microsoft 365 E3 and E5
 
-Extension bundle for Office 365 packed.
+Extension bundle for Office 365 pack that can be bought separately.
 * Enterprise Mobility Suite E3 and E5
 
-Standalone Intune licences
+Standalone Intune (Endpoint Manager) licences
 
 * User licenses in Microsoft Intune
 * Device licenses in Microsoft Intune
@@ -67,25 +67,25 @@ Standalone Intune licences
 > **Limits:** Conditional access  
 > **Limits:** User-based management features, such as email and calendaring.  
 
-Bundle licences are more cost effective and give additional features to services.  
-Example with price found on Microsoft sites: 
+Bundle licences are more cost effective and give additional features like Azure AD P1, Azure Information Protection and more...  
+Example base on price found on Microsoft sites that showing difference on costs: 
 
 | Type | EMS - E3  | User licenses in Microsoft Intune |
 | ------------- | ------------- | ------------- |
 | Cost | 8.80 $   | 8 $ |
 
-Pricing and features of EMS: [Enterprise Mobility + Security](https://www.microsoft.com/pl-pl/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing "link title")  
+Pricing and features of EMS can be found on website: [Enterprise Mobility + Security](https://www.microsoft.com/pl-pl/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing "link title")  
 
 
-`Note: If your company won't buy bundle license please consider buying Azure Active Directory Premium 1 to enabled "Conditional access features" and auto enrollment devices when they join Azure Active Directory`
+`Note: If your company won't buy bundle license please consider buying Azure Active Directory Premium 1 to enabled "Conditional access features" and auto enrollment to Intune (Endpoint Manager) devices when they join Azure Active Directory`
 
 ## Steps for first configuration
 
 ### DNS configuration in Office Admin Panel
 
-`Note: To perform this task you need to have access to DNS Server or host provider.`
+`Note: To perform this task you need to have access to DNS Server.`
 
-**Step 1:** Create DNS entries
+**Step 1:** Create DNS entries on DNS Server
 
 | Type | Name  | Value | TTL |
 | ---| -- | ---- | ---- |
@@ -93,7 +93,7 @@ Pricing and features of EMS: [Enterprise Mobility + Security](https://www.micros
 | CANME | EnterpriseRegistration.CustomDomainName.com | EnterpriseRegistration.windows.net | 3600 |
 
 > **EnterpriseEnrollment** - To simplify enrollment, create a domain name server (DNS) alias (CNAME record type) that redirects enrollment requests to Intune servers. Otherwise, users trying to connect to Intune must enter the Intune server name during enrollment.  
->
+
 > **EnterpriseRegistration**- Azure Active Directory has a different CNAME that it uses for device registration for iOS/iPadOS, Android, and Windows devices. Intune conditional access requires devices to be registered, also called "workplace joined".
 
 Example:   
