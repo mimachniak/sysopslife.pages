@@ -63,9 +63,9 @@ Standalone Intune licences
 
 > **Note: Device licenses limits**
 > 
-> **Limits:** Intune app protection policies
-> **Limits:** Conditional access
-> **Limits:** User-based management features, such as email and calendaring.
+> **Limits:** Intune app protection policies  
+> **Limits:** Conditional access  
+> **Limits:** User-based management features, such as email and calendaring.  
 
 Bundle licences are more cost effective and give additional features to services.  
 Example with price found on Microsoft sites: 
