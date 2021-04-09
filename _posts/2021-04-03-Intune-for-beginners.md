@@ -139,16 +139,19 @@ Prerequisites
 
 **MDM user scope**
 
-This section configure auto enrollment registered devices to Intune (EndPoint Manager). Auto Enrollment will be run in background task if: 
+This section have set of options to configure auto enrollment registered devices to Intune (EndPoint Manager). Auto Enrollment will be run in background task if: 
 
 * Users add their work account to their personally owned devices
 * Users join corporate-owned devices to Azure Active Directory
+* Setup on first (delivery from shop) run Windows 10 organization join is selected
 
-None - MDM automatic enrollment disabled  
-Some - Select the Groups for Azure Active Directory (Synchronized groups from local Active Directory) that can automatically enroll their Windows 10 devices  
-All - All users can automatically enroll their Windows 10 devices 
+`Note: Windows 10: Professional and Enterprise can enroll to Azure Active Directory`
 
-`Note: For pilot implementation limit to group`  
+**None** - MDM automatic enrollment disabled  
+**Some** - Select the Groups for Azure Active Directory (Synchronized groups from local Active Directory) that can automatically enroll their Windows 10 devices  
+**All** - All users can automatically enroll their Windows 10 devices 
+
+`Note: Pilot implementation limit enrollment to group of users by choosing option "Some"`  
 `Note: Azure AD join in hybrid model require additional configuration`  
 
 > **Important and when use the same group for MDM and MAM**  
@@ -165,7 +168,7 @@ All - All users can automatically enroll their Windows 10 devices
 
 ## Intune (Endpoint Manager) Console
 
-To access Intune (Endpoint Manager) web console you will need support browser (Edge, FireFox, Chrome ... not Internet Explorer) and we have 3 options to go
+To access Intune (Endpoint Manager) web console you will need support browser (Edge, FireFox, Chrome ... not Internet Explorer) and we have 3 options to navigate:  
 
 1. In web browser typ URL: [https://endpoint.microsoft.com/](https://endpoint.microsoft.com/) 
 2. Office 365 Admin Center:  [https://admin.microsoft.com](https://admin.microsoft.com), on left navigation menu choose **"Endpoint Manager"** and you will be redirected to option 1.
@@ -182,8 +185,8 @@ To access Intune (Endpoint Manager) web console you will need support browser (E
 
 ![](/assets/images/Intune/Intune-em-3.png)
 
-In this section we will configure how end user will see **"Company Portal"** on Web / Mobile or Desktop. In customization we have few options to adjust look up to our company layout. We can customize
-* Organization name​
+In this section we will configure user experience in **"Company Portal"** on Web / Mobile or Desktop. In section customization we have options to adjust look up to our company layout. We can also customize settings and display information:  
+* Organization name
 * Theme color
 * Support information
 * Configuration allowed by **"Company Portal"**
@@ -193,7 +196,8 @@ In this section we will configure how end user will see **"Company Portal"** on 
 
 ![](/assets/images/Intune/Intune-em-8.png)  
 
-How End user will see oure settings to check this we can go to URL: [https://portal.manage.microsoft.com/](https://portal.manage.microsoft.com/). In **"Company Portal"** End user have:
+To check how end user see information and customizations go to URL: [https://portal.manage.microsoft.com/](https://portal.manage.microsoft.com/).   
+On **"Company Portal"** End user have access to informatio:  
 
 * List of all devices and settings
 * Access to application
