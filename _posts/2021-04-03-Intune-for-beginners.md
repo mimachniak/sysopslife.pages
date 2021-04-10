@@ -16,7 +16,7 @@ tags:
 ---
 ## Why I write this article
 
-This guide is create to help other IT pros that are starting with Office 365 / Intune services to help with base configuration of Intune and don't make the same mistake. Fallow this guide you will have global configuration of Intune ready.
+This guide is create to help other IT pros that are starting with Office 365 / Intune services to help with base configuration of Intune and don't make the same mistake. Follow this guide you will have global configuration of Intune ready.
 ## Whats is Intune or with new name Endpoint Manager
 
 Intune is a 100% cloud-based mobile device management (MDM) and mobile application management (MAM) provider for your apps and devices. It lets you control features and settings 
