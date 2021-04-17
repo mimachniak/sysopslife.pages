@@ -5,7 +5,6 @@ toc: true
 classes: wide
 header:
   image: /assets/images/M365-Lab/M365-Lab-Home.png
-  og_image: /assets/images/M365-Lab/M365-Lab-Home.png
   teaser: /assets/images/M365-Lab/M365-Lab-Home.png
 categories:
   - SysOps
@@ -13,7 +12,7 @@ categories:
 tags:
   - M365
   - Intune
-published: true
+published: false
 hidden: true
 ---
 
@@ -31,6 +30,10 @@ Before we begin with this you will need to consider few things:
 
 ## First Azure Active Directory Tenant
 ### What is Tenant ?
+
+ **Tenant** Is isolated dedicated space for our organization for our assets. It is within the overall O365 Data Center which would be the apartment complex. The Tenant is the container for items of your Organization such as users, domains, subscriptions, devices, permissios.  
+
+
 
 ### Create Azure Active Directory Tenant
 ## Custom domian for LAB propuse without paying
