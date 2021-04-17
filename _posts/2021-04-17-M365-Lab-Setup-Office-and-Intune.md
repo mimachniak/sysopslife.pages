@@ -2,6 +2,7 @@
 title: "[EN] Micosoft 365 Setup Lab Environment M365 and Intune"
 classes: wide
 excerpt: "[EN] Micosoft 365 Setup Lab Environment - Create your own Lab with domains setup or prepare new tenant for you company. In this article we will go through creating new tenant, add custom domains for LAB purpose, assigned licences. " 
+date: 2021-04-17
 toc: true
 toc_sticky: true
 header:
@@ -21,12 +22,18 @@ Hi I wrote this article to help other start with Office 365 and Intune, without 
 
 ## Prerequisites
 
+Before we begin with this you will need to consider few things:  
+
+- Is this will be LAB environment and won't be converted to production.
+- Is this PoC or Pilot environment that will be converted to production.
+
 ## First Azure Active Directory Tenant
 ### What is Tenant ?
 
 ### Create Azure Active Directory Tenant
-## Custom domian for LAB propuse
+## Custom domian for LAB propuse without paying
 
+## Bring you own custom domain
 ## Activate trial licences
 
 ### Office 365
