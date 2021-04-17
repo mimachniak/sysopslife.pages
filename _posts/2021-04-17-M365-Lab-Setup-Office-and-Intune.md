@@ -12,7 +12,7 @@ categories:
 tags:
   - M365
   - Intune
-published: false
+published: true
 hidden: true
 ---
 
@@ -24,9 +24,29 @@ Hi I wrote this article to help other start with Office 365 and Intune, without 
 
 Before we begin with this you will need to consider few things:  
 
-- Is this will be LAB environment and won't be converted to production.
-- Is this PoC or Pilot environment that will be converted to production.
++ Is this will be LAB environment and won't be converted to production.
+  + Use domain .onmicrosoft.com
+  + test all settings
++ Is this PoC or Pilot environment that will be converted to production.
 
+```flow
+st=>start: Login
+op=>operation: Login operation
+cond=>condition: Successful Yes or No?
+e=>end: To admin
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+
+                    
+```seq
+Andrew->China: Says Hello 
+Note right of China: China thinks\nabout it 
+China-->Andrew: How are you? 
+Andrew->>China: I am good thanks!
+```
 
 ## First Azure Active Directory Tenant
 ### What is Tenant ?
