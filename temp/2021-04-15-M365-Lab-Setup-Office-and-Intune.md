@@ -1,0 +1,20 @@
+title: "[EN] Micosoft 365 Setup Lab Environment"
+classes: wide
+excerpt: "[EN] Micosoft 365 Setup Lab Environment - Create your own Lab with domains setup or prepare new tenant for you company. In this article we will go through creating new tenant, add custom domains for LAB purpose, assigned licences. " 
+toc: true
+header:
+  image: /assets/images/Intune/Intune-1.png
+categories:
+  - SysOps
+  - Configuration
+tags:
+  - M365
+  - Intune
+published: false
+---
+
+## Why I write this article
+
+Hi I wrote this article to help other start with Office 365 and Intune, without intervention on existing tenant or start as green filed for company to begin. I hope this guide we help you to avoid misconfiguration.
+
+## Prerequisites
