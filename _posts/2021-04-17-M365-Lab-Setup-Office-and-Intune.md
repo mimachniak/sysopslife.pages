@@ -25,19 +25,38 @@ Hi I wrote this article to help other start with Office 365 and Intune, without 
 Before we begin with this you will need to consider few things:  
 
 + Is this will be LAB environment and won't be converted to production.
-  + Use domain .onmicrosoft.com
-  + test all settings
-+ Is this PoC or Pilot environment that will be converted to production.
+  + LAB Only: Tenat name suppose not be connected to organization name, once used tenant name connot be reused or changed.. **Example:** demo{Random Numbers} 
+  + LAB Only: Use the highest licences like E5 to check all settings and dependencies for compare.
+  + LAB Only: Don't use production custom domains, domain can be assigne only to one **Tenant**.
++ Is this PoC Pilot environment that will be converted to production.
+  + PoC: Tenat name suppose not be connected to organization name, once used tenant name connot be reused or changed. **Example:** poc{Random Numbers} 
+  + PoC: Use the highest licences like E5 to check all settings and dependenciesfor compare.
+  + PoC: Collect user case that you like to present.
+  + PoC: Don't use production custom domains, domain can be assigne only to one **Tenant**.
++ Is this Pilot environment that will be converted to production.
+  + Pilot: Tenant name need to be connected to Organization for adoption propose.
+  + Pilot: Tenant name need to be approve by bussines becasue will be used as first part of URL in **Sharepoint** and **OneDrive**
+  + Pilot: Use licences that match Organization business cases to avoid misconfiguration.
+  + Pilot: Don't use production custom domains, to avoid data flow distributions.  
 
+>   
+> **Notice:** Tenant name cannot be change after creation.
+>  
+--------------------------
 ## First Azure Active Directory Tenant
 ### What is Tenant ?
 
- **Tenant** Is isolated dedicated space for our organization for our assets. It is within the overall O365 Data Center which would be the apartment complex. The Tenant is the container for items of your Organization such as users, domains, subscriptions, devices, permissios.  
+ **Tenant** Is isolated dedicated space for our organization and our assets. The Tenant is the container for items of your Organization such as users, domains, subscriptions, devices, permissios, Office 365 Data. 
 
+Exmaple of data isolation
+
+![](/assets/images/M365-Lab/M365-Lab-Tenant.png)
 
 
 ### Create Azure Active Directory Tenant
 ## Custom domian for LAB propuse without paying
+
+## Custom domian for Pilot propuse without paying
 
 ## Bring you own custom domain
 ## Activate trial licences
