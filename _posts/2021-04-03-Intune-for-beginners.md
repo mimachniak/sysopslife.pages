@@ -6,9 +6,8 @@ toc: true
 header:
   image: /assets/images/Intune/Intune-1.png
 categories:
-  - Intune
-  - MDM
   - SysOps
+  - Configuration
 tags:
   - Intune
   - MDM
