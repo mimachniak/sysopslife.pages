@@ -6,6 +6,7 @@ toc: true
 header:
   image: /assets/images/Intune/Intune-1.png
   og_image: /assets/images/Intune/Intune-1.png
+  overlay_image: /assets/images/Intune/Intune-1.png
 categories:
   - SysOps
   - Configuration

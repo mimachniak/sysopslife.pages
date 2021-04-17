@@ -6,6 +6,7 @@ classes: wide
 header:
   image: /assets/images/M365-Lab/M365-Lab-Home.png
   og_image: /assets/images/M365-Lab/M365-Lab-Home.png
+  overlay_image: /assets/images/M365-Lab/M365-Lab-Home.png
 categories:
   - SysOps
   - Configuration
