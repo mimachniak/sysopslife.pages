@@ -5,6 +5,7 @@ excerpt: "[EN] Intune (Endpoint Manager) - How to start the implementation and w
 toc: true
 header:
   image: /assets/images/Intune/Intune-1.png
+  teaser: /assets/images/Intune/Intune-1.png
 categories:
   - SysOps
   - Configuration
