@@ -13,6 +13,7 @@ tags:
   - Intune
 published: true
 visible: 0
+hidden: true
 ---
 
 ## Why I write this article
