@@ -12,6 +12,7 @@ tags:
   - M365
   - Intune
 published: true
+visible: 1
 ---
 
 ## Why I write this article
