@@ -11,7 +11,7 @@ categories:
 tags:
   - M365
   - Intune
-published: false
+published: true
 ---
 
 ## Why I write this article
