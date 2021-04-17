@@ -15,7 +15,7 @@ tags:
 ---
 ## Why I write this article
 
-This guide is create to help other IT pros that are starting with Office 365 / Intune services to help with base configuration of Intune and don't make the same mistake. Fallow this guide you will have global configuration of Intune ready.
+This guide is create to help other IT pros that are starting with Office 365 / Intune services to help with base configuration of Intune and don't make the same mistake. Follow this guide you will have global configuration of Intune ready.
 ## Whats is Intune or with new name Endpoint Manager
 
 Intune is a 100% cloud-based mobile device management (MDM) and mobile application management (MAM) provider for your apps and devices. It lets you control features and settings 
@@ -46,44 +46,45 @@ Intune is a 100% cloud-based mobile device management (MDM) and mobile applicati
 
 ## Choosing license
 
-Intune as a part of M365 is added licensing bundles to deliver all products that are necessary to manage organization.  
+Intune as a part of M365 is added to licensing bundles allowing organization manager whole platform and devices connected.  
 List of licences bundles that contain Intune (Endpoint Manager) User License.
 
 * Microsoft 365 Bussines Premium
 * Microsoft 365 E3 and E5
 
-Extension bundle for Office 365 packed.
+Extension bundle for Office 365 pack that can be bought separately.
 * Enterprise Mobility Suite E3 and E5
 
-Standalone Intune licences
+Standalone Intune (Endpoint Manager) licences
 
 * User licenses in Microsoft Intune
 * Device licenses in Microsoft Intune
 
-`Note: Device licenses limits`
-* Limits: Intune app protection policies
-* Limits: Conditional access
-* Limits: User-based management features, such as email and calendaring.
+> **Note: Device licenses limits**
+> 
+> **Limits:** Intune app protection policies  
+> **Limits:** Conditional access  
+> **Limits:** User-based management features, such as email and calendaring.  
 
-Bundle licences are more cost effective and give additional features to services.  
-Example with price found on Microsoft sites: 
+Bundle licences are more cost effective and give additional features like Azure AD P1, Azure Information Protection and more...  
+Example base on price found on Microsoft sites that showing difference on costs: 
 
 | Type | EMS - E3  | User licenses in Microsoft Intune |
 | ------------- | ------------- | ------------- |
 | Cost | 8.80 $   | 8 $ |
 
-Pricing and features of EMS: [Enterprise Mobility + Security](https://www.microsoft.com/pl-pl/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing "link title")  
+Pricing and features of EMS can be found on website: [Enterprise Mobility + Security](https://www.microsoft.com/pl-pl/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing "link title")  
 
 
-`Note: If your company won't buy bundle license please consider buying Azure Active Directory Premium 1 to enabled "Conditional access features" and auto enrollment devices when they join Azure Active Directory`
+`Note: If your company won't buy bundle license please consider buying Azure Active Directory Premium 1 to enabled "Conditional access features" and auto enrollment to Intune (Endpoint Manager) devices when they join Azure Active Directory`
 
 ## Steps for first configuration
 
 ### DNS configuration in Office Admin Panel
 
-`Note: To perform this task you need to have access to DNS Server or host provider.`
+`Note: To perform this task you need to have access to DNS Server.`
 
-**Step 1:** Create DNS entries
+**Step 1:** Create DNS entries on DNS Server
 
 | Type | Name  | Value | TTL |
 | ---| -- | ---- | ---- |
@@ -91,7 +92,7 @@ Pricing and features of EMS: [Enterprise Mobility + Security](https://www.micros
 | CANME | EnterpriseRegistration.CustomDomainName.com | EnterpriseRegistration.windows.net | 3600 |
 
 > **EnterpriseEnrollment** - To simplify enrollment, create a domain name server (DNS) alias (CNAME record type) that redirects enrollment requests to Intune servers. Otherwise, users trying to connect to Intune must enter the Intune server name during enrollment.  
->
+
 > **EnterpriseRegistration**- Azure Active Directory has a different CNAME that it uses for device registration for iOS/iPadOS, Android, and Windows devices. Intune conditional access requires devices to be registered, also called "workplace joined".
 
 Example:   
@@ -137,16 +138,19 @@ Prerequisites
 
 **MDM user scope**
 
-This section configure auto enrollment registered devices to Intune (EndPoint Manager). Auto Enrollment will be run in background task if: 
+This section have set of options to configure auto enrollment registered devices to Intune (EndPoint Manager). Auto Enrollment will be run in background task if: 
 
 * Users add their work account to their personally owned devices
 * Users join corporate-owned devices to Azure Active Directory
+* Setup on first (delivery from shop) run Windows 10 organization join is selected
 
-None - MDM automatic enrollment disabled  
-Some - Select the Groups for Azure Active Directory (Synchronized groups from local Active Directory) that can automatically enroll their Windows 10 devices  
-All - All users can automatically enroll their Windows 10 devices 
+`Note: Windows 10: Professional and Enterprise can enroll to Azure Active Directory`
 
-`Note: For pilot implementation limit to group`  
+**None** - MDM automatic enrollment disabled  
+**Some** - Select the Groups for Azure Active Directory (Synchronized groups from local Active Directory) that can automatically enroll their Windows 10 devices  
+**All** - All users can automatically enroll their Windows 10 devices 
+
+`Note: Pilot implementation limit enrollment to group of users by choosing option "Some"`  
 `Note: Azure AD join in hybrid model require additional configuration`  
 
 > **Important and when use the same group for MDM and MAM**  
@@ -163,7 +167,7 @@ All - All users can automatically enroll their Windows 10 devices
 
 ## Intune (Endpoint Manager) Console
 
-To access Intune (Endpoint Manager) web console you will need support browser (Edge, FireFox, Chrome ... not Internet Explorer) and we have 3 options to go
+To access Intune (Endpoint Manager) web console you will need support browser (Edge, FireFox, Chrome ... not Internet Explorer) and we have 3 options to navigate:  
 
 1. In web browser typ URL: [https://endpoint.microsoft.com/](https://endpoint.microsoft.com/) 
 2. Office 365 Admin Center:  [https://admin.microsoft.com](https://admin.microsoft.com), on left navigation menu choose **"Endpoint Manager"** and you will be redirected to option 1.
@@ -180,8 +184,8 @@ To access Intune (Endpoint Manager) web console you will need support browser (E
 
 ![](/assets/images/Intune/Intune-em-3.png)
 
-In this section we will configure how end user will see **"Company Portal"** on Web / Mobile or Desktop. In customization we have few options to adjust look up to our company layout. We can customize
-* Organization name​
+In this section we will configure user experience in **"Company Portal"** on Web / Mobile or Desktop. In section customization we have options to adjust look up to our company layout. We can also customize settings and display information:  
+* Organization name
 * Theme color
 * Support information
 * Configuration allowed by **"Company Portal"**
@@ -191,7 +195,8 @@ In this section we will configure how end user will see **"Company Portal"** on 
 
 ![](/assets/images/Intune/Intune-em-8.png)  
 
-How End user will see oure settings to check this we can go to URL: [https://portal.manage.microsoft.com/](https://portal.manage.microsoft.com/). In **"Company Portal"** End user have:
+To check how end user see information and customizations go to URL: [https://portal.manage.microsoft.com/](https://portal.manage.microsoft.com/).   
+On **"Company Portal"** End user have access to informatio:  
 
 * List of all devices and settings
 * Access to application
