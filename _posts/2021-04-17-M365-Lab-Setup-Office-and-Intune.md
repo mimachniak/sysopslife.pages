@@ -12,7 +12,7 @@ categories:
 tags:
   - M365
   - Intune
-published: true
+published: false
 hidden: true
 ---
 
@@ -96,7 +96,7 @@ Microsoft for make simple onboarding organization to Office365 or Azure, sometim
 
 ![](/assets/images/M365-Lab/M365-Tenant-3.png)
 
-**Step 4:** Verify your identity but SMS code or phone call
+**Step 4:** Verify your identity by SMS code or phone call
 
 ![](/assets/images/M365-Lab/M365-Tenant-4.png)
 
