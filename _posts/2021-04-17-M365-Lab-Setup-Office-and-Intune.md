@@ -62,13 +62,14 @@ Before we begin with this you will need to consider few things:
 Microsoft for make simple onboarding organization to Office365 or Azure, sometimes provsion tenant automatical without passing any information, as the name of tenant is using e-mail address and location is take form oure accounts.   
 **Example** of this scenario
  - MSDN Subscriptions.
- - Azure free trial Subscriptions.
+ - Azure free trial Subscriptions.  
 
- **LAB** that is not connected to our organization this name nad location dosen't matter, but if we will create **PoC** or **Pilot** tenant that in feature can be converted to production we have to be more awere when is created and what name is used.  
+ **LAB** Tenant and won't be used for production so in this case name nad location dosen't matter, but if we will create **PoC** or **Pilot** tenant that in feature can be converted to production we have to be more awere when data will be stored and what name is used.  
 
 >
 > **Notice:** Tenant **"Location"** have impact on services that we can use in Office 365, for example **Phone Systems**
->
+>  
+
 ### Create Azure Active Directory Tenant
 
 **Step 1:** Open a browser in InPrivate session, and navigate in browser to https://account.azure.com/organization
@@ -101,6 +102,21 @@ Microsoft for make simple onboarding organization to Office365 or Azure, sometim
 ![](/assets/images/M365-Lab/M365-Tenant-4.png)
 
 ![](/assets/images/M365-Lab/M365-Tenant-5.png)
+
+**Step 5:** Finish createion of tenant.
+
+![](/assets/images/M365-Lab/M365-Tenant-6.png)
+
+**Step 6:** Veryfication of tenant settings. Log on to Azure Active Directory admin center by URL: [https://aad.portal.azure.com/](https://aad.portal.azure.com/)
+
+In Azure Active Directory Portal navigate to **"Overview"**  
+
+![](/assets/images/M365-Lab/M365-Tenant-7.png)  
+
+In Azure Active Directory Portal navigate to **"Properties"**
+
+![](/assets/images/M365-Lab/M365-Tenant-8.png)  
+
 ## Custom domian for LAB propuse without paying (LAB / PoC)
 
 ## Custom domian for pilot or production
