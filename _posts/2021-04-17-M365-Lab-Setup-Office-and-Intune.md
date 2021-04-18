@@ -12,7 +12,7 @@ categories:
 tags:
   - M365
   - Intune
-published: false
+published: true
 hidden: true
 ---
 
