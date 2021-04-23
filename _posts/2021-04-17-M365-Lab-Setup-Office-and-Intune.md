@@ -188,7 +188,11 @@ Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog
 ![](/assets/images/M365-Lab/M365-Lab-Domain-10.png) 
 
 
-**Step 16:** Go back to tab with [https://admin.office.com/](https://admin.office.com/) and start domain verification.  
+**Step 16:** In section **"Add DNS record"** go to bottom and expand **"Advance"** and select options for **"Skype for Bussines (Teams)"** and **"Intune"**
+
+![](/assets/images/M365-Lab/M365-Lab-Domain-11.png) 
+![](/assets/images/M365-Lab/M365-Lab-Domain-11-1.png) 
+![](/assets/images/M365-Lab/M365-Lab-Domain-11-2.png) 
 
 ## Activate trial licences
 
