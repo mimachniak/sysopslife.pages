@@ -151,7 +151,7 @@ Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-2.png)
 
-**Step 6:** Enter friendly name of domain like **sys4ops** or if this demo **demo{Random Number}** example **sys4ops.MyO365.site**
+**Step 6:** Enter friendly name of domain like **sys4ops** or if this demo **demo{Random Number}** example **demo53567.MyO365.site**
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-3.png)
 
@@ -161,10 +161,24 @@ Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-5.png) 
 
-**Step 10:** Enter your domain name generated in step 6 like in example **sys4ops.MyO365.site**
+**Step 10:** Enter your domain name generated in step 6 like in example **demo53567.MyO365.site**
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-6.png)  
 
+**Step 11:** Confirm usage of domain
+
+![](/assets/images/M365-Lab/M365-Lab-Domain-6-1.png) 
+
+**Step 12:** Domain verification option in Office 365 chose **"TXT"** DNS record
+
+![](/assets/images/M365-Lab/M365-Lab-Domain-7.png) 
+
+**Step 13:** Copy value of **"TXT Value"**
+
+![](/assets/images/M365-Lab/M365-Lab-Domain-8.png) 
+
+
+**Step 14:** Copy value of **"TXT Value"**
 
 ## Activate trial licences
 
