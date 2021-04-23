@@ -12,7 +12,7 @@ categories:
 tags:
   - M365
   - Intune
-published: true
+published: false
 hidden: true
 ---
 
@@ -155,7 +155,10 @@ Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-3.png)
 
-**Step 7:** On next tab in browser go to link: [https://admin.office.com/](https://admin.office.com/) 
+**Step 7:** On next tab in browser go to  [https://admin.office.com/](https://admin.office.com/)
+**Step 8:** In Admin panel go to **Settings** and **Domains**
+
+![](/assets/images/M365-Lab/M365-Lab-Domain-5.png)  
 
 
 
