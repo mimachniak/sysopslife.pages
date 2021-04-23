@@ -173,22 +173,22 @@ Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-7.png) 
 
-**Step 13:** Copy value of **"TXT Value"**
+**Step 13:** Copy value from **"TXT Value"**
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-8.png) 
 
 
-**Step 14:** Go back to tab form step 6 and past **"TXT Value"** to domain verification failed and **"Save"**.  
+**Step 14:** Go back to tab form step 6 ([https://www.myo365.site/](https://www.myo365.site/)) and past **"TXT Value"** to domain verification failed and **"Save"**.  
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-9.png) 
 
-**Step 15:** Go back to tab with [https://admin.office.com/](https://admin.office.com/) and start domain verification.  
+**Step 15:** Go back to tab with [https://admin.office.com/](https://admin.office.com/) and start domain verification, click **"Veryfie"**.  
 
->
-> **Notice:** DNS propagation can take up to 48h.
->
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-10.png) 
+
+
+**Step 16:** Go back to tab with [https://admin.office.com/](https://admin.office.com/) and start domain verification.  
 
 ## Activate trial licences
 
