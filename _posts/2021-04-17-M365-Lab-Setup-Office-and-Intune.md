@@ -151,18 +151,20 @@ Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-2.png)
 
-**Step 6:** Enter friendly name of domain like **sys4ops** or if this demo **demo{Random Number}**
+**Step 6:** Enter friendly name of domain like **sys4ops** or if this demo **demo{Random Number}** example **sys4ops.MyO365.site**
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-3.png)
 
-**Step 7:** On next tab in browser go to  [https://admin.office.com/](https://admin.office.com/)
-**Step 8:** In Admin panel go to **Settings** and **Domains**
+**Step 7:** On next tab in browser go to  [https://admin.office.com/](https://admin.office.com/)  
+**Step 8:** In Admin panel go to **Settings** and **Domains**  
+**Step 9:** Click on **Add domain**  
 
-![](/assets/images/M365-Lab/M365-Lab-Domain-5.png)  
+![](/assets/images/M365-Lab/M365-Lab-Domain-5.png) 
 
-**Step 9:** Click on **Add domain**
+**Step 10:** Enter your domain name generated in step 6 like in example **sys4ops.MyO365.site**
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-6.png)  
+
 
 ## Activate trial licences
 
