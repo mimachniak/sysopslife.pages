@@ -140,28 +140,28 @@ But with help of community and with credentials for  "Gerenios Ltd" we can gener
 Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog.com/post/my-o365-site/) 
 ### DNS records for Office 365
 
-**Step 1:** Open a browser in InPrivate session, and navigate in browser to [https://portal.office.com/](https://portal.office.com/) 
-**Step 2:** Login with credentials created in previous step like **adm.local@*****.onmicosoft.com**
-**Step 3:** On diffrent tab navigate to link [https://www.myo365.site/](https://www.myo365.site/) 
-**Step 4:** On page click **"Login"**
+**Step 1:** Open a browser in InPrivate session, and navigate in browser to [https://portal.office.com/](https://portal.office.com/) .
+**Step 2:** Login with credentials created in previous step like **adm.local@*****.onmicosoft.com**.
+**Step 3:** On diffrent tab navigate to link [https://www.myo365.site/](https://www.myo365.site/) .
+**Step 4:** On page click **"Login"**.
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-1.png)
 
-**Step 5:** Approve delegation and permission for Tenant
+**Step 5:** Approve delegation and permission for Tenant.
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-2.png)
 
-**Step 6:** Enter friendly name of domain like **sys4ops** or if this demo **demo{Random Number}** example **demo53567.MyO365.site**
+**Step 6:** Enter friendly name of domain like **sys4ops** or if this demo **demo{Random Number}** example **demo53567.MyO365.site**, don't close tab in browser.
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-3.png)
 
 **Step 7:** On next tab in browser go to  [https://admin.office.com/](https://admin.office.com/)  
-**Step 8:** In Admin panel go to **Settings** and **Domains**  
-**Step 9:** Click on **Add domain**  
+**Step 8:** In Admin panel go to **Settings** and **Domains**.  
+**Step 9:** Click on **Add domain**.  
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-5.png) 
 
-**Step 10:** Enter your domain name generated in step 6 like in example **demo53567.MyO365.site**
+**Step 10:** Enter your domain name generated in step 6 like in example **demo53567.MyO365.site**.
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-6.png)  
 
@@ -178,7 +178,17 @@ Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog
 ![](/assets/images/M365-Lab/M365-Lab-Domain-8.png) 
 
 
-**Step 14:** Copy value of **"TXT Value"**
+**Step 14:** Go back to tab form step 6 and past **"TXT Value"** to domain verification failed and **"Save"**.  
+
+![](/assets/images/M365-Lab/M365-Lab-Domain-9.png) 
+
+**Step 15:** Go back to tab with [https://admin.office.com/](https://admin.office.com/) and start domain verification.  
+
+>
+> **Notice:** DNS propagation can take up to 48h.
+>
+
+![](/assets/images/M365-Lab/M365-Lab-Domain-10.png) 
 
 ## Activate trial licences
 
