@@ -12,7 +12,7 @@ categories:
 tags:
   - M365
   - Intune
-published: false
+published: true
 hidden: true
 ---
 
@@ -48,6 +48,10 @@ Before we begin with this you will need to consider few things:
 > **Notice:** Tenant **"Location"** cannot be change after creation.
 >  
 >
+
+
+![](/assets/images/M365-Lab/Tenant-Decision.png)
+
 --------------------------
 ## First Azure Active Directory Tenant
 ### What is Tenant ?
@@ -72,7 +76,7 @@ Microsoft for make simple onboarding organization to Office365 or Azure, sometim
 
 ### Create Azure Active Directory Tenant
 
-**Step 1:** Open a browser in InPrivate session, and navigate in browser to https://account.azure.com/organization
+**Step 1:** Open a browser in InPrivate session, and navigate in browser to [https://account.azure.com/organization/](https://account.azure.com/organization/) 
 
 ![](/assets/images/M365-Lab/M365-Tenant-1.png)
 
@@ -119,7 +123,41 @@ In Azure Active Directory Portal navigate to **"Properties"**
 
 ## Custom domian for LAB propuse without paying (LAB / PoC)
 
-## Custom domian for pilot or production
+### How to obtain domain ?
+
+Domains can be bough on any DNS provider on your country or region, choosing domains is only depending on business needs. But for LAB or PoC propuse some time is good to have dedicated domin for testing and good representation of bussines case, but there is non free domain. 
+
+But with help of community and with credentials for  "Gerenios Ltd" we can generated free domain dedicated for Office365 with names:
+
+>
+> **Notice:** Those domains are only LAB and POC propuse, don't use them for production. 
+>
+
+* MyO365.site
+* MyO365.net
+* MyO365.online
+
+Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog.com/post/my-o365-site/) 
+### DNS records for Office 365
+
+**Step 1:** Open a browser in InPrivate session, and navigate in browser to [https://portal.office.com/](https://portal.office.com/) 
+**Step 2:** Login with credentials created in previous step like **adm.local@*****.onmicosoft.com**
+**Step 3:** On diffrent tab navigate to link [https://www.myo365.site/](https://www.myo365.site/) 
+**Step 4:** On page click **"Login"**
+
+![](/assets/images/M365-Lab/M365-Lab-Domain-1.png)
+
+**Step 5:** Approve delegation and permission for Tenant
+
+![](/assets/images/M365-Lab/M365-Lab-Domain-2.png)
+
+**Step 6:** Enter friendly name of domain like **sys4ops** or if this demo **demo{Random Number}**
+
+![](/assets/images/M365-Lab/M365-Lab-Domain-3.png)
+
+**Step 7:** On next tab in browser go to link: [https://admin.office.com/](https://admin.office.com/) 
+
+
 
 ## Bring you own custom domain
 ## Activate trial licences
