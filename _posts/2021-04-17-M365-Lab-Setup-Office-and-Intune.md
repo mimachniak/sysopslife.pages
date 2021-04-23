@@ -12,7 +12,7 @@ categories:
 tags:
   - M365
   - Intune
-published: false
+published: true
 hidden: true
 ---
 
@@ -160,9 +160,10 @@ Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-5.png)  
 
+**Step 9:** Click on **Add domain**
 
+![](/assets/images/M365-Lab/M365-Lab-Domain-6.png)  
 
-## Bring you own custom domain
 ## Activate trial licences
 
 ### Office 365
