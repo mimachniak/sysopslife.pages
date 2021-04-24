@@ -214,6 +214,7 @@ Activating Office 365 trial license (Microsoft 365 is not available for trial ac
 ### Intune (Enterprise Mobility Suite)
 
 Activating Enterprise Mobility Suite trial license (Microsoft 365 is not available for trial activation)
+Intune bundle licences are described in this post: [Intune-for-beginners/#choosing-license](https://sysopslife.sys4ops.pl/2021/04/03/Intune-for-beginners/#choosing-license)
 
 ## Create Custom accounts and groups
 
