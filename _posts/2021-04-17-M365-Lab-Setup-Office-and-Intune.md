@@ -213,6 +213,7 @@ Activating Microsoft 365 trial license, if your business is using Office 365 you
 * Office 365 Trial (E3/E5) - License plans: [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/business/compare-all-microsoft-365-business-products?&activetab=tab:primaryr2)
 * Enterprise Mobility Suite) - Intune bundle licences are described in this post: [Intune-for-beginners/#choosing-license](https://sysopslife.sys4ops.pl/2021/04/03/Intune-for-beginners/#choosing-license)
 
+Kudos to this blog wht you can check licences SKU compare: [Compare Microsoft office 365 plans/](https://lazyadmin.nl/compare-microsoft-office-365-plans/)
 
 ## Create Custom accounts and groups
 
