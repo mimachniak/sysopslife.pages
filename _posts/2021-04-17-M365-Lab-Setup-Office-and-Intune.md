@@ -207,14 +207,12 @@ When we prepare pre-production tenant we can add trial licences and start PoC wi
 > * Adding production licences we don't have to re assign them to users if are in the same licences level. Trail will expired production licences will be active. **Example:** Trial license was M365 E5 and production bought by organization > are M365 E5 as well.
 >  
 
-### Office 365
+### Microsoft 365
 
-Activating Office 365 trial license (Microsoft 365 is not available for trial activation)
+Activating Microsoft 365 trial license, if your business is using Office 365 you can active separately. Chose licences levle and bundel to you business requirements, in LAB environment I will use the highes that is E5.
+* Office 365 Trial (E3/E5) - License plans: [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/business/compare-all-microsoft-365-business-products?&activetab=tab:primaryr2)
+* Enterprise Mobility Suite) - Intune bundle licences are described in this post: [Intune-for-beginners/#choosing-license](https://sysopslife.sys4ops.pl/2021/04/03/Intune-for-beginners/#choosing-license)
 
-### Intune (Enterprise Mobility Suite)
-
-Activating Enterprise Mobility Suite trial license (Microsoft 365 is not available for trial activation)
-Intune bundle licences are described in this post: [Intune-for-beginners/#choosing-license](https://sysopslife.sys4ops.pl/2021/04/03/Intune-for-beginners/#choosing-license)
 
 ## Create Custom accounts and groups
 
