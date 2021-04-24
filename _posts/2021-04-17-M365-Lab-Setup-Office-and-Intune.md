@@ -213,6 +213,8 @@ Activating Office 365 trial license (Microsoft 365 is not available for trial ac
 
 ### Intune (Enterprise Mobility Suite)
 
-## Create Custom Accounts
+Activating Enterprise Mobility Suite trial license (Microsoft 365 is not available for trial activation)
+
+## Create Custom accounts and groups
 
 
