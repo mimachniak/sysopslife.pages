@@ -155,25 +155,25 @@ Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-3.png)
 
-**Step 7:** On next tab in browser go to  [https://admin.office.com/](https://admin.office.com/)  
+**Step 7:** On next tab in browser go to  [https://admin.office.com/](https://admin.office.com/).  
 **Step 8:** In Admin panel go to **Setup** and **Domains**.  
 **Step 9:** Click on **Add domain**.  
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-5.png) 
 
-**Step 10:** Enter your domain name generated in step 6 like in example **demo53567.MyO365.site**.
+**Step 10:** Enter your domain name generated in step 6 like in example **demo53567.MyO365.site**.  
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-6.png)  
 
-**Step 11:** Confirm usage of domain
+**Step 11:** Confirm usage of domain.  
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-6-1.png) 
 
-**Step 12:** Domain verification option in Office 365 chose **"TXT"** DNS record
+**Step 12:** Domain verification option in Office 365 chose **"TXT"** DNS record.  
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-7.png) 
 
-**Step 13:** Copy value from **"TXT Value"**
+**Step 13:** Copy value from **"TXT Value"**.  
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-8.png) 
 
@@ -188,7 +188,7 @@ Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog
 ![](/assets/images/M365-Lab/M365-Lab-Domain-10.png) 
 
 
-**Step 16:** In section **"Add DNS record"** go to bottom and expand **"Advance"** and select options for **"Skype for Bussines (Teams)"** and **"Intune"**
+**Step 16:** In section **"Add DNS record"** go to bottom and expand **"Advance"** and select options for **"Skype for Bussines (Teams)"** and **"Intune"**  
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-11.png) 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-11-1.png) 
@@ -205,7 +205,7 @@ When we prepare pre-production tenant we can add trial licences and start PoC wi
 > * We cannot on the same tenant launch another trial for the same version of product and licences level.
 > * Content will be stored for 30 days, of license won't be active content will be deleted.
 > * Adding production licences we don't have to re assign them to users if are in the same licences level. Trail will expired production licences will be active. **Example:** Trial license was M365 E5 and production bought by organization > are M365 E5 as well.
->
+>  
 
 ### Office 365
 
