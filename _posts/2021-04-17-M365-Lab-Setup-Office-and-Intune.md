@@ -197,17 +197,19 @@ Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog
 
 ## Activate trial licences
 
-Microsoft allow to activate **once** peer tenant trial licences for diffrent products on different versions, trial licences are activate for 30 days and sometime can be extended to another 30 days. 
+Microsoft allow to activate **once** peer tenant activate trial licences for diffrent products on licences level, trial licences are activate for 30 days and sometime can be extended to another 30 days. 
 When we prepare pre-production tenant we can add trial licences and start PoC without paying money, onboard pilot users for testing. 
 
-**Trial expired:**
-
-* We cannot on the same tenant launch another trial for the same version of product and licences level.
-* Content will be stored for 30 days, of license won't be active content will be deleted.
-* Adding production licences we don't have to re assign them to users if are in the same licences level. Trail will expired production licences will be active. **Example:** Trial license was M365 E5 and production bought by organization are M365 E5 as well.
+> **Trial expired:**
+>
+> * We cannot on the same tenant launch another trial for the same version of product and licences level.
+> * Content will be stored for 30 days, of license won't be active content will be deleted.
+> * Adding production licences we don't have to re assign them to users if are in the same licences level. Trail will expired production licences will be active. **Example:** Trial license was M365 E5 and production bought by organization > are M365 E5 as well.
+>
 
 ### Office 365
 
+Activating Office 365 trial license (Microsoft 365 is not available for trial activation)
 
 ### Intune (Enterprise Mobility Suite)
 
