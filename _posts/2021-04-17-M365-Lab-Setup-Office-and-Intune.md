@@ -156,7 +156,7 @@ Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog
 ![](/assets/images/M365-Lab/M365-Lab-Domain-3.png)
 
 **Step 7:** On next tab in browser go to  [https://admin.office.com/](https://admin.office.com/)  
-**Step 8:** In Admin panel go to **Settings** and **Domains**.  
+**Step 8:** In Admin panel go to **Setup** and **Domains**.  
 **Step 9:** Click on **Add domain**.  
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-5.png) 
@@ -194,9 +194,23 @@ Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog
 ![](/assets/images/M365-Lab/M365-Lab-Domain-11-1.png) 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-11-2.png) 
 
+
 ## Activate trial licences
 
+Microsoft allow to activate **once** peer tenant trial licences for diffrent products on different versions, trial licences are activate for 30 days and sometime can be extended to another 30 days. 
+When we prepare pre-production tenant we can add trial licences and start PoC without paying money, onboard pilot users for testing. 
+
+**Trial expired:**
+
+* We cannot on the same tenant launch another trial for the same version of product and licences level.
+* Content will be stored for 30 days, of license won't be active content will be deleted.
+* Adding production licences we don't have to re assign them to users if are in the same licences level. Trail will expired production licences will be active. **Example:** Trial license was M365 E5 and production bought by organization are M365 E5 as well.
+
 ### Office 365
+
+
 ### Intune (Enterprise Mobility Suite)
 
 ## Create Custom Accounts
+
+
