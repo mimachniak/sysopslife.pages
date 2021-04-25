@@ -13,7 +13,7 @@ categories:
 tags:
   - M365
   - Azure
-  - Licenses
+  - Licences
 published: true
 hidden: false
 ---
