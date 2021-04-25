@@ -18,4 +18,4 @@ I have been passionate about information technology for over 20 years, it is my 
 ## Public Speaking
 
 
-* Microsoft 365 User Group Poland: [Microsoft 365 User Group Poland](https://www.meetup.com/pl-PL/Microsoft-365-User-Group-Poland/?_locale=pl-PL "link title")  
+* Microsoft 365 User Group Poland: [Microsoft 365 User Group Poland](https://www.meetup.com/pl-PL/Microsoft-365-User-Group-Poland/?_locale=pl-PL "Microsoft 365 User Group Poland")  
