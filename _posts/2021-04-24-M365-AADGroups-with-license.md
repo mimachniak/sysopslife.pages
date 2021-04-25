@@ -15,7 +15,7 @@ tags:
   - AAD
   - License
 published: true
-hidden: true
+hidden: false
 ---
 
 ## Why I write this article
