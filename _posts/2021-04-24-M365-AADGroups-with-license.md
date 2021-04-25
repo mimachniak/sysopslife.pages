@@ -14,7 +14,7 @@ tags:
   - M365
   - AAD
   - License
-published: false
+published: true
 hidden: true
 ---
 
@@ -58,38 +58,55 @@ To use group base license assignment, you need have Azure Active Directory Tenan
 
 ![](/assets/images/M365-Lab/M365-Lab-Groups-3.PNG)
 
-**Step 6:** Veryfied that group was created, and click on group name to go to settings of group.
+**Step 6:** Verified that group was created, and click on group name to go to settings of group.
 
 
 ![](/assets/images/M365-Lab/M365-Lab-Groups-4.PNG)
 
-**Step 7:** Veryfied that group was created, and click on group name to go to settings of group. In group settings on menu go to **"Licenses"** options.
+**Step 7:** Verified that group was created, and click on group name to go to settings of group. In group settings on menu go to **"Licenses"** options.
 
 ![](/assets/images/M365-Lab/M365-Lab-Groups-9.PNG)
 
 **Step 8:** Click in **"Licenses"** section, **"Assignments"**.
 
 > Best practice: We don't need to activate all services in group, please choose those services that are onboarded to your organization.  
-> Best practice: Different group can have different services enabled. If you assign groups with different services to user, they will merge.
+> Best practice: Different group can have different services enabled. If you assign groups with different services to user, they will merge.  
 
 ![](/assets/images/M365-Lab/M365-Lab-Groups-6.PNG)
 
 
-**Step 9:** Select licences **(1)** that you like to assign to group. Not this that in organization you can have multiple licences. After assignment go back to **"Group Settings (2)"** in navigation. 
+**Step 9:** Select licenses **(1)** that you like to assign to group. Not this that in organization you can have multiple licenses. After assignment go back to **"Group Settings (2)"** in navigation. 
 
 ![](/assets/images/M365-Lab/M365-Lab-Groups-7.PNG)
 
-**Step 10:** Verify that licences are assigned.
+**Step 10:** Verify that licenses are assigned.
 * Product - License name and level like Exchange Plan 1, Microsoft 365 E5
 * State - Active or expired. 
-* Enable Services - number of active services
+* Enable Services - number of active services, like Teams, Exchange etc.  
 
-![](/assets/images/M365-Lab/M365-Lab-Groups-8.PNG)
+> Best practice: Different group can have different services enabled. If you assign groups with different services to user, they will merge. 
 
+**Step 11:** Add users to group, in group **Settings** in menu navigate to **"Members" (1)** and click **"Add members" (2)** and typ user name that you like to add to group.
+
+
+![](/assets/images/M365-Lab/M365-Lab-Groups-10.PNG)  
+![](/assets/images/M365-Lab/M365-Lab-Groups-11.PNG)
+
+**Step 13:** Go to user **settings** on menu go to **"Licenses"** options, and verified that licenses are assigned and inherited form group.
+
+![](/assets/images/M365-Lab/M365-Lab-Groups-12.PNG)
 ## Azure Active Directory Group creation with PowerShell  
 
+**Step 1:** Install PowerShell modules.
 
-**Step 1:** Log on to Azure Active Directory.
+```powershell
+Install-module AzureADLicensing
+Install-module AzureAD
+Install-module Az
+```
+
+
+**Step 2:** Log on to Azure Active Directory.
 
 ```powershell
 
@@ -104,7 +121,7 @@ adm.local@demoM36534556.onmicrosoft.com AzureCloud  d4520405-eabf-47ea-998f-15c7
 
 ```
 
-**Step 2:** Log on to Azure Account.
+**Step 3:** Log on to Azure Account.
 
 ```powershell
 
@@ -119,7 +136,7 @@ adm.local@demoM36534556.onmicrosoft.com                  d4520405-eabf-47ea-998f
 ```
 
 
-**Step 3:** Create security group in Azure AD. Copy **ObjectId** of group.
+**Step 4:** Create security group in Azure AD. Copy **ObjectId** of group.
 
 ```powershell
 
@@ -134,10 +151,10 @@ e6a5dbb0-5a2d-44c3-a23f-c4b841d27040 GLA-M365E5-PS-Full Group for license assign
 
 ```
 
-**Step 4:** Get all License type and data available in tenant. Copy **accountSkuId**
+**Step 5:** Get all License type and data available in tenant. Copy **accountSkuId**
 
 ```powershell
-# Get all License type and data
+# Get all licences type and data
 
 Get-AADLicenseSku 
 
@@ -154,7 +171,7 @@ serviceStatuses : {@{provisioningStatus=Success; servicePlan=}, @{provisioningSt
 
 ```
 
-**Step 5:** List all groups in Azure AD to get Object ID of group.
+**Step 6:** List all groups in Azure AD to get Object ID of group.
 
 ```powershell
 
@@ -171,7 +188,7 @@ e6a5dbb0-5a2d-44c3-a23f-c4b841d27040 GLA-M365E5-PS-Full Group for license assign
 
 ```
 
-**Step 6:** Assign M365 Full license to security group. Enter data from previous steps: **ObjectId** when licenses will be assigned, and license SKU ID: **accountSkuId**.
+**Step 7:** Assign M365 Full license to security group. Enter data from previous steps: **ObjectId** when licenses will be assigned, and license SKU ID: **accountSkuId**.
 
 ```powershell
 # Assign M365 Full license to group created
@@ -180,7 +197,7 @@ Add-AADGroupLicenseAssignment -groupId "e6a5dbb0-5a2d-44c3-a23f-c4b841d27040" -a
 
 ```
 
-**Step 6:** # Full script for group creation and licences assigment with passing data.
+**Step 8:** # Full script for group creation and licences assigment with passing data.
 
 ```powershell
 
