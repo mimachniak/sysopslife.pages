@@ -6,6 +6,7 @@ classes: wide
 header:
   image: /assets/images/M365-Lab/M365-Lab-Groups-main.png
   teaser: /assets/images/M365-Lab/M365-Lab-Groups-main.png
+  og_image: /assets/images/M365-Lab/M365-Lab-Groups-main.png
 categories:
   - SysOps
   - PowerShell
