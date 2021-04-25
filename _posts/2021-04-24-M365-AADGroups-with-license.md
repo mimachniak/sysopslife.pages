@@ -12,8 +12,8 @@ categories:
   - Configuration
 tags:
   - M365
-  - AAD
-  - License
+  - Azure
+  - Licenses
 published: true
 hidden: false
 ---
