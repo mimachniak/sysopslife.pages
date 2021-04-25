@@ -8,5 +8,7 @@ main:
     url: /year-archive/
   - title: "Tags"
     url: /tags/
+  - title: "Category"
+    url: /category-archive/
   - title: "Sitemap"
     url: /sitemap/
