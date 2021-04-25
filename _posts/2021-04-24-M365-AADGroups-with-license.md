@@ -6,8 +6,6 @@ classes: wide
 header:
   image: /assets/images/M365-Lab/M365-Lab-Groups-main.png
   teaser: /assets/images/M365-Lab/M365-Lab-Groups-main.png
-  # overlay_image: /assets/images/M365-Lab/M365-Lab-Groups-main.png
-  og_image: /assets/images/M365-Lab/M365-Lab-Groups-main.png
 categories:
   - SysOps
   - PowerShell
@@ -19,6 +17,11 @@ tags:
 published: true
 hidden: false
 ---
+
+<p align="center">
+<img src="/assets/images/M365-Lab/M365-Lab-Groups-main.png?raw=true" alt="Azure Active Directory License assignment base on groups."/>
+</p>
+
 
 ## Why I write this article
 
