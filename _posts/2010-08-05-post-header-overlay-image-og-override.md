@@ -14,7 +14,7 @@ tags:
   - edge case
   - image
   - layout
-published: true
+published: false
 hidden: true
 last_modified_at: 2017-10-26T15:12:19-04:00
 ---
