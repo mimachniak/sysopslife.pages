@@ -1,7 +1,6 @@
 ---
 title: "Post: Overlay Image with OpenGraph Override"
 header:
-  #overlay_image: /assets/images/unsplash-image-1.jpg
   og_image: /assets/images/page-header-og-image.png
   teaser: /assets/images/page-header-teaser.png
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
@@ -26,6 +25,7 @@ This post has a header image with an OpenGraph override.
 header:
   overlay_image: /assets/images/unsplash-image-1.jpg
   og_image: /assets/images/page-header-og-image.png
+  teaser: /assets/images/page-header-teaser.png
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
   actions:
     - label: "Learn more"
