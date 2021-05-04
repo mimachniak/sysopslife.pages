@@ -22,7 +22,7 @@ hidden: true
 
 ## Why I write this article
 
-Hi, I wrote this article to help with creation of first Microsoft 365 tenant that can be convert to production environment. In this article I will highlight some point to avoid mistake that I have made in past. I base all information about my experience. 
+Hi, I wrote this article to help with creation of first Microsoft 365 tenant that can be convert to production environment. In this article I will highlight some point to avoid mistake that I have made in past, all information are base on my experience. 
 
 ## Prerequisites 
 
@@ -230,7 +230,32 @@ Activating Microsoft 365 trial license, if your business is using Office 365 you
 
 Kudos to this blog what you can check license SKU compare: [Compare Microsoft office 365 plans/](https://lazyadmin.nl/compare-microsoft-office-365-plans/)
 
-## Create new Azure AD user (Cloud only)
+
+**Step 1:** In browser go to URL [https://admin.office.com/](https://admin.office.com/)and login with global administrator credentials. 
+
+![](/assets/images/M365-Lab/M365-Licences-1.png) 
+
+**Step 2:** In left navigation menu go to **"Billing"** and **"Purchase Services"**.
+
+![](/assets/images/M365-Lab/M365-Licences-2.png) 
+
+
+**Step 3:** On search  box please type license name or level to filter information, in this example we like to lunch Intune and Office 365, so we are choosing to use Microsoft 365 **E5** as a trial. Click on choose license.
+
+![](/assets/images/M365-Lab/M365-Licences-3.png) 
+
+**Step 4:** In license details navigate to **Start free trial**.
+
+![](/assets/images/M365-Lab/M365-Licences-4.png) 
+
+**Step 5:** Confirm that you are not robot and confirm **trial**.
+
+![](/assets/images/M365-Lab/M365-Licences-5.png) 
+![](/assets/images/M365-Lab/M365-Licences-6.png) 
+![](/assets/images/M365-Lab/M365-Licences-7.png) 
+
+**Step 6:** Trial licenses are available and can be assigned to user or groups.
+## Create new Azure AD user (Cloud only) that will be add to group with licences.
 
 >
 > **Notice:** User can be synchronize from local Active Directory. 
@@ -322,10 +347,10 @@ Additional data for account with information
 
 
 ```
-## Create Custom accounts and groups for license assignment
+## Link: Create Custom accounts and groups for license assignment
 
 Guide how to create groups in Azure Active Directory: [Group creation in Azure Active Directory](https://sysopslife.sys4ops.pl/2021/04/24/M365-AADGroups-with-license/)
 
-## Intune configuration for first time
+## Link: Intune configuration for first time
 
 Guide Intune (Endpoint Manager) - How to start the implementation and what to pay attention to: [Intune (Endpoint Manager) - How to start the implementation and what to pay attention to](https://sysopslife.sys4ops.pl/2021/04/03/Intune-for-beginners/)
