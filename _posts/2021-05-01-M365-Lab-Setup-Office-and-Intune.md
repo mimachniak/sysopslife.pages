@@ -230,7 +230,99 @@ Activating Microsoft 365 trial license, if your business is using Office 365 you
 
 Kudos to this blog what you can check license SKU compare: [Compare Microsoft office 365 plans/](https://lazyadmin.nl/compare-microsoft-office-365-plans/)
 
-## Create Custom accounts and groups with for license assignment
+## Create new Azure AD user (Cloud only)
+
+>
+> **Notice:** User can be synchronize from local Active Directory. 
+>
+
+**Step 1:** Install PowerShell modules.
+
+```powershell
+
+Install-module AzureAD
+
+```
+
+**Step 2:** Check that AzureAD or AzureADpreview is installed.
+
+```powershell
+
+# Check that Azure AD preview is installed
+Get-InstalledModule -Name AzureADPreview
+
+Version    Name                                Repository           Description                                                                                                              
+-------    ----                                ----------           -----------                                                                                                              
+2.0.2.134  AzureADPreview                      PSGallery            Azure Active Directory V2 Preview Module. ...                                                                            
+
+# Check that Azure AD is installed
+
+Get-InstalledModule -Name AzureAD
+                                                                         
+
+
+```
+
+**Step 3:** Log on to Azure Active Directory.
+
+```powershell
+
+# Connect to Azure Active Directory
+
+Connect-AzureAD 
+
+Account                                 Environment TenantId                             TenantDomain                  AccountType
+-------                                 ----------- --------                             ------------                  -----------
+adm.local@demoM36534556.onmicrosoft.com AzureCloud  d4520405-eabf-47ea-998f-15c7f9d4b845 demoM36534556.onmicrosoft.com User       
+
+
+```
+
+**Step 3:** Create example accounts
+
+```powershell
+
+# Enter your domian of tenant that will be used as UPN
+$userDomain = "@demoM36534556.onmicrosoft.com"
+
+$PasswordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
+$PasswordProfile.Password = "Your test Users passwords"
+
+# Create example users
+
+New-AzureADUser -DisplayName "John Doe" -UserPrincipalName John.Doe$userDomain -MailNickName "JohnDoe" -AccountEnabled $true -PasswordProfile $PasswordProfile
+New-AzureADUser -DisplayName "Jane Doe" -UserPrincipalName Jane.Doe$userDomain -MailNickName "JaneDoe" -AccountEnabled $true -PasswordProfile $PasswordProfile
+New-AzureADUser -DisplayName "Tom Smith" -UserPrincipalName Tom.Smith$userDomain -MailNickName "TomSmith" -AccountEnabled $true -PasswordProfile $PasswordProfile
+
+
+<#
+
+Additional data for account with information
+
+   [-City <String>]
+   [-CompanyName <String>]
+   [-Country <String>]
+   [-Department <String>]
+   [-GivenName <String>]
+   [-JobTitle <String>]
+   [-Mobile <String>]
+   [-PhysicalDeliveryOfficeName <String>]
+   [-PostalCode <String>]
+   [-PreferredLanguage <String>]
+   [-ShowInAddressList <Boolean>]
+   [-State <String>]
+   [-StreetAddress <String>]
+   [-Surname <String>]
+   [-TelephoneNumber <String>]
+   [-UsageLocation <String>]
+   [-UserPrincipalName <String>]
+   [-UserState <String>]
+
+#>
+
+
+```
+## Create Custom accounts and groups for license assignment
 
 Guide how to create groups in Azure Active Directory: [Group creation in Azure Active Directory](https://sysopslife.sys4ops.pl/2021/04/24/M365-AADGroups-with-license/)
 
