@@ -1,10 +1,10 @@
 ---
-title: "[EN] Micosoft 365 Setup Lab Environment M365 and Intune"
+title: "Micosoft 365 Setup Lab Environment M365 and Intune with free domain names"
 excerpt: "[EN] Micosoft 365 Setup Lab Environment - Create your own Lab with domains setup or prepare new tenant for you company. In this article we will go through creating new tenant, add custom domains for LAB purpose, assigned licences. " 
 toc: true
 classes: wide
 header:
-  image: /assets/images/M365-Lab/M365-Lab-Home.png
+  #image: /assets/images/M365-Lab/M365-Lab-Home.png
   teaser: /assets/images/M365-Lab/M365-Lab-Home.png
 categories:
   - SysOps
@@ -12,17 +12,21 @@ categories:
 tags:
   - M365
   - Intune
-published: false
+published: true
 hidden: true
 ---
 
+<p align="center">
+<img src="/assets/images/M365-Lab/M365-Lab-Home.png?raw=true" alt="Micosoft 365 Setup Lab Environment M365 and Intune with free domain names."/>
+</p>
+
 ## Why I write this article
 
-Hi I wrote this article to help other start with Office 365 and Intune, without intervention on existing tenant or start as green filed for company to begin. I hope this guide we help you to avoid misconfiguration.
+Hi I wrote this article to help other start with Office 365 and Intune, without intervention on existing tenant or start as green filed for company to begin, some times we struggle where we can test new features or just test new approach. I hope this guide we help you to avoid misconfiguration.
 
 ## Prerequisites
 
-Before we begin with this you will need to consider few things:  
+Before we begin with this you will need to consider few things and answer questions:  
 
 + Is this will be LAB environment and won't be converted to production.
   + LAB Only: Tenat name suppose not be connected to organization name, once used tenant name connot be reused or changed.. **Example:** demo{Random Numbers} 
@@ -50,10 +54,19 @@ Before we begin with this you will need to consider few things:
 >
 
 
-![](/assets/images/M365-Lab/Tenant-Decision.png)
+![](/assets/images/M365-Lab/M365-Tenant-decision.png)
 
 --------------------------
 ## First Azure Active Directory Tenant
+
+Why we need new Azure Active Directory Tenanta ?
+
+* New **tenant** will be created because your organization starts testing Microsoft 365.
+* New **tenant** can be created because our organization need Lab environment and don't like mess up with existing configuration.
+* New **tenant** can be created because 2 organizations merge to new one.
+* New **tenant** can be created because organization is rebranding.
+
+
 ### What is Tenant ?
 
  **Tenant** Is isolated dedicated space for our organization and our assets. The Tenant is the container for items of your Organization such as users, domains, subscriptions, devices, permissions, Office 365 Data. Tenant is fundamental for all services in Microsoft Cloud.
@@ -90,7 +103,7 @@ Microsoft for make simple onboarding organization to Office365 or Azure, sometim
 
 ![](/assets/images/M365-Lab/M365-Tenant-2.png)
 
-**Step 2:** Tenant creation data
+**Step 3:** Tenant creation data
 
 **Account ID** - Will be used to create first user in our **tenant**.  
 >
@@ -99,7 +112,7 @@ Microsoft for make simple onboarding organization to Office365 or Azure, sometim
 >
 **Domain Name** - Will be used to create default domin in our **tenant**, cannot be change and will be used to create URL's for **Sharepoint** and **Onedrive**.
 
-![](/assets/images/M365-Lab/M365-Tenant-3.png)
+![](/assets/images/M365-Lab/M365-Tenant-3.png)  
 
 **Step 4:** Verify your identity by SMS code or phone call
 
@@ -123,7 +136,7 @@ In Azure Active Directory Portal navigate to **"Properties"**
 
 ## Custom domian for LAB propuse without paying (LAB / PoC)
 
-### How to obtain domain ?
+### How to obtain free custom domain name for M365 Tenant?
 
 Domains can be bough on any DNS provider on your country or region, choosing domains is only depending on business needs. But for LAB or PoC propuse some time is good to have dedicated domin for testing and good representation of bussines case, but there is non free domain. 
 
@@ -137,7 +150,7 @@ But with help of community and with credentials for  "Gerenios Ltd" we can gener
 * MyO365.net
 * MyO365.online
 
-Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog.com/post/my-o365-site/) 
+Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog.com/post/my-o365-site/), all rights reserved to **Nestori Syynimaa**
 ### DNS records for Office 365
 
 **Step 1:** Open a browser in InPrivate session, and navigate in browser to [https://portal.office.com/](https://portal.office.com/) .
@@ -215,9 +228,10 @@ Activating Microsoft 365 trial license, if your business is using Office 365 you
 
 Kudos to this blog what you can check licences SKU compare: [Compare Microsoft office 365 plans/](https://lazyadmin.nl/compare-microsoft-office-365-plans/)
 
-## Create Custom accounts and groups
+## Create Custom accounts and groups with for license assignment
 
 Guide how to create groups in Azure Active Directory: [Group creation in Azure Active Directory](https://sysopslife.sys4ops.pl/2021/04/24/M365-AADGroups-with-license/)
 
+## Intune configuration for first time
 
-
+Guide Intune (Endpoint Manager) - How to start the implementation and what to pay attention to: [Intune (Endpoint Manager) - How to start the implementation and what to pay attention to](https://sysopslife.sys4ops.pl/2021/04/03/Intune-for-beginners/)
