@@ -1,6 +1,6 @@
 ---
-title: "Micosoft 365 Setup Lab Environment M365 and Intune with free domain names"
-excerpt: "[EN] Micosoft 365 Setup Lab Environment - Create your own Lab with domains setup or prepare new tenant for you company. In this article we will go through creating new tenant, add custom domains for LAB purpose, assigned licences. " 
+title: "Microsoft 365 Setup Lab Environment M365 and Intune with free domain names"
+excerpt: "Microsoft 365 Setup Lab Environment - Create your own Lab with domains setup or prepare new tenant for you company. In this article we will go through creating new tenant, add custom domains for LAB purpose, assigned licenses. " 
 toc: true
 classes: wide
 header:
@@ -17,32 +17,32 @@ hidden: true
 ---
 
 <p align="center">
-<img src="/assets/images/M365-Lab/M365-Lab-Home.png?raw=true" alt="Micosoft 365 Setup Lab Environment M365 and Intune with free domain names."/>
+<img src="/assets/images/M365-Lab/M365-Lab-Home.png?raw=true" alt="Microsoft 365 Setup Lab Environment M365 and Intune with free domain names."/>
 </p>
 
 ## Why I write this article
 
-Hi I wrote this article to help other start with Office 365 and Intune, without intervention on existing tenant or start as green filed for company to begin, some times we struggle where we can test new features or just test new approach. I hope this guide we help you to avoid misconfiguration.
+Hi, I wrote this article to help with creation of first Microsoft 365 tenant that can be convert to production environment. In this article I will highlight some point to avoid mistake that I have made in past. I base all information about my experience. 
 
-## Prerequisites
+## Prerequisites 
 
 Before we begin with this you will need to consider few things and answer questions:  
 
-+ Is this will be LAB environment and won't be converted to production.
-  + LAB Only: Tenat name suppose not be connected to organization name, once used tenant name connot be reused or changed.. **Example:** demo{Random Numbers} 
-  + LAB Only: Use the highest licences like E5 to check all settings and dependencies for compare.
-  + LAB Only: Don't use production custom domains, domain can be assigne only to one **Tenant**.
++ Is this will be LAB environment and will not be converted to production.
+  + LAB Only: Tenant name suppose not be connected to organization name, once used tenant name cannot be reused or changed. **Example:** demo{Random Numbers} 
+  + LAB Only: Use the highest licenses like E5 to check all settings and dependencies for compare.
+  + LAB Only: Don't use production custom domains, domain can be assigned only to one **Tenant**.
   + LAB Only: Location of Tenant don't need to be compliance with organization location.
 + Is this PoC Pilot environment that will be converted to production.
-  + PoC: Tenat name suppose not be connected to organization name, once used tenant name connot be reused or changed. **Example:** poc{Random Numbers} 
-  + PoC: Use the highest licences like E5 to check all settings and dependenciesfor compare.
+  + PoC: Tenant name suppose not be connected to organization name, once used tenant name cannot be reused or changed. **Example:** poc{Random Numbers} 
+  + PoC: Use the highest licenses like E5 to check all settings and dependencies for compare.
   + PoC: Collect user case that you like to present.
-  + PoC: Don't use production custom domains, domain can be assigne only to one **Tenant**.
+  + PoC: Don't use production custom domains, domain can be assigned only to one **Tenant**.
   + PoC: Location of Tenant need to be compliance with organization location.
 + Is this Pilot environment that will be converted to production.
   + Pilot: Tenant name need to be connected to Organization for adoption propose.
-  + Pilot: Tenant name need to be approve by bussines becasue will be used as first part of URL in **Sharepoint** and **OneDrive**
-  + Pilot: Use licences that match Organization business cases to avoid misconfiguration.
+  + Pilot: Tenant name need to be approve by business because will be used as first part of URL in **SharePoint** and **OneDrive**
+  + Pilot: Use licenses that match Organization business cases to avoid misconfiguration.
   + Pilot: Don't use production custom domains, to avoid data flow distributions. 
   + Pilot: Location of Tenant need to be compliance with organization location.
 
@@ -57,9 +57,9 @@ Before we begin with this you will need to consider few things and answer questi
 ![](/assets/images/M365-Lab/M365-Tenant-decision.png)
 
 --------------------------
-## First Azure Active Directory Tenant
+## First Azure Active Directory Tenant that will host our data.
 
-Why we need new Azure Active Directory Tenanta ?
+Why we need new Azure Active Directory Tenant ?
 
 * New **tenant** will be created because your organization starts testing Microsoft 365.
 * New **tenant** will be crated if our organization migrate from on-prem solutions to Microsoft365.
@@ -73,17 +73,17 @@ Why we need new Azure Active Directory Tenanta ?
 
  **Tenant** Is isolated dedicated space for our organization and our assets. The Tenant is the container for items of your Organization such as users, domains, subscriptions, devices, permissions, Office 365 Data. Tenant is fundamental for all services in Microsoft Cloud.
 
-**Exmaple** of data isolation
+**Example** of data isolation in Microsoft tenant
 
 ![](/assets/images/M365-Lab/M365-Lab-Tenant.png)
 
 
-Microsoft for make simple onboarding organization to Office365 or Azure, sometimes provsion tenant automatical without passing any information, as the name of tenant is using e-mail address and location is take form oure accounts.   
-**Example** of this scenario
+Microsoft for make simple onboarding organization to Office365 or Azure, sometimes provision tenant automatically without passing any information, as the name of tenant is using e-mail address and location is take form our accounts.   
+**Example** of this scenario when tenant can be create without any prompt. 
  - MSDN Subscriptions.
  - Azure free trial Subscriptions.  
 
- **LAB** Tenant and won't be used for production so in this case name nad location dosen't matter, but if we will create **PoC** or **Pilot** tenant that in feature can be converted to production we have to be more awere when data will be stored and what name is used.  
+ **LAB** Tenant and won't be used for production so in this case name and location doesn’t matter, but if we will create **PoC** or **Pilot** tenant that in feature can be converted to production we have to be more aware when data will be stored and what name is used.  
 
 >
 > **Notice:** Tenant **"Location"** have impact on services that we can use in Office 365, for example **Phone Systems**
@@ -99,7 +99,7 @@ Microsoft for make simple onboarding organization to Office365 or Azure, sometim
 
 **Country** - Location of tenant and Datacenter region, for data processing.
 **Name and Surname** - use for display on first account
-**Contact Number** - for pre sales and support.
+**Contact Number** - for presales and support.
 **Organization Name** - Display name of organization it will be used in adoption process, can be change latter.
 **Size** - information only.
 
@@ -112,7 +112,7 @@ Microsoft for make simple onboarding organization to Office365 or Azure, sometim
 > **Best practice:** As Account ID plase don't use standard names like: Administrator, admin. 
 > **Best practice:** Use first account to create your admin account and assign rights.
 >
-**Domain Name** - Will be used to create default domin in our **tenant**, cannot be change and will be used to create URL's for **Sharepoint** and **Onedrive**.
+**Domain Name** - Will be used to create default domain in our **tenant**, cannot be change and will be used to create URL's for **SharePoint** and **OneDrive**.
 
 ![](/assets/images/M365-Lab/M365-Tenant-3.png)  
 
@@ -122,11 +122,11 @@ Microsoft for make simple onboarding organization to Office365 or Azure, sometim
 
 ![](/assets/images/M365-Lab/M365-Tenant-5.png)
 
-**Step 5:** Finish createion of tenant.
+**Step 5:** Finish creation of tenant.
 
 ![](/assets/images/M365-Lab/M365-Tenant-6.png)
 
-**Step 6:** Veryfication of tenant settings. Log on to Azure Active Directory admin center by URL: [https://aad.portal.azure.com/](https://aad.portal.azure.com/)
+**Step 6:** Verification of tenant settings. Log on to Azure Active Directory admin center by URL: [https://aad.portal.azure.com/](https://aad.portal.azure.com/)
 
 In Azure Active Directory Portal navigate to **"Overview"**  
 
@@ -136,28 +136,28 @@ In Azure Active Directory Portal navigate to **"Properties"**
 
 ![](/assets/images/M365-Lab/M365-Tenant-8.png)  
 
-## Custom domian for LAB propuse without paying (LAB / PoC)
+## Custom domain for LAB purpose without paying (LAB / PoC)
 
 ### How to obtain free custom domain name for M365 Tenant?
 
-Domains can be bough on any DNS provider on your country or region, choosing domains is only depending on business needs. But for LAB or PoC propuse some time is good to have dedicated domin for testing and good representation of bussines case, but there is non free domain. 
+Domains can be bough on any DNS provider on your country or region, choosing domains is only depending on business needs. But for LAB or PoC propose some time is good to have dedicated domain for testing and good representation of business case, but there is non free domain. 
 
 But with help of community and with credentials for  "Gerenios Ltd" we can generated free domain dedicated for Office365 with names:
 
 >
-> **Notice:** Those domains are only LAB and POC propuse, don't use them for production. 
+> **Notice:** Those domains are only LAB and POC purpose, don't use them for production. 
 >
 
 * MyO365.site
 * MyO365.net
 * MyO365.online
 
-Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog.com/post/my-o365-site/), all rights reserved to **Nestori Syynimaa**
+Original link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog.com/post/my-o365-site/), all rights reserved to **Nestori Syynimaa**
 ### DNS records for Office 365
 
 **Step 1:** Open a browser in InPrivate session, and navigate in browser to [https://portal.office.com/](https://portal.office.com/) .
 **Step 2:** Login with credentials created in previous step like **adm.local@*****.onmicosoft.com**.
-**Step 3:** On diffrent tab navigate to link [https://www.myo365.site/](https://www.myo365.site/).  
+**Step 3:** On different tab navigate to link [https://www.myo365.site/](https://www.myo365.site/).  
 **Step 4:** On page click **"Login"** and if you are ask for credentials use your account that was created for new **tenant** with global administrator rights.  
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-1.png)
@@ -197,38 +197,38 @@ Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-9.png) 
 
-**Step 15:** Go back to tab with [https://admin.office.com/](https://admin.office.com/) and start domain verification, click **"Veryfie"**.  
+**Step 15:** Go back to tab with [https://admin.office.com/](https://admin.office.com/) and start domain verification, click **"Verify**.  
 
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-10.png) 
 
 
-**Step 16:** In section **"Add DNS record"** go to bottom and expand **"Advance"** and select options for **"Skype for Bussines (Teams)"** and **"Intune"**  
+**Step 16:** In section **"Add DNS record"** go to bottom and expand **"Advance"** and select options for **"Skype for Business (Teams)"** and **"Intune"**  
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-11.png) 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-11-1.png) 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-11-2.png) 
 
 
-## Activate trial licences
+## Activate trial license
 
-Microsoft allow to activate **once** peer tenant activate trial licences for diffrent products on licences level, trial licences are activate for 30 days and sometime can be extended to another 30 days. 
-When we prepare pre-production tenant we can add trial licences and start PoC without paying money, onboard pilot users for testing. 
+Microsoft allow to activate **once** peer tenant trial license for different products on licenses level, trial licenses are activate for 30 days and sometime can be extended to another 30 days. 
+When we prepare pre-production tenant we can add trial license and start PoC without paying any money and onboard pilot users for testing. 
 
 > **Trial expired:**
 >
-> * We cannot on the same tenant launch another trial for the same version of product and licences level.
+> * We cannot on the same tenant launch another trial for the same version of product and license level.
 > * Content will be stored for 30 days, of license won't be active content will be deleted.
-> * Adding production licences we don't have to re assign them to users if are in the same licences level. Trail will expired production licences will be active. **Example:** Trial license was M365 E5 and production bought by organization > are M365 E5 as well.
+> * Adding production licenses we don't have to re assign them to users if are in the same license level. Trail will expired production licenses will be active. **Example:** Trial license was M365 E5 and production bought by organization > are M365 E5 as well.
 >  
 
 ### Microsoft 365
 
-Activating Microsoft 365 trial license, if your business is using Office 365 you can active separately. Chose licences levle and bundel to you business requirements, in LAB environment I will use the highes that is E5.
+Activating Microsoft 365 trial license, if your business is using Office 365 you can active separately. Chose license level and bundle to you business requirements, in LAB environment I will use the highes that is E5.
 * Office 365 Trial (E3/E5) - License plans: [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/business/compare-all-microsoft-365-business-products?&activetab=tab:primaryr2)
-* Enterprise Mobility Suite) - Intune bundle licences are described in this post: [Intune-for-beginners/#choosing-license](https://sysopslife.sys4ops.pl/2021/04/03/Intune-for-beginners/#choosing-license)
+* Enterprise Mobility Suite) - Intune bundle licenses are described in this post: [Intune-for-beginners/#choosing-license](https://sysopslife.sys4ops.pl/2021/04/03/Intune-for-beginners/#choosing-license)
 
-Kudos to this blog what you can check licences SKU compare: [Compare Microsoft office 365 plans/](https://lazyadmin.nl/compare-microsoft-office-365-plans/)
+Kudos to this blog what you can check license SKU compare: [Compare Microsoft office 365 plans/](https://lazyadmin.nl/compare-microsoft-office-365-plans/)
 
 ## Create Custom accounts and groups with for license assignment
 
