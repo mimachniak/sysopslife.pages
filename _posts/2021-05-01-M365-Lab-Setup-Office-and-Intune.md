@@ -62,9 +62,11 @@ Before we begin with this you will need to consider few things and answer questi
 Why we need new Azure Active Directory Tenanta ?
 
 * New **tenant** will be created because your organization starts testing Microsoft 365.
+* New **tenant** will be crated if our organization migrate from on-prem solutions to Microsoft365.
 * New **tenant** can be created because our organization need Lab environment and don't like mess up with existing configuration.
 * New **tenant** can be created because 2 organizations merge to new one.
 * New **tenant** can be created because organization is rebranding.
+* New **tenant** name of tenant is not valid by organization.
 
 
 ### What is Tenant ?
@@ -155,8 +157,8 @@ Orginal link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog
 
 **Step 1:** Open a browser in InPrivate session, and navigate in browser to [https://portal.office.com/](https://portal.office.com/) .
 **Step 2:** Login with credentials created in previous step like **adm.local@*****.onmicosoft.com**.
-**Step 3:** On diffrent tab navigate to link [https://www.myo365.site/](https://www.myo365.site/) .
-**Step 4:** On page click **"Login"**.
+**Step 3:** On diffrent tab navigate to link [https://www.myo365.site/](https://www.myo365.site/).  
+**Step 4:** On page click **"Login"** and if you are ask for credentials use your account that was created for new **tenant** with global administrator rights.  
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-1.png)
 
