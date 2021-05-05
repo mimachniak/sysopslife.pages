@@ -155,8 +155,8 @@ But with help of community and with credentials for  "Gerenios Ltd" we can gener
 Original link to post: [https://o365blog.com/post/my-o365-site/](https://o365blog.com/post/my-o365-site/), all rights reserved to **Nestori Syynimaa**
 ### DNS records for Office 365
 
-**Step 1:** Open a browser in InPrivate session, and navigate in browser to [https://portal.office.com/](https://portal.office.com/) .
-**Step 2:** Login with credentials created in previous step like **adm.local@*****.onmicosoft.com**.
+**Step 1:** Open a browser in InPrivate session, and navigate in browser to [https://portal.office.com/](https://portal.office.com/).  
+**Step 2:** Login with credentials created in previous step like **adm.local@*****.onmicosoft.com**.  
 **Step 3:** On different tab navigate to link [https://www.myo365.site/](https://www.myo365.site/).  
 **Step 4:** On page click **"Login"** and if you are ask for credentials use your account that was created for new **tenant** with global administrator rights.  
 
