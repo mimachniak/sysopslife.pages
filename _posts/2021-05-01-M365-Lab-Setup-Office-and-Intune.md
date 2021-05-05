@@ -136,7 +136,7 @@ In Azure Active Directory Portal navigate to **"Properties"**
 
 ![](/assets/images/M365-Lab/M365-Tenant-8.png)  
 
-## Custom domain for LAB purpose without paying (LAB / PoC)
+## Free custom domain for LAB purpose without paying (LAB / PoC)
 
 ### How to obtain free custom domain name for M365 Tenant?
 
