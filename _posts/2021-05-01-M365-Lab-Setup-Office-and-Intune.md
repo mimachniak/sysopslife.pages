@@ -1,6 +1,6 @@
 ---
-title: "Microsoft 365 Setup Lab Environment M365 and Intune with free domain names"
-excerpt: "Microsoft 365 Setup Lab Environment - Create your own Lab with domains setup or prepare new tenant for you company. In this article we will go through creating new tenant, add custom domains for LAB purpose, assigned licenses. " 
+title: "Microsoft 365 Setup Lab Environment for M365 and Intune with free custom domain names"
+excerpt: "Microsoft 365 Setup Lab Environment - Create your own Lab with custom domains setup or prepare new tenant for you company. In this article we will go through creating new tenant, add custom domains for LAB purpose, assigned licenses. " 
 toc: true
 classes: wide
 header:
