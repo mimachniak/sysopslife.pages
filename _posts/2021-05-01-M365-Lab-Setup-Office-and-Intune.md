@@ -13,7 +13,7 @@ tags:
   - M365
   - Intune
 published: true
-hidden: true
+hidden: false
 ---
 
 <p align="center">
