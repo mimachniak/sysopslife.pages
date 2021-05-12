@@ -170,7 +170,7 @@ Original link to post: [https://o365blog.com/post/my-o365-site/](https://o365blo
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-3.png)
 
-**Step 7:** On next tab in browser go to  [https://admin.office.com/](https://admin.office.com/).  
+**Step 7:** On next tab in browser go to  [https://admin.microsoft.com/](https://admin.microsoft.com/).  
 **Step 8:** In Admin panel go to **Setup** and **Domains**.  
 **Step 9:** Click on **Add domain**.  
 
@@ -197,7 +197,7 @@ Original link to post: [https://o365blog.com/post/my-o365-site/](https://o365blo
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-9.png) 
 
-**Step 15:** Go back to tab with [https://admin.office.com/](https://admin.office.com/) and start domain verification, click **"Verify**.  
+**Step 15:** Go back to tab with [https://admin.microsoft.com/](https://admin.microsoft.com/) and start domain verification, click **"Verify**.  
 
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-10.png) 
@@ -231,7 +231,7 @@ Activating Microsoft 365 trial license, if your business is using Office 365 you
 Kudos to this blog what you can check license SKU compare: [Compare Microsoft office 365 plans/](https://lazyadmin.nl/compare-microsoft-office-365-plans/)
 
 
-**Step 1:** In browser go to URL [https://admin.office.com/](https://admin.office.com/)and login with global administrator credentials. 
+**Step 1:** In browser go to URL [https://admin.microsoft.com/](https://admin.microsoft.com/)and login with global administrator credentials. 
 
 ![](/assets/images/M365-Lab/M365-Licences-1.png) 
 
