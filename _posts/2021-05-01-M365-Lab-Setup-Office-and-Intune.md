@@ -97,11 +97,11 @@ Microsoft for make simple onboarding organization to Office365 or Azure, sometim
 
 **Step 2:** Fill up date of your organization
 
-**Country** - Location of tenant and Datacenter region, for data processing.
-**Name and Surname** - use for display on first account
-**Contact Number** - for presales and support.
-**Organization Name** - Display name of organization it will be used in adoption process, can be change latter.
-**Size** - information only.
+**Country** - Location of tenant and Datacenter region, for data processing.  
+**Name and Surname** - use for display on first account  
+**Contact Number** - for presales and support.  
+**Organization Name** - Display name of organization it will be used in adoption process, can be change latter.  
+**Size** - information only.  
 
 ![](/assets/images/M365-Lab/M365-Tenant-2.png)
 
