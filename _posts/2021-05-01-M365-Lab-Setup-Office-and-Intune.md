@@ -26,7 +26,7 @@ Hi, I wrote this article to help with creation of first Microsoft 365 tenant tha
 
 ## Prerequisites 
 
-Before we begin with this you will need to consider few things and answer questions:  
+Before we begin you will need to consider few things and answer questions:  
 
 + Is this will be LAB environment and will not be converted to production.
   + LAB Only: Tenant name suppose not be connected to organization name, once used tenant name cannot be reused or changed. **Example:** demo{Random Numbers} 
