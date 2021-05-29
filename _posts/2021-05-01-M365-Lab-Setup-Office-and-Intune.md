@@ -1,6 +1,6 @@
 ---
-title: "Microsoft 365 Setup Lab Environment M365 and Intune with free domain names"
-excerpt: "Microsoft 365 Setup Lab Environment - Create your own Lab with domains setup or prepare new tenant for you company. In this article we will go through creating new tenant, add custom domains for LAB purpose, assigned licenses. " 
+title: "Microsoft 365 Setup Lab Environment for M365 and Intune with free custom domain names"
+excerpt: "Microsoft 365 Setup Lab Environment - Create your own Lab with custom domains setup or prepare new tenant for you company. In this article we will go through creating new tenant, add custom domains for LAB purpose, assigned licenses. " 
 toc: true
 classes: wide
 header:
@@ -13,7 +13,7 @@ tags:
   - M365
   - Intune
 published: true
-hidden: true
+hidden: false
 ---
 
 <p align="center">
@@ -26,7 +26,7 @@ Hi, I wrote this article to help with creation of first Microsoft 365 tenant tha
 
 ## Prerequisites 
 
-Before we begin with this you will need to consider few things and answer questions:  
+Before we begin you will need to consider few things and answer questions:  
 
 + Is this will be LAB environment and will not be converted to production.
   + LAB Only: Tenant name suppose not be connected to organization name, once used tenant name cannot be reused or changed. **Example:** demo{Random Numbers} 
@@ -97,11 +97,11 @@ Microsoft for make simple onboarding organization to Office365 or Azure, sometim
 
 **Step 2:** Fill up date of your organization
 
-**Country** - Location of tenant and Datacenter region, for data processing.
-**Name and Surname** - use for display on first account
-**Contact Number** - for presales and support.
-**Organization Name** - Display name of organization it will be used in adoption process, can be change latter.
-**Size** - information only.
+**Country** - Location of tenant and Datacenter region, for data processing.  
+**Name and Surname** - use for display on first account  
+**Contact Number** - for presales and support.  
+**Organization Name** - Display name of organization it will be used in adoption process, can be change latter.  
+**Size** - information only.  
 
 ![](/assets/images/M365-Lab/M365-Tenant-2.png)
 
@@ -170,7 +170,7 @@ Original link to post: [https://o365blog.com/post/my-o365-site/](https://o365blo
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-3.png)
 
-**Step 7:** On next tab in browser go to  [https://admin.office.com/](https://admin.office.com/).  
+**Step 7:** On next tab in browser go to  [https://admin.microsoft.com/](https://admin.microsoft.com/).  
 **Step 8:** In Admin panel go to **Setup** and **Domains**.  
 **Step 9:** Click on **Add domain**.  
 
@@ -197,7 +197,7 @@ Original link to post: [https://o365blog.com/post/my-o365-site/](https://o365blo
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-9.png) 
 
-**Step 15:** Go back to tab with [https://admin.office.com/](https://admin.office.com/) and start domain verification, click **"Verify**.  
+**Step 15:** Go back to tab with [https://admin.microsoft.com/](https://admin.microsoft.com/) and start domain verification, click **"Verify**.  
 
 
 ![](/assets/images/M365-Lab/M365-Lab-Domain-10.png) 
@@ -231,7 +231,7 @@ Activating Microsoft 365 trial license, if your business is using Office 365 you
 Kudos to this blog what you can check license SKU compare: [Compare Microsoft office 365 plans/](https://lazyadmin.nl/compare-microsoft-office-365-plans/)
 
 
-**Step 1:** In browser go to URL [https://admin.office.com/](https://admin.office.com/)and login with global administrator credentials. 
+**Step 1:** In browser go to URL [https://admin.microsoft.com/](https://admin.microsoft.com/)and login with global administrator credentials. 
 
 ![](/assets/images/M365-Lab/M365-Licences-1.png) 
 
