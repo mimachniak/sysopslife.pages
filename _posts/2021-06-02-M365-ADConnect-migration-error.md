@@ -44,8 +44,14 @@ Whole process is described in Microsoft docs under this link:
 ![](/assets/images/AdConnect/ADC-05.PNG)
 ![](/assets/images/AdConnect/ADC-06.PNG)
 
-**Step 3:** Log verification to check with rule is causing issue, logs file are located on folder: **C:\ProgramData\AADConnect** or you can navigate from AD connect interface. File name starts:  **trace-**
+**Step 3:** Log verification to check with rule is causing issue, logs file are located on folder: **C:\ProgramData\AADConnect** or you can navigate from AD connect interface. File name starts:  **trace-**  
 
+* In error we can check that issue is with this attribute: **extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1**
+* Error and attribute are connected to this syc rule:  AAD - User DirectoryExtension - Cloned - 10/14/2019 11:09:04 AM (**0b0cfd4f-e8b8-47b2-8a15-b0557cef3949**)  
+
+
+
+>
 >
 > [19:54:05.912] [ 26] [ERROR] Out to AAD - User DirectoryExtension - Cloned - 10/14/2019 11:09:04 AM (**0b0cfd4f-e8b8-47b2-8a15-b0557cef3949**): AttributeFlowMapping's specified target attribute **'extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1'** is not a defined attribute type.
 > Microsoft.IdentityManagement.PowerShell.Cmdlet.AddADSyncRuleCmdlet
@@ -81,7 +87,7 @@ Whole process is described in Microsoft docs under this link:
 >[19:54:05.932] [ 26] [INFO ] PerformConfigurationPageViewModel.PerformWorkflowInstallationAndUpdateState: result of installation operations - Failed
 >[19:54:05.932] [ 26] [ERROR] ExecuteADSyncConfiguration: configuration failed.  Skipping export of synchronization policy.  resultStatus=Failed
 >[19:54:05.968] [ 26] [ERROR] PerformConfigurationPageViewModel: We encountered a problem and couldn’t complete the integration.
->[19:54:05.968] [ 26] [ERROR] PerformConfigurationPageViewModel: An error occurred executing Configure AAD Sync task: Out to AAD - User DirectoryExtension - Cloned - 10/14/2019 11:09:04 AM (0b0cfd4f-e8b8-47b2-8a15-b0557cef3949): AttributeFlowMapping's specified target attribute 'extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1' is not a defined attribute type.
+>[19:54:05.968] [ 26] [ERROR] PerformConfigurationPageViewModel: An error occurred executing Configure AAD Sync task: Out to AAD - User DirectoryExtension - Cloned - 10/14/2019 11:09:04 AM (0b0cfd4f-e8b8-47b2-8a15-b0557cef3949): AttributeFlowMapping's specified target attribute >'extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1' is not a defined attribute type.
 > Microsoft.IdentityManagement.PowerShell.Cmdlet.AddADSyncRuleCmdlet
 >
 
@@ -91,3 +97,33 @@ Microsoft.IdentityManagement.PowerShell.Cmdlet.AddADSyncRuleCmdlet
 ![](/assets/images/AdConnect/ADC-07.PNG)
 
 **Step 4:** Check that attributes exist in Azure Active Directory
+
+```powershell
+
+Connect-AzureAD
+
+Account                                Environment TenantId                             TenantDomain          AccountTy
+                                                                                                              pe
+-------                                ----------- --------                             ------------          ---------
+admin.xxxxxxxxx@zzzzz.onmicrosoft.com AzureCloud  aaaaaa-bbbb-ffff-ccccc-gggggggggggggg zzzzz.onmicrosoft.com User
+
+```
+
+**Step 5:** Check on existing user that parameters exist in Azure Active Directory
+
+```powershell
+
+$AADUser = Get-AzureADUser -ObjectId UserPrincipalName
+$AADUser | Select -ExpandProperty ExtensionProperty
+
+Key                                                             Value
+---                                                             -----
+odata.metadata                                                  https://graph.windows.net/aaaaaaaaaa-b25b-456f-b283-cf...
+odata.type                                                      Microsoft.DirectoryServices.User
+createdDateTime                                                 19.10.2020 08:49:15
+employeeId
+onPremisesDistinguishedName                                     CN=aaaaaa,OU=bbbbbb,OU=bbb,OU=yyyy,OU=zzzz...
+userIdentities                                                  []
+extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1  ttttttttttttttttttttttttttttttttttttt
+
+```
