@@ -10,7 +10,7 @@ categories:
 tags:
   - M365
   - ADConnect
-published: false
+published: true
 hidden: false
 ---
 
@@ -43,3 +43,13 @@ Whole process is described in Microsoft docs under this link:
 ![](/assets/images/AdConnect/ADC-04.PNG)
 ![](/assets/images/AdConnect/ADC-05.PNG)
 ![](/assets/images/AdConnect/ADC-06.PNG)
+
+**Step 3:** Log verification to check with rule is causing issue, logs file are located on folder: **C:\ProgramData\AADConnect** or you can navigate from AD connect interface. File name starts:  **trace**
+>
+> Exception Data (Raw): Microsoft.Online.Deployment.PowerShell.PowerShellInvocationException: Out to AAD - User DirectoryExtension - Cloned - 10/14/2019 11:09:04 AM **(0b0cfd4f-e8b8-47b2-8a15-b0557cef3949)**: AttributeFlowMapping's specified target attribute 'extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1' is not a defined attribute type.
+>
+
+Microsoft.IdentityManagement.PowerShell.Cmdlet.AddADSyncRuleCmdlet
+
+
+![](/assets/images/AdConnect/ADC-07.PNG)
