@@ -138,3 +138,13 @@ extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1  tttttttttttttttt
 **Step 4:** In folder: **SynchronizationRules** find rule with **ID** from error 
 
 ![](/assets/images/AdConnect/ADC-08.PNG)
+
+**Step 5:** Copy file with rule **ID** from error to diffrent folder.
+**Step 6:** Re-run process of **Import Synchronization settings**
+**Step 7:** On last step unselect **start synchronization**
+
+`**Note**: We need to manually add missing rules from error. For adding rules user **Sync rules editor** on AD connect server`
+
+## Summary
+
+We have 90 % settings migrated to new AD connect.
