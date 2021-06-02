@@ -1,6 +1,6 @@
 ---
-title: "ADConnect migration error on Out sync rules"
-excerpt: "How to handle error caused by Out rules in migration process, that is pointing to attributes mapping: AttributeFlowMapping's specified target attribute 'extension_87ce92dfb96b4ac689f8fxxxxxxxxxx6_extensionAttribute1' is not a defined attribute type." 
+title: "AD Connect migration error on Out sync rules"
+excerpt: "How to handle error caused by Out synchronization rules in migration process, with attributes mapping: AttributeFlowMapping's specified target attribute 'extension_87ce92dfb96b4ac689f8fxxxxxxxxxx6_extensionAttribute1' is not a defined attribute type." 
 toc: true
 classes: wide
 categories:
@@ -16,14 +16,14 @@ hidden: false
 
 ## Why I write this article
 
-Hi, In last migration process of connect between servers I was using new preview feature, that is allowing exporting existing configuration like
+Hi, In my last migration process of AD connect between servers I was using new preview feature, that is allowing exporting existing configuration like
 * Synchronization filters
-* synchronization rules 
+* Synchronization rules 
 * Account settings
 * Sing In settigs 
 * etc.  
 
-In some custom implementation AD connect have Out and In synchronization rules, and migration process don't work for Out rules but rest is working so we like to use it for 90 % of configuration. So in this post I will write workaround for this issue.
+In some custom implementation of AD connect we will have Out and In synchronization rule. Import process to new AD connect server don't work for Out synchronization rules but rest is working so we like to use it to cover 90 % of settings. So in this post I will write workaround for this issue.
 
 ## How to prepare AD connect to migration 
 
