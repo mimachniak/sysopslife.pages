@@ -134,3 +134,7 @@ extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1  tttttttttttttttt
 
 **Step 1:** Uninstall AD connect, you don't have to remove all components just **Sync Engine**
 **Step 2:** On local drive of new AD connect server navigate to folder with exported configuration 
+**Step 3:** In exported configuration folder, navigate to sub folder: **SynchronizationRules**
+**Step 4:** In folder: **SynchronizationRules** find rule with **ID** from error 
+
+![](/assets/images/AdConnect/ADC-08.PNG)
