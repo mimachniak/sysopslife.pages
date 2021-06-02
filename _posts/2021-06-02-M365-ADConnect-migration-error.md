@@ -47,11 +47,11 @@ Whole process is described in Microsoft docs under this link:
 **Step 3:** Log verification to check with rule is causing issue, logs file are located on folder: **C:\ProgramData\AADConnect** or you can navigate from AD connect interface. File name starts:  **trace-**
 
 >
-> [19:54:05.912] [ 26] [ERROR] Out to AAD - User DirectoryExtension - Cloned - 10/14/2019 11:09:04 AM (0b0cfd4f-e8b8-47b2-8a15-b0557cef3949): AttributeFlowMapping's specified target attribute 'extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1' is not a defined attribute type.
+> [19:54:05.912] [ 26] [ERROR] Out to AAD - User DirectoryExtension - Cloned - 10/14/2019 11:09:04 AM (**0b0cfd4f-e8b8-47b2-8a15-b0557cef3949**): AttributeFlowMapping's specified target attribute **'extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1'** is not a defined attribute type.
 > Microsoft.IdentityManagement.PowerShell.Cmdlet.AddADSyncRuleCmdlet
 > 
 > 
-> Exception Data (Raw): Microsoft.Online.Deployment.PowerShell.PowerShellInvocationException: Out to AAD - User DirectoryExtension - Cloned - 10/14/2019 11:09:04 AM (0b0cfd4f-e8b8-47b2-8a15-b0557cef3949): AttributeFlowMapping's specified target attribute 'extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1' is not a defined attribute type.
+> Exception Data (Raw): Microsoft.Online.Deployment.PowerShell.PowerShellInvocationException: Out to AAD - User DirectoryExtension - Cloned - 10/14/2019 11:09:04 AM (**0b0cfd4f-e8b8-47b2-8a15-b0557cef3949**): AttributeFlowMapping's specified target attribute 'extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1' is not a defined attribute type.
 > Microsoft.IdentityManagement.PowerShell.Cmdlet.AddADSyncRuleCmdlet
 >
 > ---> System.ServiceModel.FaultException`1[Microsoft.Azure.ActiveDirectory.ADSyncManagement.Contract.ADSyncManagementServiceFault]: Out to AAD - User DirectoryExtension - Cloned - 10/14/2019 11:09:04 AM (0b0cfd4f-e8b8-47b2-8a15-b0557cef3949): AttributeFlowMapping's specified target attribute 'extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1' is not a defined attribute type.
@@ -89,3 +89,5 @@ Microsoft.IdentityManagement.PowerShell.Cmdlet.AddADSyncRuleCmdlet
 
 
 ![](/assets/images/AdConnect/ADC-07.PNG)
+
+**Step 4:** Check that attributes exist in Azure Active Directory
