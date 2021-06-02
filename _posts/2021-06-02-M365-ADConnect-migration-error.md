@@ -47,8 +47,10 @@ Whole process is described in Microsoft docs under this link:
 **Step 3:** Log verification to check with rule is causing issue, logs file are located on folder: **C:\ProgramData\AADConnect** or you can navigate from AD connect interface. File name starts:  **trace-**  
 
 * In error we can check that issue is with this attribute: **extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1**
-* Error and attribute are connected to this syc rule:  AAD - User DirectoryExtension - Cloned - 10/14/2019 11:09:04 AM (**0b0cfd4f-e8b8-47b2-8a15-b0557cef3949**)  
+* Error and attribute are connected to this syc rule:  AAD - User DirectoryExtension - Cloned - 10/14/2019 11:09:04 AM (**0b0cfd4f-e8b8-47b2-8a15-b0557cef3949**)
+* Rule ID with error :  **0b0cfd4f-e8b8-47b2-8a15-b0557cef3949**
 
+`**Note**: Rule ID will be required to implement workaround.`
 
 
 >
@@ -127,3 +129,8 @@ userIdentities                                                  []
 extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1  ttttttttttttttttttttttttttttttttttttt
 
 ```
+
+## Error resolving workaround
+
+**Step 1:** Uninstall AD connect, you don't have to remove all components just **Sync Engine**
+**Step 2:** On local drive of new AD connect server navigate to folder with exported configuration 
