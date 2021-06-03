@@ -139,16 +139,16 @@ extension_87ce92dfb96b4ac689f8f53836bffaa6_extensionAttribute1  tttttttttttttttt
 
 ## Error resolving workaround
 
-**Step 1:** Uninstall AD connect, you don't have to remove all components just **Sync Engine**
-**Step 2:** On local drive of new AD connect server navigate to folder with exported configuration 
-**Step 3:** In exported configuration folder, navigate to sub folder: **SynchronizationRules**
-**Step 4:** In folder: **SynchronizationRules** find rule with **ID** from error 
+**Step 1:** Uninstall AD connect, you don't have to remove all components just **Sync Engine**  
+**Step 2:** On local drive of new AD connect server navigate to folder with exported configuration   
+**Step 3:** In exported configuration folder, navigate to sub folder: **SynchronizationRules**  
+**Step 4:** In folder: **SynchronizationRules** find rule with **ID** from error   
 
 ![](/assets/images/AdConnect/ADC-08.PNG)
 
 **Step 5:** Copy file with rule **ID** from error to diffrent folder.  
 **Step 6:** Re-run process of **Import Synchronization settings**  
-**Step 7:** On last step unselect **start synchronization**, we need to add Outgoing rules.
+**Step 7:** On last step unselect **start synchronization**, we need to add Outgoing rules.  
 
 `**Note**: We need to manually add missing rules from error. For adding rules user **Sync rules editor** on AD connect server`
 
