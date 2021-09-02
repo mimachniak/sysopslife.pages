@@ -17,7 +17,7 @@ tags:
   - Automation
   - Azure
 published: true
-hidden: false
+hidden: true
 ---
 
 ## Why I write this article
