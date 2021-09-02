@@ -17,7 +17,7 @@ tags:
   - Automation
   - Azure
 published: true
-hidden: true
+hidden: false
 ---
 
 ## Why I write this article
@@ -37,7 +37,9 @@ On this articel we will use:
 
 First we will need to create free Azure Subscription:
 
-Guide: [![Is Azure Free Account really free? | Azure Tips and Tricks](/assets/images/Azure/azure-free-account.PNG)](https://www.youtube.com/watch?v=0KEfaUfolVs&ab_channel=MicrosoftAzure)
+Guide:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0KEfaUfolVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Link : [Create Free Azure account](https://azure.microsoft.com/en-us/free/)
 
