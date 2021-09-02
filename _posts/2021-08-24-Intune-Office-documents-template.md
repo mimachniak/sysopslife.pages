@@ -4,6 +4,7 @@ classes: wide
 excerpt: "Intune (Endpoint Manager) - How to deploy Office templates and keep them up to date. Office template used in organization are mote common and easy task to be deployed over GPO, most of organization have own templates with logos, formats etc. Templates are often store on some file share from where computer / user can download them, so storage is some of barriers when we like to use full cloud MDM in form of SaaS."
 toc: true
 header:
+  image: /assets/images/
   teaser: /assets/images/teaser/Intune-Office-Template.png
 categories:
   - SysOps
@@ -32,7 +33,7 @@ On this articel we will use:
 * Intune (Endpoint Manager)
 * PowerShell scripts
 
-## Azure subscription 
+## Azure subscription creation
 
 First we will need to create free Azure Subscription:
 
@@ -42,7 +43,7 @@ Guide:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0KEfaUfolVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
   
 
-## Azure storage account
+## Azure storage account configuration
 
 To storge office templete and script responsible for deploying templates in local machine, we will use azure storage account with **public blob container**. Storage account is one of chepes solution to keep data and expensive are based on amount of data counted in GB per month.
 
