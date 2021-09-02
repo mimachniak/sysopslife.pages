@@ -36,12 +36,11 @@ On this articel we will use:
 
 First we will need to create free Azure Subscription:
 
-Guide:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0KEfaUfolVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
-  
 
 Link : [Create Free Azure account](https://azure.microsoft.com/en-us/free/)
+Guide:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0KEfaUfolVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+  
 
 ## Azure storage account
 
