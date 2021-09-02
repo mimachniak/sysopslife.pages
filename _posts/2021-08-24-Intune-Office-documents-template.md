@@ -16,7 +16,8 @@ tags:
   - Office
   - Automation
   - Azure
-published: false
+published: true
+hidden: true
 ---
 
 ## Why I write this article
