@@ -75,7 +75,7 @@ Powershell scripts can be found on my repository under this link: https://github
 ### Prepare script that will download Office template file to dedicated folder
 
 #### Script responsible for downloading templates to local environment
-1. Change parameter date dedicated for your environment
+1. Change parameter date dedicated for your environment, script can be downloaded form GitHub: [Intune-DocumentTemplateStorageAccount.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/Intune/Intune-DocumentTemplateStorageAccount.ps1)
 
 ```powershell
 
@@ -98,7 +98,7 @@ $TemplateFolderName = 'Office Templates' # Folder name on desktop when files wil
 
 #### Script responsible creating by Intune task schduler that will execute script each time user log in to desktop.
 
-1. Change parameter date dedicated for your environment
+1. Change parameter date dedicated for your environment, script can be downloaded form GitHub: [Windows10-taskScheduler-register-executescript-url.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/Intune/Windows10-taskScheduler-register-executescript-url.ps1)
 
 ```powershell
 
@@ -108,3 +108,28 @@ $LogFileName = 'IntunePowerShell.log' # log file name
 $storageAccountNameScriptUrl = 'https://dofficetemplate.blob.core.windows.net/scripts/Intune-DocumentTemplateStorageAccount.ps1' # Azure Storage Acccount Url to script
 
 ```
+2. Logon to https://endpoint.microsoft.com
+3. In Endpoint Manager Consol navigate to **Devices --> Windows --> PowerShell scripts**
+4. On navigation click **Add**
+5. Enter **Name** and **Description**
+6. On **Script Settings** add script and select **Run this script using the logged on credentials**
+
+>
+> The script runs with the users’ credentials on the client computer. By default, the script runs in system context.
+>
+
+7. On **Assignments** and ***All Users** or selected group of **Users**
+8. Click **Next** and **Add**
+
+## Windows 10 veryfication
+
+### Intune policy synchronization force
+
+1. Log on to device 
+2. Navigate to **Settings --> Accounts --> Access work or school**
+3. Click on connection and then on **Info**
+4. Scroll down and click on **Sync**
+5. After sync completed (can take to 30 min) go to **task scheduler**
+6. Veryfie that task was create on Windows 10
+7. Run taks in ***task scheduler** and verify that templates was downloaded to local folder
+
