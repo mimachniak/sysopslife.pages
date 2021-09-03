@@ -101,6 +101,8 @@ g) Click on created container with name **scripts** and upload script
 
 ![](/assets/images/Azure/azure-st-12.PNG)
 
+![](/assets/images/Azure/azure-st-13.PNG)
+
 ## PowerShell scripts data preparation
 
 Powershell scripts can be found on my repository under this link: [https://github.com/mimachniak/sysopslife-scripts/tree/master/Intune](https://github.com/mimachniak/sysopslife-scripts/tree/master/Intune)
