@@ -1,5 +1,5 @@
 ---
-title: "Intune (Endpoint Manager) - How to deploy Office templates and keep them up to date."
+title: "Intune (Endpoint Manager) - How to deploy Office templates and keep them up to date (recurring)."
 classes: wide
 excerpt: "Intune (Endpoint Manager) - How to deploy Office templates and keep them up to date. Office template used in organization are mote common and easy task to be deployed over GPO, most of organization have own templates with logos, formats etc. Templates are often store on some file share from where computer / user can download them, so storage is some of barriers when we like to use full cloud MDM in form of SaaS."
 toc: true
@@ -53,18 +53,18 @@ To storge office templete and script responsible for deploying templates in loca
 
 ### Create stroage account in Azure
 
-1. Logon to https://portal.azure.com 
+1. Logon to [https://portal.azure.com ](https://portal.azure.com)
 2. On top search bar type **storage account**
 
 ![](/assets/images/azure-st-1.PNG)
 
 3. On navigation bar click **Create**
 
-![](/assets/images/azure-st-2.PNG)
+![](/assets/images/Azure/azure-st-2.PNG)
 
 4. Enter data in **Basic** tab
 
-![](/assets/images/azure-st-3.PNG)
+![](/assets/images/Azure/azure-st-3.PNG)
 
 5. On **Advanced** tab click **Next**
 6. On **Networking** tab click **Next**
@@ -74,7 +74,7 @@ To storge office templete and script responsible for deploying templates in loca
 
 ### Create public blob on storage account
 
-1. Logon to https://portal.azure.com 
+1. Logon to [https://portal.azure.com ](https://portal.azure.com)
 2. On top search bar type **storage account**
 3. Click on storage account created previously
 4. On left navigation menu click on **Containers**
@@ -86,7 +86,7 @@ To storge office templete and script responsible for deploying templates in loca
 
 ## PowerShell scripts data preparation
 
-Powershell scripts can be found on my repository under this link: https://github.com/mimachniak/sysopslife-scripts/Intune
+Powershell scripts can be found on my repository under this link: [https://github.com/mimachniak/sysopslife-scripts/Intune](https://github.com/mimachniak/sysopslife-scripts/Intune)
 
 ### Prepare script that will download Office template file to dedicated folder
 
