@@ -91,13 +91,13 @@ e) Enter date for new container and chage public access level then click   **Cre
 ![](/assets/images/Azure/azure-st-6.PNG)
 
 
-g) Upload office template files by clicking **Upload** on navigation menu  
+f) Upload office template files by clicking **Upload** on navigation menu  
 
 ![](/assets/images/Azure/azure-st-7.PNG)
 
 ![](/assets/images/Azure/azure-st-8.PNG)
 
-h) Click on created container with name **scripts** and upload script  
+g) Click on created container with name **scripts** and upload script  
 
 ![](/assets/images/Azure/azure-st-12.PNG)
 
