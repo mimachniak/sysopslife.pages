@@ -55,45 +55,45 @@ To storge office templete and script responsible for deploying templates in loca
 
 ### Create stroage account in Azure
 
-1. Logon to [https://portal.azure.com ](https://portal.azure.com)
-2. On top search bar type **storage account**
+a) Logon to [https://portal.azure.com ](https://portal.azure.com)
+b) On top search bar type **storage account**
 
 ![](/assets/images/Azure/azure-st-1.PNG)
 
-3. On navigation bar click **Create**
+c)  On navigation bar click **Create**
 
 ![](/assets/images/Azure/azure-st-2.PNG)
 
-4. Enter data in **Basic** tab
+d) Enter data in **Basic** tab
 
 ![](/assets/images/Azure/azure-st-3.PNG)
 
-5. On **Advanced** tab click **Next**
-6. On **Networking** tab click **Next**
-7. On **Data protection** tab click **Next**
-8. On **Tags** tab click **Next**
-8. On **Review + Create** tab click **Create** if Validation passed
+e) On **Advanced** tab click **Next**
+f) On **Networking** tab click **Next**
+g) On **Data protection** tab click **Next**
+h) On **Tags** tab click **Next**
+i) On **Review + Create** tab click **Create** if Validation passed
 
 ![](/assets/images/Azure/azure-st-4.PNG)
 
 ### Create public blob on storage account
 
-1. Logon to [https://portal.azure.com ](https://portal.azure.com)
-2. On top search bar type **storage account**
-3. Click on storage account created previously
-4. On left navigation menu click on **Containers** and n navigation bar click **Container**
+a) Logon to [https://portal.azure.com ](https://portal.azure.com)
+b) On top search bar type **storage account**
+c) Click on storage account created previously
+d) On left navigation menu click on **Containers** and n navigation bar click **Container**
 
 ![](/assets/images/Azure/azure-st-5.PNG)
 
 ![](/assets/images/Azure/azure-st-6.PNG)
 
-6. Enter date for new container and chage public access level then click **Create**
+e) Enter date for new container and chage public access level then click **Create**
 
 ![](/assets/images/Azure/azure-st-7.PNG)
 
-7. Click on created container with name **office-template**
-8. Upload office template files by clicking **Upload** on navigation menu
-9. Click on created container with name **scripts**
+f) Click on created container with name **office-template**
+g) Upload office template files by clicking **Upload** on navigation menu
+h) Click on created container with name **scripts**
 
 ## PowerShell scripts data preparation
 
