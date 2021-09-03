@@ -60,9 +60,12 @@ To storge office templete and script responsible for deploying templates in loca
 
 3. On navigation bar click **Create**
 
-
+![](/assets/images/azure-st-2.PNG)
 
 4. Enter data in **Basic** tab
+
+![](/assets/images/azure-st-3.PNG)
+
 5. On **Advanced** tab click **Next**
 6. On **Networking** tab click **Next**
 7. On **Data protection** tab click **Next**
