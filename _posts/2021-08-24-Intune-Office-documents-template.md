@@ -97,7 +97,7 @@ To storge office templete and script responsible for deploying templates in loca
 
 ## PowerShell scripts data preparation
 
-Powershell scripts can be found on my repository under this link: [https://github.com/mimachniak/sysopslife-scripts/Intune](https://github.com/mimachniak/sysopslife-scripts/Intune)
+Powershell scripts can be found on my repository under this link: [https://github.com/mimachniak/sysopslife-scripts/tree/master/Intune](https://github.com/mimachniak/sysopslife-scripts/tree/master/Intune)
 
 ### Prepare script that will download Office template file to dedicated folder
 
