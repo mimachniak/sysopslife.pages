@@ -58,7 +58,7 @@ To storge office templete and script responsible for deploying templates in loca
 1. Logon to [https://portal.azure.com ](https://portal.azure.com)
 2. On top search bar type **storage account**
 
-![](/assets/images/azure-st-1.PNG)
+![](/assets/images/Azure/azure-st-1.PNG)
 
 3. On navigation bar click **Create**
 
