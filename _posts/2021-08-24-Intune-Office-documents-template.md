@@ -35,6 +35,8 @@ On this article we will use:
 
 ## General flow and execution
 
+Templates will be refreshed each time user log on to PC
+
 ![](/assets/images/Office-template-mechanimz.png)
 
 ## Azure subscription creation
