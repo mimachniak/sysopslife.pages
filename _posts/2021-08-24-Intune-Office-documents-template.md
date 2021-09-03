@@ -74,14 +74,25 @@ To storge office templete and script responsible for deploying templates in loca
 8. On **Tags** tab click **Next**
 8. On **Review + Create** tab click **Create** if Validation passed
 
+![](/assets/images/Azure/azure-st-4.PNG)
+
 ### Create public blob on storage account
 
 1. Logon to [https://portal.azure.com ](https://portal.azure.com)
 2. On top search bar type **storage account**
 3. Click on storage account created previously
 4. On left navigation menu click on **Containers**
+
+![](/assets/images/Azure/azure-st-5.PNG)
+
 5. On navigation bar click **Container**
+
+![](/assets/images/Azure/azure-st-6.PNG)
+
 6. Enter date for new container and chage public access level then click **Create**
+
+![](/assets/images/Azure/azure-st-7.PNG)
+
 7. Click on created container with name **office-template**
 8. Upload office template files by clicking **Upload** on navigation menu
 9. Click on created container with name **scripts**
