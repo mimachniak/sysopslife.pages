@@ -85,15 +85,21 @@ d) On left navigation menu click on **Containers** and n navigation bar click **
 
 ![](/assets/images/Azure/azure-st-5.PNG)
 
-![](/assets/images/Azure/azure-st-6.PNG)
 
 e) Enter date for new container and chage public access level then click **Create**
 
+![](/assets/images/Azure/azure-st-6.PNG)
+
+
+g) Upload office template files by clicking **Upload** on navigation menu
+
 ![](/assets/images/Azure/azure-st-7.PNG)
 
-f) Click on created container with name **office-template**
-g) Upload office template files by clicking **Upload** on navigation menu
-h) Click on created container with name **scripts**
+![](/assets/images/Azure/azure-st-8.PNG)
+
+h) Click on created container with name **scripts** and upload script
+
+![](/assets/images/Azure/azure-st-12.PNG)
 
 ## PowerShell scripts data preparation
 
