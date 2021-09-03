@@ -55,49 +55,49 @@ To storge office templete and script responsible for deploying templates in loca
 
 ### Create stroage account in Azure
 
-a) Logon to [https://portal.azure.com ](https://portal.azure.com)
-b) On top search bar type **storage account**
+a) Logon to [https://portal.azure.com ](https://portal.azure.com)  
+b) On top search bar type **storage account**  
 
-![](/assets/images/Azure/azure-st-1.PNG)
+![](/assets/images/Azure/azure-st-1.PNG)  
 
-c)  On navigation bar click **Create**
+c)  On navigation bar click **Create**  
 
 ![](/assets/images/Azure/azure-st-2.PNG)
 
-d) Enter data in **Basic** tab
+d) Enter data in **Basic** tab  
 
 ![](/assets/images/Azure/azure-st-3.PNG)
 
-e) On **Advanced** tab click **Next**
-f) On **Networking** tab click **Next**
-g) On **Data protection** tab click **Next**
-h) On **Tags** tab click **Next**
-i) On **Review + Create** tab click **Create** if Validation passed
+e) On **Advanced** tab click **Next**  
+f) On **Networking** tab click **Next**  
+g) On **Data protection** tab click **Next**  
+h) On **Tags** tab click **Next**  
+i) On **Review + Create** tab click **Create** if Validation passed  
 
 ![](/assets/images/Azure/azure-st-4.PNG)
 
 ### Create public blob on storage account
 
-a) Logon to [https://portal.azure.com ](https://portal.azure.com)
-b) On top search bar type **storage account**
-c) Click on storage account created previously
-d) On left navigation menu click on **Containers** and n navigation bar click **Container**
+a) Logon to [https://portal.azure.com ](https://portal.azure.com)  
+b) On top search bar type **storage account**  
+c) Click on storage account created previously  
+d) On left navigation menu click on **Containers** and n navigation bar click   **Container**
 
 ![](/assets/images/Azure/azure-st-5.PNG)
 
 
-e) Enter date for new container and chage public access level then click **Create**
+e) Enter date for new container and chage public access level then click   **Create**
 
 ![](/assets/images/Azure/azure-st-6.PNG)
 
 
-g) Upload office template files by clicking **Upload** on navigation menu
+g) Upload office template files by clicking **Upload** on navigation menu  
 
 ![](/assets/images/Azure/azure-st-7.PNG)
 
 ![](/assets/images/Azure/azure-st-8.PNG)
 
-h) Click on created container with name **scripts** and upload script
+h) Click on created container with name **scripts** and upload script  
 
 ![](/assets/images/Azure/azure-st-12.PNG)
 
