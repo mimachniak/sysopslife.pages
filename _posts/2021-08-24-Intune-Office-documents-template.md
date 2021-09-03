@@ -28,10 +28,14 @@ On this article I will show how to do it with full cloud based solution, for thi
 
 ## Prerequisites 
 
-On this articel we will use: 
+On this article we will use: 
 * Azure storage account
 * Intune (Endpoint Manager)
 * PowerShell scripts
+
+## General flow and execution
+
+![](/assets/images/Office-template-mechanimz.png)
 
 ## Azure subscription creation
 
@@ -64,7 +68,7 @@ To storge office templete and script responsible for deploying templates in loca
 1. Logon to https://portal.azure.com 
 2. On top search bar type **storage account**
 3. Click on storage account created previously
-4. On left navigation maenu click on **Containers**
+4. On left navigation menu click on **Containers**
 5. On navigation bar click **Container**
 6. Enter date for new container and chage public access level then click **Create**
 7. Click on created container with name **office-template**
@@ -112,7 +116,7 @@ $storageAccountNameScriptUrl = 'https://dofficetemplate.blob.core.windows.net/sc
 
 ```
 2. Logon to https://endpoint.microsoft.com
-3. In Endpoint Manager Consol navigate to **Devices --> Windows --> PowerShell scripts**
+3. In Endpoint Manager Console navigate to **Devices --> Windows --> PowerShell scripts**
 4. On navigation click **Add**
 5. Enter **Name** and **Description**
 6. On **Script Settings** add script and select **Run this script using the logged on credentials**
@@ -124,7 +128,7 @@ $storageAccountNameScriptUrl = 'https://dofficetemplate.blob.core.windows.net/sc
 7. On **Assignments** and ***All Users** or selected group of **Users**
 8. Click **Next** and **Add**
 
-## Windows 10 veryfication
+## Windows 10 verification
 
 ### Intune policy synchronization force
 
@@ -133,7 +137,7 @@ $storageAccountNameScriptUrl = 'https://dofficetemplate.blob.core.windows.net/sc
 3. Click on connection and then on **Info**
 4. Scroll down and click on **Sync**
 5. After sync completed (can take to 30 min) go to **task scheduler**
-6. Veryfie that task was create on Windows 10
+6. Verify that task was create on Windows 10
 7. Run taks in ***task scheduler** and verify that templates was downloaded to local folder
 8. Log files will be created for each action and replace each run under path **C:\Users\Public\Documents**
 
