@@ -103,14 +103,14 @@ g) Click on created container with name **scripts** and upload script
 
 ![](/assets/images/Azure/azure-st-13.PNG)
 
-## PowerShell scripts data preparation
+## PowerShell scripts data preparation for all actions
 
 Powershell scripts can be found on my repository under this link: [https://github.com/mimachniak/sysopslife-scripts/tree/master/Intune](https://github.com/mimachniak/sysopslife-scripts/tree/master/Intune)
 
 ### Prepare script that will download Office template file to dedicated folder
 
 #### Script responsible for downloading templates to local environment
-1. Change parameter date dedicated for your environment, script can be downloaded form GitHub: [Intune-DocumentTemplateStorageAccount.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/Intune/Intune-DocumentTemplateStorageAccount.ps1)
+**a)** Change parameter date dedicated for your environment, script can be downloaded form GitHub: [Intune-DocumentTemplateStorageAccount.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/Intune/Intune-DocumentTemplateStorageAccount.ps1)  
 
 ```powershell
 
@@ -126,14 +126,22 @@ $TemplateFolderName = 'Office Templates' # Folder name on desktop when files wil
 
 ```
 
-2. Storage account **Name** is available in **Endpoints** section in Azure on **Blob**
-3. Upload script to **Container** on storage account, the same **container** name **scripts**
-4. Click on uploade script with name **Intune-DocumentTemplateStorageAccount.ps1**
-5. Copy **URL** and past it to second script that will be deploy by **Intune**
+b) Storage account **Name** is available in **Endpoints** section in Azure on **Blob**  
 
-#### Script responsible creating by Intune task schduler that will execute script each time user log in to desktop.
+![](/assets/images/Azure/azure-st-9.PNG)
 
-1. Change parameter date dedicated for your environment, script can be downloaded form GitHub: [Windows10-taskScheduler-register-executescript-url.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/Intune/Windows10-taskScheduler-register-executescript-url.ps1)
+c) Upload script to **Container** on storage account, the same **container** name **scripts**  
+
+![](/assets/images/Azure/azure-st-13.PNG)
+
+d) Click on uploade script with name **Intune-DocumentTemplateStorageAccount.ps1**  
+f) Copy **URL** and past it to second script that will be deploy by **Intune**  
+
+![](/assets/images/Azure/azure-st-11.PNG)
+
+#### Script responsible registring by Intune task schduler that will execute script each time user log in to desktop.
+
+a) Change parameter date dedicated for your environment, script can be downloaded form GitHub: [Windows10-taskScheduler-register-executescript-url.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/Intune/Windows10-taskScheduler-register-executescript-url.ps1)
 
 ```powershell
 
@@ -143,11 +151,11 @@ $LogFileName = 'IntunePowerShell.log' # log file name
 $storageAccountNameScriptUrl = 'https://dofficetemplate.blob.core.windows.net/scripts/Intune-DocumentTemplateStorageAccount.ps1' # Azure Storage Acccount Url to script
 
 ```
-2. Logon to https://endpoint.microsoft.com
-3. In Endpoint Manager Console navigate to **Devices --> Windows --> PowerShell scripts**
-4. On navigation click **Add**
-5. Enter **Name** and **Description**
-6. On **Script Settings** add script and select **Run this script using the logged on credentials**
+b) Logon to https://endpoint.microsoft.com
+c) In Endpoint Manager Console navigate to **Devices --> Windows --> PowerShell scripts**
+d) On navigation click **Add**
+f) Enter **Name** and **Description**
+g) On **Script Settings** add script and select **Run this script using the logged on credentials**
 
 >
 > The script runs with the users’ credentials on the client computer. By default, the script runs in system context.
