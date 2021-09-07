@@ -425,3 +425,6 @@ End time: 20210903203140
 
 ```
 
+## Summary
+
+I hope this article will allow to eliminate in your organization another step that block you witch moving to cloud, if you like this post please share it or send feedback. 
