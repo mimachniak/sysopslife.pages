@@ -320,7 +320,7 @@ h) Click **Next** and **Add**
 
 ### Intune policy synchronization force
 
-a) Log on to device 
+a) Log on to device  
 b) Navigate to **Settings --> Accounts --> Access work or school**  
 b) Click on connection and then on **Info**  
 
@@ -330,7 +330,7 @@ c) Scroll down and click on **Sync**
 
 ![](/assets/images/Intune/Intune-OfficeTemplate-7.png)
 
-d) After sync completed (can take to 90 min) go to **task scheduler** and verify that new task was registered under **Task Scheduler Library**
+d) After sync completed (can take to 90 min) go to **task scheduler** and verify that new task was registered under **Task Scheduler Library**   
 e) Verify that task was create on Windows 10  
 f) Run taks in ***task scheduler** and verify that templates was downloaded to local folder or re-logon user to trigger **task scheduler**  
 
