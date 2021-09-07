@@ -331,7 +331,10 @@ c) Scroll down and click on **Sync**
 ![](/assets/images/Intune/Intune-OfficeTemplate-7.png)
 
 d) After sync completed (can take to 90 min) go to **task scheduler** and verify that new task was registered under **Task Scheduler Library**   
-e) Verify that task was create on Windows 10  
+e) Verify that task was registered on Windows 10 in **Task Scheduler Library**    
+
+![](/assets/images/Intune/Intune-OfficeTemplate-8.png)
+
 f) Run taks in ***task scheduler** and verify that templates was downloaded to local folder or re-logon user to trigger **task scheduler**  
 
 ![](/assets/images/Intune/Intune-OfficeTemplate-9.png)
@@ -348,7 +351,7 @@ i) Verify that Microsft Word and Excel show document templates in section **Pers
 j) Log files will be created for each action and replace each run under path **C:\Users\Public\Documents** all logs are super pass on each run  
 
 * IntunePowerShell.log - Contains logs of Intune executing tasks that will runs script responsible for registering in Task Scheduler Library recurring task that responsible for downloading Office templates to local drive
-* OfficeTemplates.log - 
+* OfficeTemplates.log - Contains logs of script that is responsible for downloading templates to local drive, script is executed form URL  
 
 ![](/assets/images/Intune/Intune-OfficeTemplate-12.png)
 
