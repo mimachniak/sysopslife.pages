@@ -308,7 +308,7 @@ g) On **Script Settings** add script and select **Run this script using the logg
 > The script runs with the users’ credentials on the client computer. By default, the script runs in system context.
 >
 
-f) On **Assignments** and ***All Users** or selected group of **Users**
+f) On **Assignments** and **All Users** or selected dedicated group of **Users** for which you like to implement this solution  
 
 ![](/assets/images/Intune/Intune-OfficeTemplate-4.png)
 
@@ -323,11 +323,31 @@ h) Click **Next** and **Add**
 a) Log on to device 
 b) Navigate to **Settings --> Accounts --> Access work or school**  
 b) Click on connection and then on **Info**  
+
+![](/assets/images/Intune/Intune-OfficeTemplate-6.png)
+
 c) Scroll down and click on **Sync**  
-d) After sync completed (can take to 90 min) go to **task scheduler**  
+
+![](/assets/images/Intune/Intune-OfficeTemplate-7.png)
+
+d) After sync completed (can take to 90 min) go to **task scheduler** and verify that new task was registered under **Task Scheduler Library**
 e) Verify that task was create on Windows 10  
-f) Run taks in ***task scheduler** and verify that templates was downloaded to local folder  
-g) Log files will be created for each action and replace each run under path **C:\Users\Public\Documents**  
+f) Run taks in ***task scheduler** and verify that templates was downloaded to local folder or re-logon user to trigger **task scheduler**  
+
+![](/assets/images/Intune/Intune-OfficeTemplate-9.png)
+
+g) Verify that after task run templates files are downloaded to designated location on local hard drive 
+
+![](/assets/images/Intune/Intune-OfficeTemplate-10.png)
+
+i) Verify that Microsft Word and Excel show document templates in section **Personal**
+
+![](/assets/images/Intune/Intune-OfficeTemplate-11.png)
+
+
+j) Log files will be created for each action and replace each run under path **C:\Users\Public\Documents**  
+
+![](/assets/images/Intune/Intune-OfficeTemplate-12.png)
 
 ```text
 
