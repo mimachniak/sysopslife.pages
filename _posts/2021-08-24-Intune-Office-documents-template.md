@@ -345,7 +345,10 @@ i) Verify that Microsft Word and Excel show document templates in section **Pers
 ![](/assets/images/Intune/Intune-OfficeTemplate-11.png)
 
 
-j) Log files will be created for each action and replace each run under path **C:\Users\Public\Documents**  
+j) Log files will be created for each action and replace each run under path **C:\Users\Public\Documents** all logs are super pass on each run  
+
+* IntunePowerShell.log - Contains logs of Intune executing tasks that will runs script responsible for registering in Task Scheduler Library recurring task that responsible for downloading Office templates to local drive
+* OfficeTemplates.log - 
 
 ![](/assets/images/Intune/Intune-OfficeTemplate-12.png)
 
