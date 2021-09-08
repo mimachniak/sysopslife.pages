@@ -68,7 +68,7 @@ Guide:
 
 ## Azure storage account configuration
 
-To storge office templete and script responsible for deploying templates in local machine, we will use azure storage account with **public blob container**. Storage account is one of cheaper solution to keep data use in this solution. Cost is based on amount of data counted in GB per month so for scripts and documents template it won't be so match. 
+To storage office templete and script responsible for deploying templates in local machine, we will use azure storage account with **public blob container**. Storage account is one of cheaper solution to keep data use in this solution. Cost is based on amount of data counted in GB per month so for scripts and documents template it won't be so match. 
 
 ### Create storage account in Azure
 
