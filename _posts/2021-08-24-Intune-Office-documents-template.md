@@ -1,7 +1,7 @@
 ---
 title: "Intune (Endpoint Manager) - How to deploy Office templates and keep them up to date (recurring)."
 classes: wide
-excerpt: "Intune (Endpoint Manager) - How to deploy Office templates and keep them up to date. Office template used in organization are mote common and easy task to be deployed over GPO, most of organization have own templates with logos, formats etc. Templates are often store on some file share from where computer / user can download them, so storage is some of barriers when we like to use full cloud MDM in form of SaaS."
+excerpt: "Intune (Endpoint Manager) - How to deploy Custom Office templates and keep them up to date. Templates are often store on some file share from where computer / user can download them, so storage is some of limitation when we like to use full cloud MDM in form of SaaS."
 toc: true
 header:
   teaser: /assets/images/teaser/Intune-Office-Template.png
