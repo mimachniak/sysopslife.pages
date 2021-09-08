@@ -19,6 +19,8 @@ published: true
 hidden: false
 ---
 
+![image-center](/assets/images/Intune-Office-Template.png)
+
 ## Why I write this article
 
 Organization often use **custom office templates** that are available in **Word/Excel/PowerPoint** as custom. Those templates contain logs, footers of organization and custom fonts. 
@@ -40,7 +42,6 @@ To avoid these limitations, we split this solution to 2 parts:
 
 On this article I will show how to do it with full cloud based solution, for this I will use Azure **storage account** and Intune with **PowerShell**.
 
-![image-center](/assets/images/Intune-Office-Template.png)
 
 ## Prerequisites 
 
