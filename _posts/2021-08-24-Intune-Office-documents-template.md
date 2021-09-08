@@ -21,9 +21,24 @@ hidden: false
 
 ## Why I write this article
 
-Deploy office template used in organization are common and easy task to be deployed over GPO, most of organization have own templates with logos, formats etc. Templates are often store on some file share from where computer / user can download them, so storage is some of barriers when we like to use full cloud MDM in form of SaaS.  
-Another limitation is that Intune don't have ability to tun PowerShell script in some schedule. 
-On this article I will show how to do it with full cloud based solution, for this I will use Azure and Intune.
+Organization often use **custom office templates** that are available in **Word/Excel/PowerPoint** as custom. Those templates contain logs, footers of organization and custom fonts. 
+
+IT ops deploy **custom office and templates** to End User devices using **Group Policy** in **Active Directory** and file share to store those **custom office templates**. This task is common but have few limitations:
+-	Users need to be connected over VPN and have access to file share
+-	Custom templates don’t update after change on file share
+-	This solution requires Active Directory management 
+
+To allow move management to Intune and keep business process of delivering custom office templates to devices that are manage by Intune and don’t connect to **Active Directory** we develop this solution base on PowerShell scripts. 
+
+Intune witch PowerShell scripts also have some limitations like 
+-	PowerShell scripts deploy by won’t run schedule time all time
+-	Intune agent don’t have any profile
+
+To avoid these limitations, we split this solution to 2 parts:
+1.	Registered solution on local computer that will in dedicated schedule call script.
+2.	Call script each time when will be running will download fresh **custom office templates** to local drive.
+
+On this article I will show how to do it with full cloud based solution, for this I will use Azure ***storage account** and Intune with **PowerShell**.
 
 ## Prerequisites 
 
@@ -50,9 +65,9 @@ Guide:
 
 ## Azure storage account configuration
 
-To storge office templete and script responsible for deploying templates in local machine, we will use azure storage account with **public blob container**. Storage account is one of chepes solution to keep data and expensive are based on amount of data counted in GB per month.
+To storge office templete and script responsible for deploying templates in local machine, we will use azure storage account with **public blob container**. Storage account is one of cheaper solution to keep data use in this solution. Cost is based on amount of data counted in GB per month so for scripts and documents template it won't be so match. 
 
-### Create stroage account in Azure
+### Create storage account in Azure
 
 a) Logon to [https://portal.azure.com ](https://portal.azure.com)  
 b) On top search bar type **storage account**  
@@ -104,10 +119,13 @@ g) Click on created container with name **scripts** and upload script
 
 ## PowerShell scripts data preparation for all actions
 
-Powershell scripts can be found on my repository under this link: [https://github.com/mimachniak/sysopslife-scripts/tree/master/Intune](https://github.com/mimachniak/sysopslife-scripts/tree/master/Intune)
+Powershell scripts used for this solution can be found on my repository in GitHub under this link: [https://github.com/mimachniak/sysopslife-scripts/tree/master/Intune](https://github.com/mimachniak/sysopslife-scripts/tree/master/Intune)
 
 ### Script responsible for downloading templates to local environment
-**a)** Change parameter date dedicated for your environment, script can be downloaded form GitHub: [Intune-DocumentTemplateStorageAccount.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/Intune/Intune-DocumentTemplateStorageAccount.ps1)
+
+First, we will prepare script that is responsible for downloading Office templates form Storage account to local drive and put those templates in dedicated folder that is also set by this script. So as starting point you need to prepare configuration parameters dedicated for your organization or use my.   
+
+a) Change parameter date dedicated for your environment, script can be downloaded form GitHub: [Intune-DocumentTemplateStorageAccount.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/Intune/Intune-DocumentTemplateStorageAccount.ps1)
 
 Parameters that need to be change for you environment
 
