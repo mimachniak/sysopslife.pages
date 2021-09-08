@@ -38,7 +38,7 @@ To avoid these limitations, we split this solution to 2 parts:
 1.	Registered solution on local computer that will in dedicated schedule call script.
 2.	Call script each time when will be running will download fresh **custom office templates** to local drive.
 
-On this article I will show how to do it with full cloud based solution, for this I will use Azure ***storage account** and Intune with **PowerShell**.
+On this article I will show how to do it with full cloud based solution, for this I will use Azure **storage account** and Intune with **PowerShell**.
 
 ## Prerequisites 
 
