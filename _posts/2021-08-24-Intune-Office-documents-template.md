@@ -40,6 +40,8 @@ To avoid these limitations, we split this solution to 2 parts:
 
 On this article I will show how to do it with full cloud based solution, for this I will use Azure **storage account** and Intune with **PowerShell**.
 
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Intune-Office-Template.png){: .align-center}
+
 ## Prerequisites 
 
 On this article we will use: 
