@@ -34,7 +34,7 @@ As a starting point we will configure SharePoint sharing policy. Policy settings
 2. Go to **Sharing**
 3. Extend **More external sharing settings**  
 4. Select **Guest access to a site or OneDrive will expire automatically after theis many days** 
-5. Set number of days
+5. Set number of days number from **30** to **730**
 
 ![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-admin.png)
 
