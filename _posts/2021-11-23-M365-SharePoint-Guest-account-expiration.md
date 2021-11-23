@@ -38,6 +38,14 @@ As a starting point we will configure SharePoint sharing policy. Policy settings
 
 ![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-admin.png)
 
+## SharePoint Online Administrator - Site sharing policies
+
+Site can override global settings, so we can use different policy for different site.
+-	Extended period of expiration 
+-	Disable expiration period for guest access  
+
+
+
 
 
 
