@@ -16,7 +16,7 @@ tags:
   - Access
   - Policy
 published: true
-hidden: false
+hidden: true
 ---
 
 
@@ -43,6 +43,8 @@ As a starting point we will configure SharePoint sharing policy. Policy settings
 Site can override global settings, so we can use different policy for different site.
 -	Extended period of expiration 
 -	Disable expiration period for guest access  
+
+
 
 
 
