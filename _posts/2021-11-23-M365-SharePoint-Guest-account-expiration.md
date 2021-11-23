@@ -30,8 +30,13 @@ On this article I will show how to configure guest policy expiration on differen
 
 As a starting point we will configure SharePoint sharing policy. Policy settings are located on SharePoint Admin Center, that is accessible by link [https://{domain}-admin.sharepoint.com/](https://{domain}-admin.sharepoint.com/) or you can navigate from Office365 Admin Center. 
 
+1. In admin center on left side contex menu navigate to **Policies** section
+2. Go to **Sharing**
+3. Extend **More external sharing settings**  
+4. Select **Guest access to a site or OneDrive will expire automatically after theis many days** 
+5. Set number of days
 
-![](/assets/images/Office-template-mechanimz.png)
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-admin.png)
 
 
 
