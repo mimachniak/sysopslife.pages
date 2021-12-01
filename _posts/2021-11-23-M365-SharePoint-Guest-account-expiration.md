@@ -67,11 +67,21 @@ To setup policy for dedicated site we need to edit policy on this site form Shar
 
 ![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Admin-Site-2.png)
 
+>
+> OneDrive sites don't have option of overriding expiration policy for guest accounts.
+>
 
+## How to manage expiring guest access for OneDrive and SharePoint site
 
+### Notification about guest expiring access
 
+Notification about guest expiring access will be displayed on site level so site Owners and Admins can see how many guest access will expired: 
 
+- Site collection administrators will receive an e-mail notification once per week informing you about all guests that will expire in the next 2 to 3 weeks.
+- The banner will appear 2 to 3 weeks before the guest expiration date and will only display on the web app.
+- The banner does not display in the mobile application.
 
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site-6.png)
 
 
 
