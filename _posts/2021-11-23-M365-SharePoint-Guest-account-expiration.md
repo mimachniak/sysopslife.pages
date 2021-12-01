@@ -88,6 +88,11 @@ Notification about guest expiring access will be displayed on site level so site
 
 ### SharePoint Site guest expiring access (Extend or remove access)
 
+We can manage guest expiration of site level for permission settings. Site administrators can:
+-	Extend access for guest without waiting to policy applied 
+-	Remove access for guest without waiting to policy applied
+
+
 1. On web browser open site URL 
 2. On navigation options in right upper corner open site **Settings**
 
