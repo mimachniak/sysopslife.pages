@@ -86,10 +86,31 @@ Notification about guest expiring access will be displayed on site level so site
 
 ![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site-6.png)
 
-### SharePoint Site guest expiring access
+### SharePoint Site guest expiring access (Extend or remove access)
+
+1. On web browser open site URL 
+2. On navigation options in right upper corner open site **Settings**
+
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site-1.png)
+
+3. Select **Site Permissions** 
+
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site-2.png)
+
+4. Click **Manage** under **guest expiration** 
+
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site-3.png)
+
+5. Verified list of guest account and expiration dates
+
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site-4.png)
+
+6. To Extend or remove access click right 3 dots in end of guest account line
+
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site-5.png)
 
 
-### OneDrive site about guest expiring access
+### OneDrive site guest expiring access (Extend or remove access)
 
 
 
