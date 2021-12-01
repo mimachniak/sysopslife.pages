@@ -29,7 +29,7 @@ On this article I will show how to configure guest policy expiration on differen
 ## SharePoint Online Administrator Center
 
 As a starting point we will configure SharePoint sharing policy. Policy settings are located on SharePoint Admin Center, that is accessible by link [https://{domain}-admin.sharepoint.com/](https://{domain}-admin.sharepoint.com/) or you can navigate from Office365 Admin Center. 
-This policy will be inherited globally for all sites new and existing one in our tenant.
+This policy will be inherited globally for all sites new and existing one in our tenant and also all OneDrive sites.
 
 1. In admin center on left side contex menu navigate to **Policies** section
 2. Go to **Sharing**
@@ -41,12 +41,31 @@ This policy will be inherited globally for all sites new and existing one in our
 
 ## SharePoint Online Administrator - Site sharing policies
 
-Site can override global settings, so we can use different policy for different site.
+Site collections create as standalone or Microsoft 365 Groups (Teams Site) policy can override against global settings, so we can use different policy for different sites but not for OneDrive sites. Witch override options is policy we can: 
 -	Extended period of expiration 
 -	Disable expiration period for guest access  
 
+To setup policy for dedicated site we need to edit policy on this site form SharePoint Online admin center. 
+
+1. In admin center on left side contex menu navigate to **Sites** section
+2. Go to **Active Sites**
+3. Select site collection name 
 
 
+
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Admin-Site-1.png)
+
+
+4. In site collection settings change tab to **Policies**
+
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Admin-Site-3.png)
+
+5. **Uncheck** Same as organization-level settings (XX Days) in Expiration of guest access, change settings that you like to override 
+- Turn off guest expiration policy, by checking **Guest access doesn’t expire automatically** 
+- Change expire policy to less restrictive or extend by changing value in **Guest access expires automatically after this many days** 
+
+
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Admin-Site-2.png)
 
 
 
