@@ -26,6 +26,9 @@ When we manage organization that is collaborating which other B2B partners we ar
 One of new approaches in Microsoft 365 we are able to use guest expiration policies that will track all guest access across tenant and automatically remove unnecessary access to information base on tenant, site police. 
 On this article I will show how to configure guest policy expiration on different levels, how to review/remove and extend access in SharePoint and OneDrive.
 
+## Prequesties 
+
+SharePoint Online licences 
 ## SharePoint Online Administrator Center
 
 As a starting point we will configure SharePoint sharing policy. Policy settings are located on SharePoint Admin Center, that is accessible by link [https://{domain}-admin.sharepoint.com/](https://{domain}-admin.sharepoint.com/) or you can navigate from Office365 Admin Center. 
@@ -82,6 +85,11 @@ Notification about guest expiring access will be displayed on site level so site
 - The banner does not display in the mobile application.
 
 ![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site-6.png)
+
+### SharePoint Site guest expiring access
+
+
+### OneDrive site about guest expiring access
 
 
 
