@@ -29,6 +29,7 @@ On this article I will show how to configure guest policy expiration on differen
 ## SharePoint Online Administrator Center
 
 As a starting point we will configure SharePoint sharing policy. Policy settings are located on SharePoint Admin Center, that is accessible by link [https://{domain}-admin.sharepoint.com/](https://{domain}-admin.sharepoint.com/) or you can navigate from Office365 Admin Center. 
+This policy will be inherited globally for all sites new and existing one in our tenant.
 
 1. In admin center on left side contex menu navigate to **Policies** section
 2. Go to **Sharing**
