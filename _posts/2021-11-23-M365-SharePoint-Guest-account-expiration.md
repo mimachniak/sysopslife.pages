@@ -125,9 +125,25 @@ We can manage guest expiration of site level for permission settings. Site admin
 
 * Open OneDrive client right click of mouse and chose option **View Online**
 
-![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site8.png)
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site-8.png)
 
 * On navigation options in right upper corner open site **Settings**
+
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site-1.png)
+
+* On navigation go to **More settings**
+
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site-2.png)
+
+* Go to **Manage guest expiration**
+
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site-3.png)  
+* Verified list of guest account and expiration dates  
+
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site-4.png)
+
+* To Extend or remove access click right 3 dots in end of guest account line
+
 
 
 
