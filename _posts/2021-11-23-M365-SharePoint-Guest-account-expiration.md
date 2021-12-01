@@ -117,6 +117,18 @@ We can manage guest expiration of site level for permission settings. Site admin
 
 ### OneDrive site guest expiring access (Extend or remove access)
 
+* On web browser open OneDrive site URL
+
+* Open [https://portal.office.com/](portal.office.com/) and on navigation menu select **OneDrive**
+
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site-7.png)
+
+* Open OneDrive client right click of mouse and chose option **View Online**
+
+![](/assets/images/M365-Guest-Policy/M365-Guest-SPO-Site8.png)
+
+* On navigation options in right upper corner open site **Settings**
+
 
 
 
