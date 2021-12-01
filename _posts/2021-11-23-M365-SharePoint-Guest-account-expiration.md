@@ -72,6 +72,4 @@ Site can override global settings, so we can use different policy for different 
 
 
 
-
-
-//https://support.microsoft.com/en-us/office/manage-guest-expiration-for-a-site-25bee24f-42ad-4ee8-8402-4186eed74dea?ui=en-us&rs=en-us&ad=us
+<!-- https://support.microsoft.com/en-us/office/manage-guest-expiration-for-a-site-25bee24f-42ad-4ee8-8402-4186eed74dea?ui=en-us&rs=en-us&ad=us -->
