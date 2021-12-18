@@ -281,6 +281,8 @@ defaults:
       comments: true
       share: true
       related: true
+      sitemap: true
+      
   # _pages
   - scope:
       path: ""
