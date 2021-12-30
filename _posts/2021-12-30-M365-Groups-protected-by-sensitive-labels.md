@@ -155,3 +155,22 @@ ClassificationList
 EnableGroupCreation           True
 
 ```
+
+# Sensitive label’s naming and description
+
+## Define privacy and external user access settings
+
+These options apply to all Microsoft 365 Groups and teams that have this label applied. When applied, these settings will replace any existing privacy settings for the team or group. If the label is removed, users can change it again.
+
+* Private – Only team owners and members can access the group or team, and only owners can add members
+* Public – Anyone in organization can access the group or team (Include content) and add members.
+* External user access – Let Microsoft 365 Group owners add people outside organization to the group as guest. 
+
+## Control external sharing from labeled SharePoint sites
+
+When this label is applied to a SharePoint site, these settings will replace existing external sharing settings configured for the site.
+
+* Anyone – Users can share files and folders using links that don’t require sin in 
+* New and existing guest – Guest must sing in or provide verification code.
+* Existing guest – Only guest in your organization directory.
+* Only people in your organization – No external sharing allowed 
