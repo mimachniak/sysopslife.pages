@@ -160,7 +160,7 @@ EnableGroupCreation           True
 
 # Test 2   
 
-## Privacy and external user access settings detalies
+### Privacy and external user access settings detalies
 
 These options apply to all Microsoft 365 Groups and teams that have this label applied. When applied, these settings will replace any existing privacy settings for the team or group. If the label is removed, users can change it again.
 
@@ -168,7 +168,7 @@ These options apply to all Microsoft 365 Groups and teams that have this label a
 * Public – Anyone in organization can access the group or team (Include content) and add members.
 * External user access – Let Microsoft 365 Group owners add people outside organization to the group as guest. 
 
-## Control external sharing from labeled SharePoint sites
+### Control external sharing from labeled SharePoint sites
 
 When this label is applied to a SharePoint site (Teams / Yammer / Outlook group), these settings will replace existing external sharing settings on this site.
 
@@ -177,7 +177,7 @@ When this label is applied to a SharePoint site (Teams / Yammer / Outlook group)
 * Existing guest – Only guest in your organization directory.
 * Only people in your organization – No external sharing allowed 
 
-## Design labels name and settings  that need to be created in Microsoft365 Compliance Center 
+### Design labels name and settings  that need to be created in Microsoft365 Compliance Center 
 
 Before we start implementation we need to plan naming convention  and settings for sensitive labels, when we are choosing names we need to remember that this will be visible for end user and base on name and description user will chose witch protection settings need to be applied.  
 
