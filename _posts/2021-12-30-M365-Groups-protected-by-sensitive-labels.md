@@ -158,7 +158,7 @@ EnableGroupCreation           True
 
 ## Sensitive label’s naming and description
 
-# Sensitive  
+# Test 2   
 
 ## Privacy and external user access settings detalies
 
