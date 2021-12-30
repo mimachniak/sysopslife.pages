@@ -64,9 +64,9 @@ You don’t have to worry about manually assigning permissions to all those reso
 
 # Prepartion of Azure Active Directory
 
-1. Open PowerShell Window
-2. Install Azure AD PowerShell module 
-3. Connect to Azure Active Directory by PowerShell
+1 - Open PowerShell Window
+2 - Install Azure AD PowerShell module 
+3 - Connect to Azure Active Directory by PowerShell
 
 ```powershell
 
@@ -75,7 +75,7 @@ Import-Module AzureADPreview
 Connect-AzureAD
 
 ```
-4. Check Group Unified Settings in Azure Active Directory
+4 - Check Group Unified Settings in Azure Active Directory
 
 ```powershell
 
@@ -85,7 +85,7 @@ $aadSetting = $m365GroupUnifiedTemplate.CreateDirectorySetting()
 
 ```
 
-5. Check value for Group Unified settings
+5 - Check value for Group Unified settings
 
 ```powershell
 
@@ -113,7 +113,7 @@ EnableGroupCreation           True
 
 ```
 
-5. Setup value for setting: EnableMIPLabels
+6 - Setup value for setting: EnableMIPLabels
 
 ```powershell
 
@@ -121,7 +121,7 @@ $aadSetting["EnableMIPLabels"] = "True"
 
 ```
 
-6. Save Azure Active Directory settigs for Group Unified
+7 - Save Azure Active Directory settigs for Group Unified
 
 ```powershell
 
@@ -129,7 +129,7 @@ Set-AzureADDirectorySetting -Id $m365GroupUnifiedSetting.Id -DirectorySetting $a
 
 ```
 
-5. Check value for setting: EnableMIPLabels
+8 - Check value for setting: EnableMIPLabels
 
 ```powershell
 
