@@ -188,3 +188,5 @@ Before we start implementation we need to plan naming convention  and settings f
 |Site settings | Only people in your organization | New and existing guests | Anyone | 
 
 ## Configuration sensitive labels for Microsoft 365 Groups  
+
+After planning our settings we can configure  sensitive labels and policy in our organization for Microsoft 365 groups. 
