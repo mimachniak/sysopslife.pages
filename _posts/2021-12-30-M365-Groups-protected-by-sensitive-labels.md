@@ -158,7 +158,6 @@ EnableGroupCreation           True
 
 ## Sensitive label’s naming and description
 
-# Test 2   
 
 ### Privacy and external user access settings detalies
 
@@ -183,9 +182,9 @@ Before we start implementation we need to plan naming convention  and settings f
 
 | Label name | Internal | B2B-Partner | External |
 | ----------- | ----------- | ----------- | ------------ |
-|Description | SharePoint,  M365 groups and content can be access only by employees in organization | SharePoint,  M365 groups and content can be access by employees in organization and invited partners (Guest). | SharePoint,  M365 groups and content can be access by employees in organization and invited partners with option to share content without authorization. | 
+|Description | SharePoint, Teams, M365 groups and content can be access only by employees in organization. No external access is allowed. | SharePoint, Teams, M365 groups and content can be access by employees in organization and invited partners (Guest). | SharePoint, Teams, M365 groups and content can be access by employees in organization and invited partners with option to share content without authorization. | 
 |Group settings | Private | Private | Private | 
 |External user access | False | True | True | 
 |Site settings | Only people in your organization | New and existing guests | Anyone | 
 
-# Configuration sensitive labels for Microsoft 365 Groups  
+## Configuration sensitive labels for Microsoft 365 Groups  
