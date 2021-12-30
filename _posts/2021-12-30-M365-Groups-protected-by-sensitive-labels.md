@@ -179,6 +179,7 @@ When this label is applied to a SharePoint site (Teams / Yammer / Outlook group)
 
 ## Design labels name and settings  that need to be created in Microsoft365 Compliance Center 
 
+Before we start implementation we need to plan naming convention  and settings for sensitive labels, when we are choosing names we need to remember that this will be visible for end user and base on name and description user will chose witch protection settings need to be applied.  
 
 | Label name | Internal | B2B-Partner | External |
 | ----------- | ----------- | ----------- | ------------ |
@@ -186,3 +187,5 @@ When this label is applied to a SharePoint site (Teams / Yammer / Outlook group)
 |Group settings | Private | Private | Private | 
 |External user access | False | True | True | 
 |Site settings | Only people in your organization | New and existing guests | Anyone | 
+
+# Configuration sensitive labels for Microsoft 365 Groups  
