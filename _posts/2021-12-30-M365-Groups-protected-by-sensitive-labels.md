@@ -158,7 +158,7 @@ EnableGroupCreation           True
 
 # Sensitive label’s naming and description
 
-## Define privacy and external user access settings
+## Privacy and external user access settings detalies
 
 These options apply to all Microsoft 365 Groups and teams that have this label applied. When applied, these settings will replace any existing privacy settings for the team or group. If the label is removed, users can change it again.
 
@@ -168,9 +168,19 @@ These options apply to all Microsoft 365 Groups and teams that have this label a
 
 ## Control external sharing from labeled SharePoint sites
 
-When this label is applied to a SharePoint site, these settings will replace existing external sharing settings configured for the site.
+When this label is applied to a SharePoint site (Teams / Yammer / Outlook group), these settings will replace existing external sharing settings on this site.
 
 * Anyone – Users can share files and folders using links that don’t require sin in 
 * New and existing guest – Guest must sing in or provide verification code.
 * Existing guest – Only guest in your organization directory.
 * Only people in your organization – No external sharing allowed 
+
+## Design labels name and settings  that need to be created in Microsoft365 Compliance Center 
+
+
+| Label name | Internal | Partner | External |
+| ----------- | ----------- | ----------- | ------------ |
+|Description | SharePoint,  M365 groups and content can be access only by employees in organization | SharePoint,  M365 groups and content can be access by employees in organization and invited partners (Guest). | SharePoint,  M365 groups and content can be access by employees in organization and invited partners with option to share content without authorization. | 
+|Group settings | Private | Private | Private | 
+|External user access | False | True | True | 
+|Site settings | Only people in your organization | New and existing guests | Anyone | 
