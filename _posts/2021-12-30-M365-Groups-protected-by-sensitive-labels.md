@@ -158,6 +158,8 @@ EnableGroupCreation           True
 
 ## Sensitive label’s naming and description
 
+# Sensitive  
+
 ## Privacy and external user access settings detalies
 
 These options apply to all Microsoft 365 Groups and teams that have this label applied. When applied, these settings will replace any existing privacy settings for the team or group. If the label is removed, users can change it again.
