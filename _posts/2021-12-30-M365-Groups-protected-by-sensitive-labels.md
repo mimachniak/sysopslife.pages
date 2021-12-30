@@ -190,3 +190,7 @@ Before we start implementation we need to plan naming convention  and settings f
 ## Configuration sensitive labels for Microsoft 365 Groups  
 
 After planning our settings we can configure  sensitive labels and policy in our organization for Microsoft 365 groups. 
+
+1- Logon to Microsoft 365 compliance ccenter:  [https://compliance.microsoft.com/homepage](https://compliance.microsoft.com/homepage)  
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-1.png)
