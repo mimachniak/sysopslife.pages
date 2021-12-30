@@ -178,7 +178,7 @@ When this label is applied to a SharePoint site (Teams / Yammer / Outlook group)
 ## Design labels name and settings  that need to be created in Microsoft365 Compliance Center 
 
 
-| Label name | Internal | Partner | External |
+| Label name | Internal | B2B-Partner | External |
 | ----------- | ----------- | ----------- | ------------ |
 |Description | SharePoint,  M365 groups and content can be access only by employees in organization | SharePoint,  M365 groups and content can be access by employees in organization and invited partners (Guest). | SharePoint,  M365 groups and content can be access by employees in organization and invited partners with option to share content without authorization. | 
 |Group settings | Private | Private | Private | 
