@@ -75,7 +75,7 @@ Import-Module AzureADPreview
 Connect-AzureAD
 
 ```
-4 - Check Group Unified Settings in Azure Active Directory
+**4** - Check Group Unified Settings in Azure Active Directory
 
 ```powershell
 
@@ -85,7 +85,7 @@ $aadSetting = $m365GroupUnifiedTemplate.CreateDirectorySetting()
 
 ```
 
-5 - Check value for Group Unified settings
+**5** - Check value for Group Unified settings
 
 ```powershell
 
@@ -113,7 +113,7 @@ EnableGroupCreation           True
 
 ```
 
-6 - Setup value for setting: EnableMIPLabels
+**6** - Setup value for setting: EnableMIPLabels
 
 ```powershell
 
@@ -121,7 +121,7 @@ $aadSetting["EnableMIPLabels"] = "True"
 
 ```
 
-7 - Save Azure Active Directory settigs for Group Unified
+**7** - Save Azure Active Directory settigs for Group Unified
 
 ```powershell
 
@@ -129,7 +129,7 @@ Set-AzureADDirectorySetting -Id $m365GroupUnifiedSetting.Id -DirectorySetting $a
 
 ```
 
-8 - Check value for setting: EnableMIPLabels
+**8** - Check value for setting: EnableMIPLabels
 
 ```powershell
 
@@ -187,10 +187,33 @@ Before we start implementation we need to plan naming convention  and settings f
 |External user access | False | True | True | 
 |Site settings | Only people in your organization | New and existing guests | Anyone | 
 
-## Configuration sensitive labels for Microsoft 365 Groups  
+## Configuration sensitive labels and policy for Microsoft 365 Groups  
 
-After planning our settings we can configure  sensitive labels and policy in our organization for Microsoft 365 groups. 
+After planning our settings we can configure sensitive labels and policy in our organization for Microsoft 365 groups. Policy will force user to chose **label** in process of creation: 
+- Microsoft 365 Groups, 
+- Microsoft Teams, 
+- SharePoint Site, 
+- Yammer, 
+- Planner  
 
-1- Logon to Microsoft 365 compliance ccenter:  [https://compliance.microsoft.com/homepage](https://compliance.microsoft.com/homepage)  
+**1** - Logon to Microsoft 365 compliance ccenter:  [https://compliance.microsoft.com/homepage](https://compliance.microsoft.com/homepage)  
+**2** - On left navigation menu go to **Information protection**  
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-1.png)  
 
-![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-1.png)
+
+**3** - On navigation menu select **labels**
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-2.png)  
+
+**4** - Click **Create a label**  
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-3.png)  
+
+**5** - Enter date on required fields 
+
+- **Name** This is the name of the label your admins will see in the Microsoft 365 compliance center when configuring or managing labels  
+- **Display name** This is the name of the label your users will see in the apps where it's published (like Word, Outlook, and SharePoint). Be sure to come with a name that helps them understand what it's used for (for example, 'Confidential' or 'Personal')  
+
+- **Description for users** When this label is applied to content, this tooltip will appear to users when they view the label in their apps (like Word, Outlook, and Teams)  
+
+- **Description for admins** This description will appear only to admins who manage this label in the security center or compliance center.  
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-4.png)  
