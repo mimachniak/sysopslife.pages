@@ -221,3 +221,34 @@ After planning our settings we can configure sensitive labels and policy in our 
 >
 
 ![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-4.png)  
+
+
+**6** - Define the scope for this label we select only **Groups & Sites**  
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-5.png)  
+
+
+**7** - Define protection settings for groups and sites we chose both options  
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-6.png)  
+
+**8** - Define privacy and external user access settings  
+
+>
+> All information was planned in section : **Design labels name and settings  that need to be created in Microsoft365 Compliance Center**
+>
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-7.png)  
+
+**9** - Define external sharing and conditional access settings 
+
+>
+> All information was planned in section : **Design labels name and settings  that need to be created in Microsoft365 Compliance Center**
+>
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-8.png)  
+
+**10** - Review settings 
+
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-9.png) 
