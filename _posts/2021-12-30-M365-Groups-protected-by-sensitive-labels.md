@@ -216,4 +216,8 @@ After planning our settings we can configure sensitive labels and policy in our 
 
 - **Description for admins** This description will appear only to admins who manage this label in the security center or compliance center.  
 
+>
+> All information was planned in section : **Design labels name and settings  that need to be created in Microsoft365 Compliance Center**
+>
+
 ![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-4.png)  
