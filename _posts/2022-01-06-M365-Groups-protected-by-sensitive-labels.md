@@ -4,7 +4,8 @@ classes: wide
 excerpt: "Microsoft 365 Groups – Sensitive labels assignment for data protection and external sharing. "
 toc: true
 header:
-  teaser: 
+  image: /assets/images/M365-Sensitive-labels/M365-Sensitive-labels-21.png
+  teaser: /assets/images/M365-Sensitive-labels/M365-Sensitive-labels-21.png
 categories:
  - Microsoft365
  - Security
@@ -156,7 +157,7 @@ EnableGroupCreation           True
 
 ```
 
-## Sensitive label’s naming and description
+## Sensitive label’s naming and settings
 
 
 ### Privacy and external user access settings detalies
@@ -187,7 +188,7 @@ Before we start implementation we need to plan naming convention  and settings f
 |External user access | False | True | True | 
 |Site settings | Only people in your organization | New and existing guests | Anyone | 
 
-## Configuration sensitive labels and policy for Microsoft 365 Groups  
+## Configuration sensitive labels for Microsoft 365 Groups  
 
 After planning our settings we can configure sensitive labels and policy in our organization for Microsoft 365 groups. Policy will force user to chose **label** in process of creation: 
 - Microsoft 365 Groups, 
@@ -250,5 +251,74 @@ After planning our settings we can configure sensitive labels and policy in our 
 
 **10** - Review settings 
 
+>
+> Repeat step for all 3 labels witch changes on Define external sharing and conditional access settings 
+> All information was planned in section : **Design labels name and settings  that need to be created in Microsoft365 Compliance Center**
+>
 
 ![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-9.png) 
+
+
+**11** - **B2B-Partner** Define external sharing and conditional access settings 
+
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-11.png) 
+
+
+**12** - **External** Define external sharing and conditional access settings 
+
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-12.png) 
+
+
+## Configuration sensitive labels publish policy for Microsoft 365 Groups  
+
+Creation of labels don’t force any policy to user or organization , to active labels we need to create policy for whole organization or dedicated group of users.  
+
+**1** - Logon to Microsoft 365 compliance ccenter:  [https://compliance.microsoft.com/homepage](https://compliance.microsoft.com/homepage)  
+**2** - On left navigation menu go to **Information protection**  
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-1.png)  
+
+
+**3** - On navigation menu select **labels policies** and click **publish label**
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-13.png)  
+
+
+**4** - Choose sensitivity labels to publish (Organization can have multiple policies)
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-14.png)  
+
+**5** - Select sensitivity labels to publish
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-15.png)  
+
+**6** - Select group of users that will be allowed to chose label 
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-16.png)  
+
+**7** - Select group of users that will be allowed to chose label 
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-16.png)  
+
+
+**8** - Policy settings for sites and groups  
+
+**Apply this label by default to groups and sites** – this option will display this label to user as default when Microsoft 365 groups will be created   
+
+**Requires users to apply a label to their group or sites** – this option will force users to use one of published labels and allow us to control settings for Microsoft 365 Groups 
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-17.png)  
+
+
+**9** - Policy name and description 
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-18.png) 
+
+
+##	End user experience when Microsoft 365 groups are create witch Microsoft Teams 
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-20.png) 
+
+
+![](/assets/images/M365-Sensitive-labels/M365-Sensitive-labels-21.png) 
