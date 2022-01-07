@@ -18,9 +18,9 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 locale                   : "en-US"
 title                    : "Microsoft365 / Azure - sysOps and devOps life by my own experience"
 title_separator          : "-"
-subtitle                 : "Daily life with Microsoft Technology and not only ..." # site tagline that appears below site title in masthead
+subtitle                 : "Daily life with Microsoft Technology and not only ... witch Michal Machniak" # site tagline that appears below site title in masthead
 name                     : "Michal Machniak"
-description              : "Blog dedicated to Microsoft technologies, based on my daily experience of working as sysOps / devOps / System Architect."
+description              : "Michal Machniak blog dedicated to Microsoft technologies, based on my daily experience of working as sysOps / devOps / System Architect."
 url                      : https://mimachniak.github.io/sysopslife # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
