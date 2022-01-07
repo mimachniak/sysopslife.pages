@@ -5,7 +5,7 @@ date: 2022-01-06
 excerpt: "Microsoft 365 Groups – Sensitive labels assignment for data protection and external sharing. "
 toc: true
 header:
-  image: /assets/images/M365-Sensitive-labels/M365-Sensitive-labels-21.png
+  # image: /assets/images/M365-Sensitive-labels/M365-Sensitive-labels-21.png
   teaser: /assets/images/M365-Sensitive-labels/M365-Sensitive-labels-21.png
 categories:
  - Microsoft365
