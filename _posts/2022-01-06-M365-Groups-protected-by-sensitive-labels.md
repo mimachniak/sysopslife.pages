@@ -1,6 +1,7 @@
 ---
 title: "Microsoft 365 Groups – Sensitive labels assignment for data protection and external sharing. "
 classes: wide
+date: 2022-01-06
 excerpt: "Microsoft 365 Groups – Sensitive labels assignment for data protection and external sharing. "
 toc: true
 header:
