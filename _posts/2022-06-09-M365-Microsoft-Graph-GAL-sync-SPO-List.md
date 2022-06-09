@@ -148,6 +148,16 @@ We need two service principal on 2 different tenants, one that will have access 
 
 ## Source code and script
 
+- spoSiteName - SharePoint online site name that will be hosting list example. **My Demo Site**
+- spoListName - SharePoint custom list name example. **OrganizationContacts**
+- spoTenantId - Microsoft 365 tenant ID witch SharePoint site example. **f5d4b86-859e-4b25-ad2a-074c9d598234d**
+- spoClient_id - Application ID created in **3** on tenant witch SharePoint site example. **9f38f4c1-d1ca-4398-b760-52377b9426b3**
+- spoClient_secret secret generated on step **14** ********************************
+- aadTenantId - Microsoft 365 tenant ID witch users that will be added to SharePoint site list example. **d9b560f9-5cf3-4d1b-aeef-0a7e00934498**
+- aadTlient_id - Application ID created in **3** on tenant witch users that will be added to SharePoint site list. example. **058f94e0-0647-4137-8bb9-893b0a953e1d** 
+- aadClient_secret - secret generated on step **14** ***************************** 
+
+
 ### Parameters description and example run
 
 ### Code on Github
