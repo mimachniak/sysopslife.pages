@@ -64,8 +64,14 @@ We need two service principal on 2 different tenants, one that will have access 
     User.Read  
     User.Read.All  
 12. Grant admin consent for permissions
+
+    ![](/assets/images/M365-GAL/M365-GAL-Sync-witch-SPO-07.png)  
+
 13. Navigate in application to **Certificates & secrets**
 14. Click on **New Client secret**
+
+    ![](/assets/images/M365-GAL/M365-GAL-Sync-witch-SPO-08.png)  
+
 16. Save value of secret
 
 ### Tenant witch SharePoint Online list
