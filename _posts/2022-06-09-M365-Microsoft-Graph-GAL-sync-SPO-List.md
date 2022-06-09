@@ -21,7 +21,7 @@ hidden: false
 
 ## Why I write this article
 
-When we create SharePoint and multiple tenants we always see that we are missing information about users between tenant that are creating the same organization. One of solutions is create list in SharePoint taht will contain informations about users form diffrent tenants. On list we can create filters, viwes and easy seach for contacts.  
+When we create SharePoint and multiple tenants we always see that we are missing information about users between tenant that are working in the same organization but have diffrent Microsoft365 tenants. One of solutions for ths is create list in SharePoint that will contain informations about users form diffrent tenants. On list we can create filters, viwes and easy search for contacts.  
 For creation of this solution we will use Microsoft Graph API that is integrating all components in Office 365.
 
 PowerShell script base on list of users in Microsoft365 tenant will 
