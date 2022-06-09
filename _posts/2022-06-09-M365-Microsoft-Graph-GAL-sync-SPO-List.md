@@ -89,6 +89,9 @@ We need two service principal on 2 different tenants, one that will have access 
 11. Form list select those permissions  
     Sites.Selected
 12. Grant admin consent for permissions 
+
+    ![](/assets/images/M365-GAL/M365-GAL-Sync-witch-SPO-09.png)  
+
 13. Navigate in application to **Certificates & secrets**
 14. Click on **New Client secret**
 16. Save value of secret
@@ -118,6 +121,13 @@ We need two service principal on 2 different tenants, one that will have access 
         OfficePhoneNumber	Single line of text	
 
 5.	On **list settings** in **indexed columns** create new index on **userPrincipalName** column
+
+    ![](/assets/images/M365-GAL/M365-GAL-Sync-witch-SPO-10.png) 
+
+    ![](/assets/images/M365-GAL/M365-GAL-Sync-witch-SPO-11.png)  
+
+    ![](/assets/images/M365-GAL/M365-GAL-Sync-witch-SPO-12.png)   
+
 6.	Install PowerShell module 
 
     ```powershell
