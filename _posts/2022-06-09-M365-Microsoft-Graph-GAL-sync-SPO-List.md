@@ -22,6 +22,8 @@ hidden: false
 
 ## Why I write this article
 
+![](/assets/teaser/images/MicrosoftGraphAPI-GAL-Sync-to-SPO.png) 
+
 When we create SharePoint and multiple tenants we always see that we are missing information about users between tenant that are working in the same organization but have diffrent Microsoft365 tenants. One of solutions for ths is create list in SharePoint that will contain informations about users form diffrent tenants. On list we can create filters, viwes and easy search for contacts.  
 For creation of this solution we will use Microsoft Graph API that is integrating all components in Office 365.
 
@@ -188,7 +190,7 @@ We need two service principal on 2 different tenants, one that will have access 
 ### Code on Github
 Change parameter data dedicated for your environment, script can be downloaded form my repository on GitHub: [M365-GAL-sync-witch-SPO-ContactList-Client.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/M365/M365-GAL-sync-witch-SPO-ContactList-Client.ps1)
 
-<iframe width="640" height="360" src="https://github.com/mimachniak/sysopslife-scripts/blob/master/M365/M365-GAL-sync-witch-SPO-ContactList-Client.ps1" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://raw.githubusercontent.com/mimachniak/sysopslife-scripts/master/M365/M365-GAL-sync-witch-SPO-ContactList-Client.ps1" frameborder="0" allowfullscreen></iframe>
 
 ```powershell
 
