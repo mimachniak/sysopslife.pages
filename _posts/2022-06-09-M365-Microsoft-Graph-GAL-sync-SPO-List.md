@@ -32,13 +32,31 @@ We need two service principal on 2 different tenants, one that will have access 
 
 1. Log on to Azure Active Directory witch **Global Administrator Rights**
 2. Navigate to **App registrations**
+
+    ![](/assets/images/M365-GAL/M365-GAL-Sync-witch-SPO-01.png)  
+
 3. Click on **New registration**
+
+    ![](/assets/images/M365-GAL/M365-GAL-Sync-witch-SPO-02.png)  
+
 4. Enter application **Name**
+
+    ![](/assets/images/M365-GAL/M365-GAL-Sync-witch-SPO-03.png)  
+
 5. Click in **Register** 
 6. Open application 
 7. Navigate to **API permissions**
+
+    ![](/assets/images/M365-GAL/M365-GAL-Sync-witch-SPO-04.png)  
+
 8. Click **Add permission**
+
+    ![](/assets/images/M365-GAL/M365-GAL-Sync-witch-SPO-05.png)  
+
 9. Choose **Microsoft Graph**
+
+    ![](/assets/images/M365-GAL/M365-GAL-Sync-witch-SPO-06.png)  
+
 10. Choose **Application permissions** Your application runs as a background service or daemon without a signed-in user.
 11. Form list select those permissions  
     Directory.Read.All  
@@ -110,11 +128,6 @@ We need two service principal on 2 different tenants, one that will have access 
     ```powershell
     Grant-PnPAzureADAppSitePermission -AppId 'Application ID created witch Site.Selected permissions' -DisplayName 'App Name here' -Site 'https://tenantname.sharepoint.com/sites/sitename' -Permissions Write
     ```
-
-
-
-
-
 
 
 ## Source 
