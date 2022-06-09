@@ -6,6 +6,7 @@ excerpt: "Microsoft 365 Graph synchronization GAL to SharePoint Online List. "
 toc: true
 header:
   teaser: /assets/teaser/images/MicrosoftGraphAPI-GAL-Sync-to-SPO.png
+  og_image: /assets/teaser/images/MicrosoftGraphAPI-GAL-Sync-to-SPO.png
 categories:
  - Microsoft365
  - PowerShell
@@ -185,7 +186,7 @@ We need two service principal on 2 different tenants, one that will have access 
 ### Parameters description and example run
 
 ### Code on Github
-Change parameter data dedicated for your environment, script can be downloaded form my repository on GitHub: [M365-GAL-sync-witch-SPO-ContactList-Client.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/M365-GAL-sync-witch-SPO-ContactList-Client.ps1)
+Change parameter data dedicated for your environment, script can be downloaded form my repository on GitHub: [M365-GAL-sync-witch-SPO-ContactList-Client.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/M365/M365-GAL-sync-witch-SPO-ContactList-Client.ps1)
 
 ```powershell
 
