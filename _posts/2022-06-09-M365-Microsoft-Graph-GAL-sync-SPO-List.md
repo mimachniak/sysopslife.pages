@@ -71,14 +71,55 @@ We need two service principal on 2 different tenants, one that will have access 
 
 ## SharePoint online site and list preparation
 
-1.	Logon to https://portal.office.com 
+1.	Logon to [https://portal.office.com](https://portal.office.com)
 2.	Navigate to existing SharePoint Online site or create new one
 3.	Create new Custom SharePoint List
 4.	On **list settings** add new **columns** 
+
+        DisplayName	Single line of text	
+        givenName	Single line of text	
+        surName	Single line of text	
+        userPrincipalName	Single line of text
+        mail	Single line of text	
+        JobTittle	Single line of text	
+        Office	Single line of text	
+        Company	Single line of text	
+        Department	Single line of text	
+        City	Single line of text	
+        StreetAddress	Single line of text	
+        Province	Single line of text
+        postalCode   Single line of text
+        Country	Single line of text	
+        Mobile	Single line of text	
+        OfficePhoneNumber	Single line of text	
+
 5.	On **list settings** in **indexed columns** create new index on **userPrincipalName** column
+6.	Install PowerShell module 
+
+    ```powershell
+    Install-Module -Name PnP.PowerShell
+    ```
+
+7.	Connect to SharePoint site that is hosting custom list 
+
+    ```powershell
+    Connect-PnPOnline https://tenantname.sharepoint.com/sites/siteName -Interactive
+    ```
+8.	Grant permissions for application created witch site permissions 
+
+    ```powershell
+    Grant-PnPAzureADAppSitePermission -AppId 'Application ID created witch Site.Selected permissions' -DisplayName 'App Name here' -Site 'https://tenantname.sharepoint.com/sites/sitename' -Permissions Write
+    ```
 
 
 
+
+
+
+
+## Source 
+
+Change parameter data dedicated for your environment, script can be downloaded form my repository on GitHub: [M365-GAL-sync-witch-SPO-ContactList-Client.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/M365-GAL-sync-witch-SPO-ContactList-Client.ps1)
 
 ```powershell
 
@@ -606,7 +647,3 @@ Write-Host "Number of Users skipped to list: $m365UsersSkipped"
 Stop-Transcript
 
 ```
-
-## Source 
-
-Change parameter data dedicated for your environment, script can be downloaded form my repository on GitHub: [M365-GAL-sync-witch-SPO-ContactList-Client.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/M365-GAL-sync-witch-SPO-ContactList-Client.ps1)
