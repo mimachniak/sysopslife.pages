@@ -5,7 +5,7 @@ date: 2022-06-09
 excerpt: "Microsoft 365 Graph synchronization GAL to SharePoint Online List. "
 toc: true
 header:
-  teaser: /assets/teaser/images/MicrosoftGraphAPI-GAL-Sync-to-SPO.png
+  teaser: /assets/images/teaser/MicrosoftGraphAPI-GAL-Sync-to-SPO.png
   og_image: /assets/images/teaser/MicrosoftGraphAPI-GAL-Sync-to-SPO.png
 categories:
  - Microsoft365
