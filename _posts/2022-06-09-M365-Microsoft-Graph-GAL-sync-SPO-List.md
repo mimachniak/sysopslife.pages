@@ -38,7 +38,7 @@ We need two service principal on 2 different tenants, one that will have access 
 6. Open application 
 7. Navigate to **API permissions**
 8. Click **Add permission**
-9. Choose ** Microsoft Graph**
+9. Choose **Microsoft Graph**
 10. Choose **Application permissions** Your application runs as a background service or daemon without a signed-in user.
 11. Form list select those permissions  
     Directory.Read.All  
@@ -60,7 +60,7 @@ We need two service principal on 2 different tenants, one that will have access 
 6. Open application 
 7. Navigate to **API permissions**
 8. Click **Add permission**
-9. Choose ** Microsoft Graph**
+9. Choose **Microsoft Graph**
 10. Choose **Application permissions** Your application runs as a background service or daemon without a signed-in user.
 11. Form list select those permissions  
     Sites.Selected
@@ -70,6 +70,14 @@ We need two service principal on 2 different tenants, one that will have access 
 16. Save value of secret
 
 ## SharePoint online site and list preparation
+
+1.	Logon to https://portal.office.com 
+2.	Navigate to existing SharePoint Online site or create new one
+3.	Create new Custom SharePoint List
+4.	On **list settings** add new **columns** 
+5.	On **list settings** in **indexed columns** create new index on **userPrincipalName** column
+
+
 
 
 ```powershell
@@ -598,3 +606,7 @@ Write-Host "Number of Users skipped to list: $m365UsersSkipped"
 Stop-Transcript
 
 ```
+
+## Source 
+
+Change parameter data dedicated for your environment, script can be downloaded form my repository on GitHub: [M365-GAL-sync-witch-SPO-ContactList-Client.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/M365-GAL-sync-witch-SPO-ContactList-Client.ps1)
