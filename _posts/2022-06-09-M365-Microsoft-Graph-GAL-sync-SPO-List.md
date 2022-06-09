@@ -24,6 +24,29 @@ hidden: false
 When we create SharePoint and multiple tenants we always see that we are missing information about users between tenant that are creating the same organization. One of solutions is create list in SharePoint taht will contain informations about users form diffrent tenants. On list we can create filters, viwes and easy seach for contacts.  
 For creation of this solution we will use Microsoft Graph API that is integrating all components in Office 365.
 
+PowerShell script base on list of users in Microsoft365 tenant will 
+-	Create new list item witch all user data 
+-	Update existing list item witch user data
+
+Attributes downloaded for each user and add or update in SharePoint list.
+
+    ```
+            {
+                "businessPhones": [
+                    "+48 17 555 1122"
+                ],
+                "displayName": "Jan Kowalski",
+                "givenName": "Jan",
+                "jobTitle": "IT HelpDesk",
+                "mail": "jan.kowalski@sys4ops.pl",
+                "mobilePhone": "+48 666555111",
+                "officeLocation": null,
+                "preferredLanguage": null,
+                "surname": "Kowalski",
+                "userPrincipalName": "jan.kowalski@sys4ops.pl",
+                "id": "1c227ac6-51a6-401e-bd39-96eee6270b0f"
+        }
+    ```
 ## Creation of Service Principals in Tenants
 
 We need two service principal on 2 different tenants, one that will have access to user list when will get data and second one witch access to SharePoint Online list when we will add and update contacts.  
