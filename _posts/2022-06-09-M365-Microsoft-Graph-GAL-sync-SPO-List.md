@@ -188,6 +188,8 @@ We need two service principal on 2 different tenants, one that will have access 
 ### Code on Github
 Change parameter data dedicated for your environment, script can be downloaded form my repository on GitHub: [M365-GAL-sync-witch-SPO-ContactList-Client.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/M365/M365-GAL-sync-witch-SPO-ContactList-Client.ps1)
 
+<iframe width="640" height="360" src="https://github.com/mimachniak/sysopslife-scripts/blob/master/M365/M365-GAL-sync-witch-SPO-ContactList-Client.ps1" frameborder="0" allowfullscreen></iframe>
+
 ```powershell
 
 
