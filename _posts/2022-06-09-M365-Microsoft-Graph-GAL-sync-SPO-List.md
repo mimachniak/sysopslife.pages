@@ -146,8 +146,11 @@ We need two service principal on 2 different tenants, one that will have access 
     ```
 
 
-## Source 
+## Source code and script
 
+### Parameters description and example run
+
+### Code on Github
 Change parameter data dedicated for your environment, script can be downloaded form my repository on GitHub: [M365-GAL-sync-witch-SPO-ContactList-Client.ps1](https://github.com/mimachniak/sysopslife-scripts/blob/master/M365-GAL-sync-witch-SPO-ContactList-Client.ps1)
 
 ```powershell
@@ -177,9 +180,9 @@ Example CmdletBinding
 -spoTenantId 435634636-eabf-47ea-998f-15c7f956366`
 -spoClient_id d74552343-7400-4b48-8dde-74r23553252`
 -spoClient_secret ********************************`
--tenantId d4520405-eabf-47ea-998f-15c7f956366 `
--client_id d77bcd93-7400-4b48-8dde-74r23553252 `
--client_secret ***************************** `
+-aadTenantId d4520405-eabf-47ea-998f-15c7f956366 `
+-aadTlient_id d77bcd93-7400-4b48-8dde-74r23553252 `
+-aadClient_secret ***************************** `
 
 .EXAMPLE
 Data for Sharepoint item in json
