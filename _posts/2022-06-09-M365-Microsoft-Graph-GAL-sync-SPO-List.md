@@ -1,8 +1,8 @@
 ---
-title: "Microsoft 365 Graph synchronization GAL to SharePoint Online List. "
+title: "Microsoft 365 Graph synchronization GAL to SharePoint Online List across multiple tenants. "
 classes: wide
 date: 2022-06-09
-excerpt: "Microsoft 365 Graph synchronization GAL to SharePoint Online List. "
+excerpt: "Microsoft 365 Graph synchronization GAL to SharePoint Online List accross multiple tenants. "
 toc: true
 header:
   teaser: /assets/images/teaser/MicrosoftGraphAPI-GAL-Sync-to-SPO.png
