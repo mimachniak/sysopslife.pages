@@ -30,6 +30,7 @@ For creation of this solution we will use Microsoft Graph API that is integratin
 PowerShell script base on list of users in Microsoft365 tenant will 
 -	Create new list item witch all user data 
 -	Update existing list item witch user data
+-   Script will create output summary and logs what was changed
 
 Attributes downloaded for each user and add or update in SharePoint list.
 
@@ -184,6 +185,7 @@ We need two service principal on 2 different tenants, one that will have access 
 - aadTlient_id - Application ID created in **3** on tenant witch users that will be added to SharePoint site list. example. **058f94e0-0647-4137-8bb9-893b0a953e1d** 
 - aadClient_secret - secret generated on step **14** ***************************** 
 
+    ![](/assets/images/M365-GAL/M365-GAL-Sync-witch-SPO-13.png) 
 
 ### Parameters description and example run
 
@@ -192,6 +194,7 @@ Change parameter data dedicated for your environment, script can be downloaded f
 
 
 ```powershell
+
 
 
 <#  
@@ -219,7 +222,7 @@ Example CmdletBinding
 -spoClient_id d74552343-7400-4b48-8dde-74r23553252`
 -spoClient_secret ********************************`
 -aadTenantId d4520405-eabf-47ea-998f-15c7f956366 `
--aadTlient_id d77bcd93-7400-4b48-8dde-74r23553252 `
+-aadClient_id d77bcd93-7400-4b48-8dde-74r23553252 `
 -aadClient_secret ***************************** `
 
 .EXAMPLE
@@ -315,7 +318,8 @@ $TranscriptFilePath = "F:\Scripts\GAl-Sync"
         $TranscriptFilePath = $PWD.Path
 
     }
-$TranscriptFile = $TranscriptFilePath+'\'+$tenantName+'.txt'
+$dateSring = (get-date).ToString('yyyyMMdd')
+$TranscriptFile = $TranscriptFilePath+'\'+$dateSring+'GAl-Sync-To-SPO.txt'
 $TranscriptFile
 
 Start-Transcript -Path "$TranscriptFile"
@@ -416,7 +420,7 @@ catch [System.Net.WebException] {
 
 Write-Verbose "Sharepoint Online hostname"
 
-    $spoRootSite = Invoke-WebRequest -Method Get -Uri "https://graph.microsoft.com/v1.0/sites/root" -ContentType "application/json" -Headers @{Authorization = "Bearer $graphtoken_spo"} -ErrorAction Stop
+    $spoRootSite = Invoke-WebRequest -Method Get -Uri "https://graph.microsoft.com/v1.0/sites/root"  -ContentType "application/json" -Headers @{Authorization = "Bearer $graphtoken_spo"} -ErrorAction Stop
     $spoRootSite = $spoRootSite | ConvertFrom-Json
     $spoRootSiteHostName = $spoRootSite.siteCollection.hostname
 
@@ -437,6 +441,8 @@ Write-Host "SPO Site ID: [$spoSiteId]"
 
 Write-Verbose "Sharepoint Online List Data" 
 
+Write-Verbose "https://graph.microsoft.com/v1.0/sites/$spoSiteId/lists/$spoListName"
+
     $spoSiteListUri = "https://graph.microsoft.com/v1.0/sites/$spoSiteId/lists/$spoListName"
     $spoSiteList = Invoke-WebRequest -Method Get -Uri $spoSiteListUri  -ContentType "application/json" -Headers @{Authorization = "Bearer $graphtoken_spo"} -ErrorAction Stop
     $spoSiteList = $spoSiteList | ConvertFrom-Json
@@ -455,10 +461,12 @@ $m365Users = @()
 
 # Filter only Members accounts
 
+Write-Host "Loading Azure Active Directory list of users"
+
 $url = 'https://graph.microsoft.com/v1.0/users?$select=accountEnabled,assignedLicenses,businessPhones,city,companyName,state,country,displayName,department,givenName,jobTitle,mail,mobilePhone,postalCode,preferredLanguage,streetAddress,surname,userType,userPrincipalName&$filter=userType eq ''member'''
  
     While ($url -ne $Null) {
-        $data = (Invoke-WebRequest -Method Get -Uri $url -Headers @{Authorization = "Bearer $graphtoken_aad"}) | ConvertFrom-Json
+        $data = (Invoke-WebRequest -Method Get -Uri $url -Headers @{Authorization = "Bearer $graphtokenRequest_aad"}) | ConvertFrom-Json
         $m365Users += $data.Value
         $url = $data.'@Odata.NextLink'
     }
@@ -503,6 +511,8 @@ foreach ($m365User in $m365Users)
     
     $TestExisting = try {
 
+        Write-Host "Checking that user exist on SharePoint List witch ID: [$userPrincipalName]" -ForegroundColor Yellow
+
         Invoke-RestMethod -Method GET -Uri "https://graph.microsoft.com/v1.0/sites/$spoSiteId/lists/$spoListId/items?expand=fields&filter=((fields/userPrincipalName eq '$($userPrincipalName)'))" -Headers @{Authorization = "Bearer $graphtoken_spo"} -ErrorAction Stop
 
         }
@@ -518,7 +528,7 @@ foreach ($m365User in $m365Users)
 
             $requestItemProperties = [PSCustomObject]@{} # PS Custom object null
 
-            Write-Host "Prepare to [UPDATE] User witch ID: [$userPrincipalName]" -ForegroundColor Yellow
+            Write-Host "Prepare to [UPDATE] User witch ID: [$userPrincipalName] taht exsit on SharePoint List" -ForegroundColor Yellow
 
 
             if ($displayName -ne $($TestExisting.value.fields.Title) ) { # Title is default SharePoiny column name adn connot be change
@@ -631,7 +641,7 @@ foreach ($m365User in $m365Users)
 
             $spoUpdateItemToList = try {
             
-                Invoke-WebRequest -Method Patch -Uri "https://graph.microsoft.com/v1.0/sites/$spoSiteId/lists/$spoListId/items/$spoSiteContactId"  -ContentType "application/json" -Headers @{Authorization = "Bearer $graphtoken"} -Body $spoRequestBody -ErrorAction Stop
+                Invoke-WebRequest -Method Patch -Uri "https://graph.microsoft.com/v1.0/sites/$spoSiteId/lists/$spoListId/items/$spoSiteContactId"  -ContentType "application/json" -Headers @{Authorization = "Bearer $graphtoken_spo"} -Body $spoRequestBody -ErrorAction Stop
                 
             }
             catch [System.Net.WebException] {
@@ -652,7 +662,7 @@ foreach ($m365User in $m365Users)
                 # write-host "Checking user $($m365User.userPrincipalName)" -ForegroundColor Green
     
                 $m365User_mailboxSettings_uri = "https://graph.microsoft.com/v1.0/users/$($m365User.userPrincipalName)/mailboxSettings"
-                $m365User_mailboxSettings = Invoke-WebRequest -Method Get -Uri $m365User_mailboxSettings_uri  -ContentType "application/json" -Headers @{Authorization = "Bearer $graphtoken"} -ErrorAction Stop | ConvertFrom-Json
+                $m365User_mailboxSettings = Invoke-WebRequest -Method Get -Uri $m365User_mailboxSettings_uri  -ContentType "application/json" -Headers @{Authorization = "Bearer $graphtokenRequest_aad"} -ErrorAction Stop | ConvertFrom-Json
                 
                 if ($m365User_mailboxSettings.userPurpose -eq "user") {
     
@@ -696,7 +706,7 @@ foreach ($m365User in $m365Users)
                 } # Only User's Mailbox Type
                 else {
     
-                    write-host "User don't have user type mailbox $($m365User.userPrincipalName)" -ForegroundColor Yellow
+                    write-host "User is not mail type user $($m365User.userPrincipalName)" -ForegroundColor Yellow
     
                 } # Not User Mailbox
 
