@@ -312,14 +312,14 @@ Param (
 # Record session to file
 #...................................
 
-$TranscriptFilePath = "F:\Scripts\GAl-Sync"
+$TranscriptFilePath = "F:\Scripts\GAL-Sync"
     if (!(test-path ($TranscriptFilePath ))) {
 
         $TranscriptFilePath = $PWD.Path
 
     }
 $dateSring = (get-date).ToString('yyyyMMdd')
-$TranscriptFile = $TranscriptFilePath+'\'+$dateSring+'GAl-Sync-To-SPO.txt'
+$TranscriptFile = $TranscriptFilePath+'\'+$dateSring+'-GAL-Sync-To-SPO.txt'
 $TranscriptFile
 
 Start-Transcript -Path "$TranscriptFile"
