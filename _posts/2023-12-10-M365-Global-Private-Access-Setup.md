@@ -56,19 +56,19 @@ Remote users can connect to private apps across hybrid and multicloud environmen
 Architecture show simple infrastructure deployed on Azure without any public access to servers, all servers are connected to one Virtual Network and protected by Network Security Group  
 Application proxy is installed on server that have access to Entra ID.  
 
-![](/assets/images/Private-Access/AAD-M365-Private-Access-Architcture.PNG)
+![](/assets/images/Private-Access/AAD-M365-Private-Access-Architcture.png)
 
 ## Quick Access vs per-app access
 
 * Quick Access
 Quick Access for broader access to your network using Microsoft Entra Private Access.  
 
-![](/assets/images/Private-Access/AAD-M365-Private-Access-1.PNG)
+![](/assets/images/Private-Access/AAD-M365-Private-Access-1.png)
 
 * per-app access
 Specific private apps for granular segmented access to private access resources using Microsoft Entra Private Access.  
 
-![](/assets/images/Private-Access/AAD-M365-Private-Access-2.PNG)
+![](/assets/images/Private-Access/AAD-M365-Private-Access-2.png)
 
 ## Configuration steps 
 
@@ -82,11 +82,11 @@ Microsoft Entra application proxy provides secure remote access to on-premises w
 3. Navigate to **Enterprise Application**.
 4. On the menu click **Download connector service** and then **Accept terms & Download**
 
-![](/assets/images/Private-Access/AAD-M365-Private-Access-app-proxy-1.PNG)
+![](/assets/images/Private-Access/AAD-M365-Private-Access-app-proxy-1.png)
 
 5. Enable aaplication proxy on tenant level.
 
-![](/assets/images/Private-Access/AAD-M365-Private-Access-app-proxy-2.PNG)
+![](/assets/images/Private-Access/AAD-M365-Private-Access-app-proxy-2.png)
 
 
 ### Setup Entra Private Access
