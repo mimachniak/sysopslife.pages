@@ -115,6 +115,12 @@ Switch setup to **IP address range (CIDR)** and put data for whole subnet
 
 ![](/assets/images/Private-Access/AAD-M365-Private-Access-gsa-4.png)
 
+## Enable the Private access traffic forwarding profile
+Browse to **Global Secure Access (preview)** > **Connect** > **Traffic forwarding**. 
+Select the checkbox for Private Access profile.  
+
+![](/assets/images/Private-Access/AAD-M365-Private-Access-gsa-7.png)
+
 ### Install client
 
 Logon to portal [https://entra.microsoft.com/](https://entra.microsoft.com/)  
