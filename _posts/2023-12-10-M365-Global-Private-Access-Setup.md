@@ -14,7 +14,7 @@ tags:
   - Access
   - Security
   - M365
-published: false
+published: true
 hidden: false
 ---
 
@@ -72,7 +72,15 @@ Specific private apps for granular segmented access to private access resources 
 
 ## Configuration steps 
 
+
 ### Setup application proxy
+
+Microsoft Entra application proxy provides secure remote access to on-premises web applications. After a single sign-on to Microsoft Entra ID, users can access both cloud and on-premises applications through an external URL or an internal application portal. For example, Application Proxy can provide remote access and single sign-on to Remote Desktop, SharePoint, Teams, Tableau, Qlik, and line of business (LOB) applications.
+
+1. Logon to portal [https://entra.microsoft.com/](https://entra.microsoft.com/)
+2. Navigte to **Application**.
+3. Navigate to **Enterprise Application**.
+4. On the menu click **Download connector service** and then **Accept terms & Download**
 
 ### Setup Entra Private Access
 
