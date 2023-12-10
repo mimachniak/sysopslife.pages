@@ -91,4 +91,42 @@ Microsoft Entra application proxy provides secure remote access to on-premises w
 
 ### Setup Entra Private Access
 
+1. Logon to portal [https://entra.microsoft.com/](https://entra.microsoft.com/)
+
+
+![](/assets/images/Private-Access/AAD-M365-Private-Access-gsa-1.png)
+
+
+2. Navigate to **Global Secure Access** and go to **Applications** 
+3. Navigate to **Quick Access**
+
+>
+> On this setup we will use **Quick access** not **per-app access** that all to create more restrictive access.
+>
+
+4. On context menu click **Add Quick Access application segment**
+
+![](/assets/images/Private-Access/AAD-M365-Private-Access-gsa-2.png)
+
+
+5. Switch setup to **IP address range (CIDR)** and put data for whole subnet
+
+![](/assets/images/Private-Access/AAD-M365-Private-Access-gsa-3.png)
+
+![](/assets/images/Private-Access/AAD-M365-Private-Access-gsa-4.png)
+
+### Install client
+
+1. Logon to portal [https://entra.microsoft.com/](https://entra.microsoft.com/)
+2. Navigate to **Global Secure Access** and go to **Connect** 
+3. Navigate to **Client Download**
+
+![](/assets/images/Private-Access/AAD-M365-Private-Access-gsa-5.png)
+
+4. Install veyfication and client setup
+
+![](/assets/images/Private-Access/AAD-M365-Private-Access-gsa-6.png)
+
+## More features that will available in next months
+
 
