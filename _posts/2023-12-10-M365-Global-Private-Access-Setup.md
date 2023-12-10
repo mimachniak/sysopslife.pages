@@ -127,6 +127,8 @@ Install veyfication and client setup
 
 ![](/assets/images/Private-Access/AAD-M365-Private-Access-gsa-6.png)
 
+![](/assets/images/Private-Access/M365-GBA-1.mp4)
+
 ## More features that will available in next months
 
 * Security profiles
