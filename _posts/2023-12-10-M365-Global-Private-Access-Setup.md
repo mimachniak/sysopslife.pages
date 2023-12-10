@@ -5,8 +5,6 @@ date: 2023-12-10
 excerpt: "Private Access is new solution that allow to access internal resources, it replace classic VPN with  identity-centric Zero Trust Network Access (ZTNA)."
 toc: true
 header:
-  teaser: /assets/images/teaser/MicrosoftGraphAPI-GAL-Sync-to-SPO_01.png
-  og_image: /assets/images/teaser/MicrosoftGraphAPI-GAL-Sync-to-SPO_og.png
 categories:
  - Microsoft365
  - Security
