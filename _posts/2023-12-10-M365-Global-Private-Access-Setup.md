@@ -135,6 +135,8 @@ Install veyfication and client setup
 
 ![](/assets/images/Private-Access/M365-GBA-1.mp4)
 
+<iframe width="640" height="360" src="https://mmachniak.net/assets/images/Private-Access/M365-GBA-1.mp4" frameborder="0" allowfullscreen></iframe>
+
 ## More features that will available in next months
 
 * Security profiles
