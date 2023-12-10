@@ -119,7 +119,7 @@ Switch setup to **IP address range (CIDR)** and put data for whole subnet
 Browse to **Global Secure Access (preview)** > **Connect** > **Traffic forwarding**. 
 Select the checkbox for Private Access profile.  
 
-![](/assets/images/Private-Access/AAD-M365-Private-Access-gsa-7.png)
+![](/assets/images/Private-Access/AAD-M365-Private-Access-gsa-8.png)
 
 ### Install client
 
