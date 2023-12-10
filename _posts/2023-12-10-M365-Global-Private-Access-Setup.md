@@ -82,6 +82,13 @@ Microsoft Entra application proxy provides secure remote access to on-premises w
 3. Navigate to **Enterprise Application**.
 4. On the menu click **Download connector service** and then **Accept terms & Download**
 
+![](/assets/images/Private-Access/AAD-M365-Private-Access-app-proxy-1.PNG)
+
+5. Enable aaplication proxy on tenant level.
+
+![](/assets/images/Private-Access/AAD-M365-Private-Access-app-proxy-2.PNG)
+
+
 ### Setup Entra Private Access
 
 
