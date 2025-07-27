@@ -12,8 +12,8 @@ categories:
 tags:
   - Shell
   - VirtualMachine
-published: false
-hidden: true
+published: true
+hidden: false
 ---
 
 ## Description 
