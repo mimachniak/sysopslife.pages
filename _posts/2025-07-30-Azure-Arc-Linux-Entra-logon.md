@@ -18,7 +18,7 @@ hidden: false
 
 ## Description 
 
-Azure Arc extends the power of Azure to your on-premises and multi-cloud environments. One great feature it enables is logging into Linux servers using Entra ID (formerly Azure AD). This provides centralized identity management, RBAC, and conditional access for your Linux infrastructure. In this post, I'll walk you through how to enable and use Entra ID to log in to a Linux server connected to Azure Arc.
+Azure Arc extends the power of Azure to your on-premises and multi-cloud environments. One great feature it enables is logging into Linux servers using Entra ID (formerly Azure AD). This provides centralized identity management, RBAC, and conditional access for your Linux infrastructure. In this post, I'll walk you through how to enable and use Entra ID to log in to a Linux server connected to Azure Arc.  
 
 | Distribution |	Version |
 | ------------- | ------------- |
