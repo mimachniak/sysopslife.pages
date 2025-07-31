@@ -1,7 +1,7 @@
 ---
 title: "Bicep Microsoft Entra (Graph) Extension - GA"
 classes: wide
-date: 2025-08-04
+date: 2025-08-01
 excerpt: "The Microsoft Entra (Graph) Bicep Extension allows you to provision and manage Microsoft Entra ID (formerly Azure AD) resources using Bicep, extending Infrastructure as Code beyond Azure resources into identity management."
 toc: true
 categories:
