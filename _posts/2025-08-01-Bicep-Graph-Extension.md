@@ -39,8 +39,8 @@ Key Benefits:
 
 Extension verions can be found in Microsoft Artifact Registry
 
-Microsoft Graph Bicep Extension (beta): https://mcr.microsoft.com/artifact/mar/bicep/extensions/microsoftgraph/beta/tags  
-Microsoft Graph Bicep Extension:  https://mcr.microsoft.com/artifact/mar/bicep/extensions/microsoftgraph/v1.0/tags  
+**Microsoft Graph Bicep Extension (beta):** https://mcr.microsoft.com/artifact/mar/bicep/extensions/microsoftgraph/beta/tags  
+**Microsoft Graph Bicep Extension:**  https://mcr.microsoft.com/artifact/mar/bicep/extensions/microsoftgraph/v1.0/tags  
 
 
 ## Example of code
@@ -96,7 +96,7 @@ resource res_secuirty_group_v1 'Microsoft.Graph/groups@beta' = {
 
 ## Deploy options 
 
-We can deploy this code on any target scope as it support, and using **Azure CLI** or **PowerShell**, for troubleshooting is better to deploy on Resource Group or Subscription as it easy to read logs and check mistakes. 
+We can deploy this code on any target scope as it support, and using **Azure CLI** or **PowerShell**. For troubleshooting is better to deploy on Resource Group or Subscription as it is easy to read deployment logs and check mistakes, example descibe below.
 
 ```powershell
 
@@ -106,7 +106,7 @@ New-AzResourceGroupDeployment -ResourceGroupName "D-AUT-ITW" -Name "AAD" -Templa
 
 ```
 
-### Example deploy on tenat level
+### Example deploy on tenat level and logs
 
 ```powershell
 
@@ -127,7 +127,7 @@ CorrelationId: d95e67b1-ce6a-40d2-a9f4-31e16566d235
 
 ```
 
-Issue in code:
+Issue in code was find when deployment was change to **Resource Group**  
 
 ```powershell
 
