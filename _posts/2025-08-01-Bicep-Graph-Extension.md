@@ -96,7 +96,7 @@ resource res_secuirty_group_v1 'Microsoft.Graph/groups@beta' = {
 
 ## Deploy options 
 
-We can deploy this code on any target scope as it support, and using **Azure CLI** or **PowerShell**, for troubleshooting is better to deploy on Resource Group or Subscription as it easy to read logs and check mistakes.
+We can deploy this code on any target scope as it support, and using **Azure CLI** or **PowerShell**, for troubleshooting is better to deploy on Resource Group or Subscription as it easy to read logs and check mistakes. 
 
 ```powershell
 
