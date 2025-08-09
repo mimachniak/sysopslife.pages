@@ -255,9 +255,9 @@ tag_archive:
 #   layouts:
 #     category: archive-taxonomy
 #     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+permalinks:
+  category: /categories/:name/
+  tag: /tags/:name/
 
 
 # HTML Compression
@@ -291,6 +291,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: false
-      comments: false
+      comments: true
       share: true
       related: false
