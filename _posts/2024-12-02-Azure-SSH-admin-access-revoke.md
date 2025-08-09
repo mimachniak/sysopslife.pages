@@ -5,8 +5,8 @@ date: 2024-12-02
 excerpt: "In this post, you’ll learn how to securely revoke access to your Azure Virtual Machines by replacing compromised or outdated SSH keys. Whether you’re responding to a potential security breach or performing routine key rotation, this step-by-step guide will walk you through identifying the affected keys, removing them from your VM, and safely adding new ones."
 toc: true
 header:
-  teaser: /assets/images/page-header-teaser.png
-  og_image: /assets/images/page-header-og-image.png
+  teaser: /assets/images/teaser-main-v1
+  og_image: /assets/images/teaser-main-v1
 categories:
  - Azure
 tags:
