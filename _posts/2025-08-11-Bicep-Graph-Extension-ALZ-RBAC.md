@@ -15,8 +15,8 @@ tags:
   - Bicep
   - IaaC
   - EntraID
-published: false
-hidden: true
+published: true
+hidden: false
 ---
 
 ## Description 
