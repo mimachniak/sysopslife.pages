@@ -4,7 +4,7 @@ classes: wide
 date: 2025-08-11
 excerpt: "In large, multi-subscription environments, such as Azure Landing Zones, managing identity and access at scale is a constant challenge. Security groups are a key component of Azure RBAC (Role-Based Access Control), enabling centralized control of permissions for teams and workloads.
 While you can configure them manually in the Azure Portal, Infrastructure as Code (IaC) ensures consistency, repeatability, and compliance.
-With Bicep and the Microsoft Graph extension, we can define security groups and assign Azure roles programmatically—integrating identity management directly into our landing zone deployment workflows."
+With Bicep and the Microsoft Graph extension, we can define security groups and assign Azure roles programmatically—integrating identity management directly into our landing zone deployment workflows. "
 toc: true
 header:
   teaser: /assets/images/teaser-main-v1
