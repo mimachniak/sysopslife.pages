@@ -183,11 +183,15 @@ However, for larger organizations, **multiple subscriptions** provide better sca
 
 Example of building and envoling network in azure for organization  
 
+### Example for organization with one Azure subscription
+
 ![](../assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V1.drawio.png)  
 
 ![](../assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V2.drawio.png)  
 
 ![](../assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V3.drawio.png)  
+
+### Example for organization with multiple Azure subscription (Hub)
 
 ![](../assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V4.drawio.png)  
 
