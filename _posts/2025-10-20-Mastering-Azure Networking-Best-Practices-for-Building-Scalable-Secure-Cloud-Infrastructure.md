@@ -12,7 +12,7 @@ categories:
 tags:
   - Network
   - Security
-published: false
+published: true
 hidden: true
 ---
 
@@ -66,6 +66,16 @@ You can also use **Azure Virtual Network Manager** to create and manage:
 ---
 
 ## 🧱 Planning Your Network
+
+### Mapping on-premises network to Azure network  
+
+Mapping VLANs to Azure networking depends on how and where you’re connecting Azure to your on-premises or extended network. 
+Azure itself doesn’t use VLANs internally—it uses Virtual Networks (VNets) for segmentation—but VLANs still matter when you’re integrating Azure with your physical or hybrid infrastructure.  
+
+- Use subnets within a VNet to logically segment traffic (similar to VLANs).
+- Apply Network Security Groups (NSGs) or Azure Firewall rules for isolation.
+- VLAN tagging or trunking is not available between Azure VMs or subnets.
+
 
 ### Naming Conventions
 
@@ -185,15 +195,67 @@ Example of building and envoling network in azure for organization
 
 ### Example for organization with one Azure subscription
 
+#### Example 1
+- One Azure subscription
+- One Azure Virtual Network 
+- Azure Virtual Network with subntes (segmentation)
+- Network Secuirty groups for all subnetes with DenyRules for Inbound / Outbound
+- Azure Virtual Gateway for Site to Site VPN connection  
+- Azure Nat Gateway for NAT outbound traffic
+
 ![](../assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V1.drawio.png)  
 
+#### Example 2
+- One Azure subscription
+- One Azure Virtual Network 
+- Azure Virtual Network with subntes (segmentation)
+- Network Secuirty groups for all subnetes with DenyRules for Inbound / Outbound
+- Azure Virtual Gateway for Site to Site VPN connection  
+- Azure Nat Gateway for NAT outbound traffic
+- Azure Private DNS zones dedicated for Azure SQL services
+- Azure privet link for Azure SQL server
+- Azure SQL server without any Internet access
+
 ![](../assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V2.drawio.png)  
+
+#### Example 2
+- One Azure subscription
+- One Azure Virtual Network 
+- Azure Virtual Network with subntes (segmentation)
+- Network Secuirty groups for all subnetes with DenyRules for Inbound / Outbound
+- Azure Virtual Gateway for Site to Site VPN connection  
+- Azure Nat Gateway for NAT outbound traffic
+- Azure Private DNS zones dedicated for Azure SQL services
+- Azure privet link for Azure SQL server
+- Azure SQL server without any Internet access
+- Azure Firewall that inspect all traffic between subnets
+- Azure user definie route to pass traffic between subnets over Azure firewall
 
 ![](../assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V3.drawio.png)  
 
 ### Example for organization with multiple Azure subscription (Hub)
 
+#### Example 1
+- 3 Azure subscription
+- 3 Azure Virtual Network 
+- Azure Virtual Network with subntes (segmentation)
+- Network Secuirty groups for all subnetes with DenyRules for Inbound / Outbound
+- Azure Virtual Gateway for Site to Site VPN connection  
+- Azure Nat Gateway for NAT outbound traffic
+- Azure Private DNS zones dedicated for Azure SQL services
+- Azure privet link for Azure SQL server
+
 ![](../assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V4.drawio.png)  
+
+- 3 Azure subscription
+- 3 Azure Virtual Network 
+- Azure Virtual Network with subntes (segmentation)
+- Network Secuirty groups for all subnetes with DenyRules for Inbound / Outbound
+- Azure Virtual Gateway for Site to Site VPN connection  
+- Azure Nat Gateway for NAT outbound traffic
+- Azure Private DNS zones dedicated for Azure SQL services
+- Azure privet link for Azure SQL server
+- Azure Network Manager
 
 ![](../assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V5.drawio.png)
 
