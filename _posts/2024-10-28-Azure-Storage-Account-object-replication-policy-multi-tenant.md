@@ -5,8 +5,8 @@ date: 2024-10-28
 excerpt: "Setup object replication policy for 10 to 1000 blobs between two storage account in different tenants."
 toc: true
 header:
-  teaser: /assets/images/teaser-main-v1
-  og_image: /assets/images/teaser-main-v1
+  teaser: /assets/images/teaser-main-v1.png
+  og_image: /assets/images/teaser-main-v1.png
 categories:
  - Azure
 tags:

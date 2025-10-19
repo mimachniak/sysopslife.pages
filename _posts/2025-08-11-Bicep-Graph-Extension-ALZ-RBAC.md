@@ -7,8 +7,8 @@ While you can configure them manually in the Azure Portal, Infrastructure as Cod
 With Bicep and the Microsoft Graph extension, we can define security groups and assign Azure roles programmatically—integrating identity management directly into our landing zone deployment workflows. "
 toc: true
 header:
-  teaser: /assets/images/teaser-main-v1
-  og_image: /assets/images/teaser-main-v1
+  teaser: /assets/images/teaser-main-v1.png
+  og_image: /assets/images/teaser-main-v1.png
 categories:
  - Azure
 tags:
