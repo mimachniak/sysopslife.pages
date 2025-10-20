@@ -2,7 +2,7 @@
 title: "Mastering Azure Networking: Best Practices for Building Scalable, Secure Cloud Infrastructure"
 classes: wide
 date: 2025-10-22
-excerpt: "Discover how to build a secure and scalable Azure network from the ground up. Learn how to start with a simple network for a small company and seamlessly extend it into an enterprise-grade architecture. Explore best practices for Azure Landing Zones, hub-and-spoke topology, private connectivity, DNS configuration, and network security to design flexible, future-ready cloud infrastructure in Microsoft Azure."
+excerpt: "Discover how to build a secure and scalable Azure network from the ground up. Learn how to start with a simple network for a small company and seamlessly extend it into an enterprise-grade architecture. Explore best practices for Azure Landing Zones, hub-and-spoke topology, private connectivity, DNS configuration, and network security to design flexible, future-ready cloud infrastructure in Microsoft Azure. "
 toc: true
 header:
   teaser: /assets/images/teaser-main-v3.png
@@ -13,7 +13,7 @@ tags:
   - Network
   - Security
 published: true
-hidden: true
+hidden: false
 ---
 
 # Building a Network in Azure — From Zero to Hero
