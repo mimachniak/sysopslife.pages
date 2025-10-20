@@ -5,8 +5,8 @@ date: 2025-10-20
 excerpt: "Discover how to build a secure and scalable Azure network from the ground up. Learn how to start with a simple network for a small company and seamlessly extend it into an enterprise-grade architecture. Explore best practices for Azure Landing Zones, hub-and-spoke topology, private connectivity, DNS configuration, and network security to design flexible, future-ready cloud infrastructure in Microsoft Azure. "
 toc: true
 header:
-  teaser: /assets/images/teaser-main-v3.png
-  og_image: /assets/images/teaser-main-v3.png
+  teaser: /assets/images/teaser-main-v1.png
+  og_image: /assets/images/teaser-main-v1.png
 categories:
  - Azure
 tags:
@@ -61,7 +61,7 @@ You can also use **Azure Virtual Network Manager** to create and manage:
 - **Mesh topology** (in preview)
 - **Hybrid hub-spoke with direct spoke-to-spoke connectivity**
 
-![](../assets/images/Azure/network/PL-Azure%20Networking-topology.png)  
+![](/assets/images/Azure/network/PL-Azure%20Networking-topology.png)  
 
 ---
 
@@ -83,7 +83,7 @@ A consistent naming convention is the foundation of an organized environment.
 Follow Microsoft’s **Cloud Adoption Framework** recommendations for naming standards:
 > [Cloud Adoption Framework | Microsoft Learn](https://learn.microsoft.com/azure/cloud-adoption-framework/)
 
-![](../assets/images/Azure/network/PL-Azure%20Networking-naming.drawio.png)  
+![](/assets/images/Azure/network/PL-Azure%20Networking-naming.drawio.png)  
 
 ### IP Addressing
 
@@ -146,7 +146,7 @@ It offers a straightforward interface to quickly visualize and manage subnets wi
 
 > [Visual Subnet Calculator](https://www.davidc.net/sites/default/subnets/subnets.html)
 
-![](../assets/images/Azure/network/PL-Azure%20Networking-planner.png)  
+![](/assets/images/Azure/network/PL-Azure%20Networking-planner.png)  
 ---
 
 ## 🔐 Security and Access
@@ -157,9 +157,9 @@ It’s a best practice to:
 - Block all inbound and outbound traffic by default.
 - Explicitly allow only what’s required.
 
-![](../assets/images/Azure/network/PL-Azure%20Networking-NSG.png)  
+![](/assets/images/Azure/network/PL-Azure%20Networking-NSG.png)  
 
-![](../assets/images/Azure/network/PL-Azure%20Networking-Private-Subnet.png)  
+![](/assets/images/Azure/network/PL-Azure%20Networking-Private-Subnet.png)  
 
 ---
 
@@ -203,7 +203,7 @@ Example of building and envoling network in azure for organization
 - Azure Virtual Gateway for Site to Site VPN connection  
 - Azure Nat Gateway for NAT outbound traffic
 
-![](../assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V1.drawio.png)  
+![](/assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V1.drawio.png)  
 
 #### Example 2
 - One Azure subscription
@@ -216,7 +216,7 @@ Example of building and envoling network in azure for organization
 - Azure privet link for Azure SQL server
 - Azure SQL server without any Internet access
 
-![](../assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V2.drawio.png)  
+![](/assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V2.drawio.png)  
 
 #### Example 2
 - One Azure subscription
@@ -231,7 +231,7 @@ Example of building and envoling network in azure for organization
 - Azure Firewall that inspect all traffic between subnets
 - Azure user definie route to pass traffic between subnets over Azure firewall
 
-![](../assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V3.drawio.png)  
+![](/assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V3.drawio.png)  
 
 ### Example for organization with multiple Azure subscription (Hub)
 
@@ -245,7 +245,7 @@ Example of building and envoling network in azure for organization
 - Azure Private DNS zones dedicated for Azure SQL services
 - Azure privet link for Azure SQL server
 
-![](../assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V4.drawio.png)  
+![](/assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V4.drawio.png)  
 
 - 3 Azure subscription
 - 3 Azure Virtual Network 
@@ -257,7 +257,7 @@ Example of building and envoling network in azure for organization
 - Azure privet link for Azure SQL server
 - Azure Network Manager
 
-![](../assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V5.drawio.png)
+![](/assets/images/Azure/network//PL-Azure%20Networking%20from%20Zero%20to%20Hero-V5.drawio.png)
 
 
 
