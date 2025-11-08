@@ -14,7 +14,7 @@ tags:
   - Security
 published: true
 hidden: false
-author: Michal Machniak
+#author: Michal Machniak
 ---
 
 # Building a Network in Azure — From Zero to Hero
