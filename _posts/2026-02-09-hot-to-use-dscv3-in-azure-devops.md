@@ -5,15 +5,15 @@ date: 2026-02-09
 excerpt: "A real world example that uses AzureDevOpsDscv3 to create a project, add a group, and assign users with a repeatable Azure DevOps pipeline."
 toc: true
 header:
-	teaser: /assets/images/teaser-main-v1.png
-	og_image: /assets/images/teaser-main-v1.png
+  teaser: /assets/images/teaser-main-v1.png
+  og_image: /assets/images/teaser-main-v1.png
 categories:
  - Azure
  - DevOps
 tags:
-	- DSC
-	- AzureDevOps
-	- Pipeline
+  - DSC
+  - AzureDevOps
+  - Pipeline
 published: true
 hidden: false
 #author: Michal Machniak
