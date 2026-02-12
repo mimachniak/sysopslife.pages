@@ -21,7 +21,7 @@ hidden: false
 
 # How to Use AzureDevOpsDscv3 in Azure DevOps Pipelines
 
-This post shows a real-life example for using [AzureDevOpsDscv3](https://github.com/mimachniak/AzureDevOpsDscv3) inside an Azure DevOps pipeline. The goal is to define Azure DevOps projects, users, and groups as code, then apply the configuration in a controlled pipeline.
+This post shows a real-life example for using [AzureDevOpsDscv3](https://github.com/mimachniak/AzureDevOpsDscv3) inside an Azure DevOps pipeline. The goal is to define Azure DevOps projects, users, and groups as code, then apply the configuration in a controlled pipeline. 
 
 ## Scenario
 
