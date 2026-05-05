@@ -301,6 +301,16 @@ parameters:
     defaultValue: "DC=contoso,DC=com"
 resources:
 
+- name: Active Directory Root Organizational Unit
+  type: ActiveDirectoryDsc/ADOrganizationalUnit
+  properties: 
+    Name: Organization
+    Path: "[parameters('DomainRootPath')]"
+    Description: "Organization OU for All organizational objects"
+    ProtectedFromAccidentalDeletion: true
+    ensure: Present
+
+
 - name: Active Directory Accounts Organizational Unit
   type: ActiveDirectoryDsc/ADOrganizationalUnit
   properties:
@@ -311,6 +321,17 @@ resources:
     ensure: Present
     dependsOn:
       - "[resourceId('ActiveDirectoryDsc/ADOrganizationalUnit','Active Directory Root Organizational Unit')]"
+
+- name: Active Directory Users Organizational Unit
+  type: ActiveDirectoryDsc/ADOrganizationalUnit
+  properties: 
+    Name: Users
+    Path: "[concat('OU=Accounts,','OU=Organization,', parameters('DomainRootPath'))]"
+    Description: "OU for Users accounts that can be synchonized to Microsoft 365 or used for on-premises authentication"
+    ProtectedFromAccidentalDeletion: true
+    ensure: Present
+    dependsOn: 
+      - "[resourceId('ActiveDirectoryDsc/ADOrganizationalUnit','Active Directory Accounts Organizational Unit')]"
 ```
 
 The `concat()` function builds the LDAP path dynamically from the `DomainRootPath` parameter, making the file fully portable across domains.
