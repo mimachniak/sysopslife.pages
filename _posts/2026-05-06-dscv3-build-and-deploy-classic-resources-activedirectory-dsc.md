@@ -18,6 +18,8 @@ hidden: false
 #author: Michal Machniak
 ---
 
+![](/assets/images/DSC/dsc-flow.PNG)  
+
 # Deploying Active Directory with Microsoft DSC v3 — A Configuration-as-Code Approach
 
 ## Introduction
