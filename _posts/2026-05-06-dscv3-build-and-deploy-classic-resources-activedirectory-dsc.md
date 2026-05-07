@@ -46,6 +46,18 @@ Traditional AD deployment relies on PowerShell scripts or manual steps that are 
 
 Before running any configuration, ensure the following are in place on the target Domain Controller:
 
+**Search DSC v3:**
+
+```powershell
+winget search DesiredStateConfiguration
+Name                              Id            Version Match                          Source
+----------------------------------------------------------------------------------------------
+DesiredStateConfiguration         9NVTPZWRC6KQ  Unknown                                msstore
+DesiredStateConfiguration-Preview 9PCX3HX4HZ0Z  Unknown                                msstore
+DSC v3                            Microsoft.DSC 3.2.0   Tag: desiredstateconfiguration winget
+
+```
+
 **Install DSC v3:**
 ```powershell
 winget install --id 9PCX3HX4HZ0Z --source msstore
