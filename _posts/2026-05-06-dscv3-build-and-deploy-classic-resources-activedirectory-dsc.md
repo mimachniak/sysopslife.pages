@@ -680,15 +680,13 @@ parameters:
 Before applying anything, use `test` mode to see what is out of compliance:
 
 ```powershell
-dsc config test `
-  --parameters-file .\ads-root.dsc.parameters.yaml `
+dsc config --parameters-file .\ads-root.dsc.parameters.yaml test `
   --file .\ads-root-forest.dsc.yaml
 ```
 
 For the Stage 2 orchestrator:
 ```powershell
-dsc config test `
-  --parameters-file .\ADS-Include\parameters\ads.parameters.yaml `
+dsc config --parameters-file .\ADS-Include\parameters\ads.parameters.yaml test `
   --file .\ADS-Include\ads.main.dsc.yaml
 ```
 
@@ -697,8 +695,7 @@ dsc config test `
 Run this on the first server that will become the Domain Controller. The server will be promoted and — if `SuppressReboot: false` — will reboot automatically.
 
 ```powershell
-dsc config set `
-  --parameters-file .\ads-root.dsc.parameters.yaml `
+dsc config --parameters-file .\ads-root.dsc.parameters.yaml set `
   --file .\ads-root-forest.dsc.yaml
 ```
 
@@ -719,8 +716,7 @@ The `Include` resource resolves `configurationFile` paths relative to the locati
 If any resource fails, enable detailed output with `--trace-level`:
 
 ```powershell
-dsc --trace-level trace config set `
-  --parameters-file .\parameters\ads.parameters.yaml `
+dsc --trace-level trace config --parameters-file .\parameters\ads.parameters.yaml set `
   --file .\ads.main.dsc.yaml
 ```
 
