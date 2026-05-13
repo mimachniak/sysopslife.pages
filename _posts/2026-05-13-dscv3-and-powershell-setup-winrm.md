@@ -408,3 +408,7 @@ DSC v3 makes this multi-step process repeatable, auditable, and idempotent. The 
 - [Microsoft.Windows/Service resource](https://learn.microsoft.com/en-us/powershell/dsc/reference/microsoft/windows/service/overview)
 - [Microsoft.Windows/FirewallRuleList resource](https://learn.microsoft.com/en-us/powershell/dsc/reference/microsoft/windows/firewallrulelist/overview)
 - [WinRM HTTPS setup — Microsoft Docs](https://learn.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)
+
+- [Microsoft DSCv3 Github](https://github.com/PowerShell/DSC)
+- [DSC community Github](https://github.com/dsccommunity/ActiveDirectoryDsc)
+- [Blog code examples Github](https://github.com/mimachniak/sysopslife-scripts)
