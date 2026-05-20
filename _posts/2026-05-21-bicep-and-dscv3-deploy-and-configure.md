@@ -2,7 +2,7 @@
 title: "Deploy and Configure a Windows VM with Bicep and DSC v3"
 classes: wide
 date: 2026-05-21
-excerpt: "End-to-end walkthrough: provision an Azure Windows VM with Bicep, install DSC v3 via a Run Command extension, store DSC YAML documents in Azure Blob Storage, and apply them on the VM to create a self-signed certificate and configure a WinRM HTTPS listener — all in a single deployment."
+excerpt: "End-to-end walkthrough: provision an Azure Windows VM with Bicep, install DSC v3 via a Run Command extension, store DSC YAML documents in Azure Blob Storage, and apply them on the VM to create a self-signed certificate and configure a WinRM HTTPS listener — all in a single deployment.."
 toc: true
 header:
   teaser: /assets/images/teaser-main-v1.png
