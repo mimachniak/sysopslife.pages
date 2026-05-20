@@ -286,7 +286,6 @@ Locate the `runCommandsApplyDSC` resource in `main.bicep` and replace the placeh
 
 ```bicep
 
-
 resource runCommandsApplyDSC 'Microsoft.Compute/virtualMachines/runCommands@2025-11-01' = {
   parent: vm
   name: 'DSC-Configuration'
@@ -409,6 +408,102 @@ The download URL is constructed as:
 ```
 https://github.com/PowerShell/DSC/releases/download/v<version>/DSC-<version>-<arch>.zip
 ```
+Bicep code:  
+
+```bicep
+
+resource runCommandsInstallDSC 'Microsoft.Compute/virtualMachines/runCommands@2025-11-01' = {
+  parent: vm
+  name: 'DSC-Install'
+  location: location
+  properties: {
+    timeoutInSeconds: 900
+    treatFailureAsDeploymentFailure: true
+    parameters: [
+      {
+        name: 'dscVersion'
+        value: '3.2.0'
+      }
+      {
+        name: 'dscArch'
+        value: 'x86_64-pc-windows-msvc'
+      }
+
+    ]
+    source: {
+      script: '''
+          #Requires -RunAsAdministrator
+
+          param(
+              [string]$dscVersion,
+              [string]$dscArch
+          )
+          $downloadUrl = "https://github.com/PowerShell/DSC/releases/download/v$dscVersion/DSC-$dscVersion-$dscArch.zip"
+          $installDir  = "C:\Program Files\DSC\$dscVersion"
+          $zipPath     = Join-Path $env:TEMP "DSC-$dscVersion-$dscArch.zip"
+          $logPath     = Join-Path $env:TEMP "DSC-$dscVersion-install_$(Get-Date -Format 'yyyyMMdd_HHmmss').log"
+
+          $ProgressPreference = 'SilentlyContinue'
+
+          function Write-Log {
+              param([string]$Message, [ValidateSet('INFO','WARN','ERROR')]$Level = 'INFO')
+              $entry = "[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] [$Level] $Message"
+              Write-Host $entry
+              Add-Content -Path $logPath -Value $entry
+          }
+
+          Write-Log "Log file: $logPath"
+          Write-Log "Install directory: $installDir"
+          Write-Log "Download URL: $downloadUrl"
+
+          # Download
+          Write-Log "Downloading DSC v$dscVersion..."
+          try {
+              Invoke-WebRequest -Uri $downloadUrl -OutFile $zipPath -UseBasicParsing
+              Write-Log "Download completed: $zipPath"
+          } catch {
+              Write-Log "Download failed: $_" -Level ERROR
+              exit 1
+          }
+
+          # Extract
+          if (-not (Test-Path $installDir)) {
+              New-Item -ItemType Directory -Path $installDir -Force | Out-Null
+              Write-Log "Created directory: $installDir"
+          }
+          Write-Log "Extracting to $installDir..."
+          try {
+              Expand-Archive -Path $zipPath -DestinationPath $installDir -Force
+              Write-Log "Extraction completed."
+          } catch {
+              Write-Log "Extraction failed: $_" -Level ERROR
+              exit 1
+          }
+
+          # Add to system PATH if not already present
+          $currentPath = [Environment]::GetEnvironmentVariable('Path', 'Machine')
+          if ($currentPath -split ';' -notcontains $installDir) {
+              Write-Log "Adding $installDir to system PATH..."
+              [Environment]::SetEnvironmentVariable('Path', "$currentPath;$installDir", 'Machine')
+              Write-Log "System PATH updated. Restart your shell to apply changes."
+          } else {
+              Write-Log "$installDir is already in the system PATH." -Level WARN
+          }
+
+          # Cleanup temp file
+          Remove-Item -Path $zipPath -Force
+          Write-Log "Removed temporary file: $zipPath"
+
+          Write-Log "DSC v$dscVersion installed successfully."
+          Write-Log "Full log saved to: $logPath"
+
+      '''
+
+    }
+  }
+}
+
+```
 
 ### Run Command 2: `DSC-Configuration`
 
@@ -475,3 +570,9 @@ This pattern is composable: swap the YAML documents for any other DSC v3 configu
 
 - [Setting Up WinRM HTTPS Listener with DSC v3 and PowerShell]({% post_url 2026-05-13-dscv3-and-powershell-setup-winrm %})
 - [How to Use AzureDevOpsDscv3 in Azure DevOps Pipelines]({% post_url 2026-02-09-hot-to-use-dscv3-in-azure-devops %})
+
+## References
+
+- [Microsoft DSCv3 Github](https://github.com/PowerShell/DSC)
+- [DSC community Github](https://github.com/dsccommunity/ActiveDirectoryDsc)
+- [Blog code examples Github](https://github.com/mimachniak/sysopslife-scripts)
