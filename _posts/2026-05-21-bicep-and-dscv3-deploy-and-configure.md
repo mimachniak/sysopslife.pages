@@ -284,6 +284,8 @@ The full Bicep template provisions the network stack, the VM, and two `Microsoft
 
 Locate the `runCommandsApplyDSC` resource in `main.bicep` and replace the placeholder URLs with your actual storage account blob URLs:
 
+**Bicep code:**  
+
 ```bicep
 
 resource runCommandsApplyDSC 'Microsoft.Compute/virtualMachines/runCommands@2025-11-01' = {
@@ -408,7 +410,7 @@ The download URL is constructed as:
 ```
 https://github.com/PowerShell/DSC/releases/download/v<version>/DSC-<version>-<arch>.zip
 ```
-Bicep code:  
+**Bicep code:**  
 
 ```bicep
 
