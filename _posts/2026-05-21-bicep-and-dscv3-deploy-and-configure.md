@@ -248,7 +248,7 @@ New-AzStorageContainer -Name $containerName -Context $ctx -Permission Blob
 
 ## Step 3 — Upload the DSC YAML Files
 
-> **Yaml files** can be found here: https://github.com/mimachniak/sysopslife-scripts/tree/master/DSC/V3/winrm
+> **Yaml files** can be found here: [DSC Yaml configurations](https://github.com/mimachniak/sysopslife-scripts/tree/master/DSC/V3/winrm)
 
 ```powershell
 $ctx = (Get-AzStorageAccount -ResourceGroupName $rg -Name $storageName).Context
@@ -284,87 +284,16 @@ The full Bicep template provisions the network stack, the VM, and two `Microsoft
 
 Locate the `runCommandsApplyDSC` resource in `[main.bicep](https://github.com/mimachniak/sysopslife-scripts/blob/master/DSC/V3/bicep-demo-dsc/main.bicep)` and replace the placeholder URLs with your actual storage account blob URLs:
 
-**Bicep code:**  
+**Bicep code main:**  
 
 ```powershell
+# Replace with your storage account url
 
-resource runCommandsApplyDSC 'Microsoft.Compute/virtualMachines/runCommands@2025-11-01' = {
-  parent: vm
-  name: 'DSC-Configuration'
-  location: location
-  properties: {
-    timeoutInSeconds: 900
-    treatFailureAsDeploymentFailure: true
-    parameters: [
-      {
-        name: 'dscInstallDir'
-        value: '3.2.0'
-      }
-    ]
-    source: {
-      script: '''
+$contentYamlCert = Invoke-RestMethod -Uri "https://<your-storage-account>.blob.core.windows.net/dsc/ps-script-certificate.dsc.yaml"
 
-        param(
-          [string]$dscInstallDir
-        )
+# Replace with your storage account url
 
-        $dscInstallDir = "C:\Program Files\DSC\$dscInstallDir"
-        Write-Host "DSC for certificate "
-
-        # Add DSC install dir to current user PATH if not already present
-        $userPath = [Environment]::GetEnvironmentVariable('Path', 'User')
-        if ($userPath -split ';' -notcontains $dscInstallDir) {
-            [Environment]::SetEnvironmentVariable('Path', "$userPath;$dscInstallDir", 'User')
-            Write-Host "Added $dscInstallDir to user PATH."
-        }
-        # Also update the current session so dsc.exe is resolvable immediately
-        if ($env:PATH -split ';' -notcontains $dscInstallDir) {
-            $env:PATH = "$env:PATH;$dscInstallDir"
-        }
-
-
-        $contentYamlCert = Invoke-RestMethod -Uri "https://<your-storage-account>.blob.core.windows.net/dsc/ps-script-certificate.dsc.yaml"
-        $result = $contentYamlCert | dsc config set --file - --output-format pretty-json
-        $result = $result | ConvertFrom-Json
-
-        $thumbprint = if ($result.results.result.afterState.output -is [System.Array]) {
-            $result.results.result.afterState.output[0].Thumbprint
-        } else {
-            $result.results.result.afterState.output.Thumbprint
-        }
-
-        if (-not $thumbprint) {
-            throw "Thumbprint was not found in DSC output."
-        }
-
-
-        Write-Host "DSC for certificate Thumbprint: " $thumbprint
-
-        $inlineParams = @{
-            parameters = @{
-                certThumbprint = $thumbprint
-            }
-        } | ConvertTo-Json
-
-        # dsc config --parameters $inlineParams get --file .\winrm.dsc.yaml
-        # dsc config --parameters $inlineParams test --file .\winrm.dsc.yaml
-
-        Write-Host "DSC - winrm HTTPS setup"
-
-        $contentYamlWinrm = Invoke-RestMethod -Uri "https://<your-storage-account>.blob.core.windows.net/dsc/winrm.dsc.yaml"
-
-        $contentYamlWinrm | dsc config --parameters $inlineParams set --file -
-
-
-      '''
-
-    }
-  }
-  dependsOn: [
-    runCommandsInstallDSC
-  ]
-}
-
+$contentYamlWinrm = Invoke-RestMethod -Uri "https://<your-storage-account>.blob.core.windows.net/dsc/winrm.dsc.yaml"
 
 ```
 
