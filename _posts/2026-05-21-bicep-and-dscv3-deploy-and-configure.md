@@ -282,11 +282,11 @@ The full Bicep template provisions the network stack, the VM, and two `Microsoft
 
 ### Update the blob URLs
 
-Locate the `runCommandsApplyDSC` resource in `main.bicep` and replace the placeholder URLs with your actual storage account blob URLs:
+Locate the `runCommandsApplyDSC` resource in `[main.bicep](https://github.com/mimachniak/sysopslife-scripts/blob/master/DSC/V3/bicep-demo-dsc/main.bicep)` and replace the placeholder URLs with your actual storage account blob URLs:
 
 **Bicep code:**  
 
-```bicep
+```powershell
 
 resource runCommandsApplyDSC 'Microsoft.Compute/virtualMachines/runCommands@2025-11-01' = {
   parent: vm
@@ -372,7 +372,7 @@ resource runCommandsApplyDSC 'Microsoft.Compute/virtualMachines/runCommands@2025
 
 ## Step 5 — Deploy with Bicep
 
-> **Bicep main file** for this example with all steps can be found here: https://github.com/mimachniak/sysopslife-scripts/tree/master/DSC/V3/bicep-demo-dsc 
+> **Bicep main file** for this example with all steps can be found here: [bicep-demo-dsc ](https://github.com/mimachniak/sysopslife-scripts/tree/master/DSC/V3/bicep-demo-dsc)
 
 ```powershell
 $exampleRG    = 'demo-dsc-bicep-rg'
@@ -412,7 +412,7 @@ https://github.com/PowerShell/DSC/releases/download/v<version>/DSC-<version>-<ar
 ```
 **Bicep code:**  
 
-```bicep
+```powershell
 
 resource runCommandsInstallDSC 'Microsoft.Compute/virtualMachines/runCommands@2025-11-01' = {
   parent: vm
@@ -518,22 +518,84 @@ Runs **after** `DSC-Install` (`dependsOn`). It:
 5. Downloads `winrm.dsc.yaml` and applies it with `dsc config --parameters <json> set --file -`.
 
 ```powershell
-# Simplified excerpt from the run command script
-$contentYamlCert = Invoke-RestMethod -Uri "https://<your-storage-account>.blob.core.windows.net/dsc/ps-script-certificate.dsc.yaml"
-$result = $contentYamlCert | dsc config set --file - --output-format pretty-json | ConvertFrom-Json
 
-$thumbprint = if ($result.results.result.afterState.output -is [System.Array]) {
-    $result.results.result.afterState.output[0].Thumbprint
-} else {
-    $result.results.result.afterState.output.Thumbprint
+resource runCommandsApplyDSC 'Microsoft.Compute/virtualMachines/runCommands@2025-11-01' = {
+  parent: vm
+  name: 'DSC-Configuration'
+  location: location
+  properties: {
+    timeoutInSeconds: 900
+    treatFailureAsDeploymentFailure: true
+    parameters: [
+      {
+        name: 'dscInstallDir'
+        value: '3.2.0'
+      }
+    ]
+    source: {
+      script: '''
+
+        param(
+          [string]$dscInstallDir
+        )
+
+        $dscInstallDir = "C:\Program Files\DSC\$dscInstallDir"
+        Write-Host "DSC for certificate "
+
+        # Add DSC install dir to current user PATH if not already present
+        $userPath = [Environment]::GetEnvironmentVariable('Path', 'User')
+        if ($userPath -split ';' -notcontains $dscInstallDir) {
+            [Environment]::SetEnvironmentVariable('Path', "$userPath;$dscInstallDir", 'User')
+            Write-Host "Added $dscInstallDir to user PATH."
+        }
+        # Also update the current session so dsc.exe is resolvable immediately
+        if ($env:PATH -split ';' -notcontains $dscInstallDir) {
+            $env:PATH = "$env:PATH;$dscInstallDir"
+        }
+
+
+        $contentYamlCert = Invoke-RestMethod -Uri "https://<your-storage-account>.blob.core.windows.net/dsc/ps-script-certificate.dsc.yaml"
+        $result = $contentYamlCert | dsc config set --file - --output-format pretty-json
+        $result = $result | ConvertFrom-Json
+
+        $thumbprint = if ($result.results.result.afterState.output -is [System.Array]) {
+            $result.results.result.afterState.output[0].Thumbprint
+        } else {
+            $result.results.result.afterState.output.Thumbprint
+        }
+
+        if (-not $thumbprint) {
+            throw "Thumbprint was not found in DSC output."
+        }
+
+
+        Write-Host "DSC for certificate Thumbprint: " $thumbprint
+
+        $inlineParams = @{
+            parameters = @{
+                certThumbprint = $thumbprint
+            }
+        } | ConvertTo-Json
+
+        # dsc config --parameters $inlineParams get --file .\winrm.dsc.yaml
+        # dsc config --parameters $inlineParams test --file .\winrm.dsc.yaml
+
+        Write-Host "DSC - winrm HTTPS setup"
+
+        $contentYamlWinrm = Invoke-RestMethod -Uri "https://<your-storage-account>.blob.core.windows.net/dsc/winrm.dsc.yaml"
+
+        $contentYamlWinrm | dsc config --parameters $inlineParams set --file -
+
+
+      '''
+
+    }
+  }
+  dependsOn: [
+    runCommandsInstallDSC
+  ]
 }
-
-$inlineParams = @{ parameters = @{ certThumbprint = $thumbprint } } | ConvertTo-Json
-
-$contentYamlWinrm = Invoke-RestMethod -Uri "https://<your-storage-account>.blob.core.windows.net/dsc/winrm.dsc.yaml"
-$contentYamlWinrm | dsc config --parameters $inlineParams set --file -
 ```
-
 ---
 
 ## Verifying the Result
