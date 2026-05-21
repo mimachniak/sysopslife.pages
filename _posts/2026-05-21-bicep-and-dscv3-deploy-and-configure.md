@@ -282,7 +282,7 @@ The full Bicep template provisions the network stack, the VM, and two `Microsoft
 
 ### Update the blob URLs
 
-Locate the `runCommandsApplyDSC` resource in `[main.bicep](https://github.com/mimachniak/sysopslife-scripts/blob/master/DSC/V3/bicep-demo-dsc/main.bicep)` and replace the placeholder URLs with your actual storage account blob URLs:
+Locate the `runCommandsApplyDSC` resource in [main.bicep](https://github.com/mimachniak/sysopslife-scripts/blob/master/DSC/V3/bicep-demo-dsc/main.bicep) and replace the placeholder URLs with your actual storage account blob URLs:
 
 **Bicep code main:**  
 
