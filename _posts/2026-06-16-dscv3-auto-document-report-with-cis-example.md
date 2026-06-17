@@ -2,7 +2,7 @@
 title: "Auto-Documenting DSC v3 Drift and Compliance with DSC-DocsGenerator (CIS Example)"
 classes: wide
 date: 2026-06-16
-excerpt: "Introducing DSC-DocsGenerator — a PowerShell module that runs `dsc config test` against a DSC v3 YAML configuration, parses the JSON output, and produces a complete Markdown compliance report. Demonstrated end-to-end with a CIS Windows Server 2025 Level 1 Member Server baseline showing drift, desired vs actual state, and a per-resource compliance breakdown."
+excerpt: "Introducing DSC-DocsGenerator — a PowerShell module that runs `dsc config test` against a DSC v3 YAML configuration, parses the JSON output, and produces a complete Markdown compliance report. Demonstrated end-to-end with a CIS Windows Server 2025 Level 1 Member Server baseline showing drift, desired vs actual state, and a per-resource compliance breakdown. "
 toc: true
 header:
   teaser: /assets/images/teaser-main-v1.png
