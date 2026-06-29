@@ -284,6 +284,6 @@ It is simple, scriptable, and easy to plug into CI/CD pipelines for consistent A
 ## References
 
 - [Microsoft DSCv3 Github](https://github.com/PowerShell/DSC)
-- [DSC community Github](https://github.com/mimachniak/AzureConnectedMachineDsc)
+- [DSC Resources Github](https://github.com/mimachniak/AzureConnectedMachineDscV3)
 - [Blog code examples Github](https://github.com/mimachniak/sysopslife-scripts)
 
