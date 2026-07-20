@@ -1,5 +1,5 @@
 ---
-title: "Azure Custom Guest Configuration with PowerShell DSC"
+title: "Azure Custom Guest Configuration with PowerShell DSC and Azure Guest Configuration."
 classes: wide
 date: 2026-07-21
 excerpt: "Build, test, publish, and assign a custom Azure Guest Configuration package using PowerShell DSC and Azure Policy."
@@ -26,6 +26,15 @@ This article walks through a Windows example that enforces a legal logon message
 > **Important:** Test every package in a non-production subscription first. An `AuditAndSet` package changes the guest operating system when it detects drift.
 
 ---
+
+# Matrix of supported systems
+
+Machine configuration policy definitions are inclusive of new versions. Older versions of operating systems available in Azure Marketplace are excluded if the Guest Configuration client isn't compatible. Additionally, Linux server versions that are out of lifetime support by their respective publishers are excluded from the support matrix.  
+
+
+
+---
+
 
 ## How the pieces fit together
 
@@ -58,9 +67,11 @@ Before creating a custom package, prepare the authoring workstation and Azure en
 
 Install the two DSC modules on the authoring workstation:
 
+> Note: PSDesiredStateConfiguration is required in version at lest 2.0.7
+
 ```powershell
 Install-Module -Name PSDscResources -Scope CurrentUser
-Install-Module -Name GuestConfiguration -Scope CurrentUser
+Install-Module -Name GuestConfiguration -Scope CurrentUser # Work only on PowerShell 7
 
 Get-Module -ListAvailable -FullyQualifiedName PSDscResources
 Get-Module -ListAvailable -FullyQualifiedName GuestConfiguration
@@ -75,7 +86,16 @@ Set-AzContext -Subscription '<subscription-id-or-name>'
 
 ---
 
-## Step 1: Author and compile the DSC configuration
+
+## Step 1: Virtual Machine need to have those perquisites 
+
+⁉️ Resource provider: Microsoft.GuestConfiguration
+⁉️System Assigne Identity / User Managed Idenity
+⁉️Virtual machine extension is enabled, To use machine configuration packages that apply configurations, Azure VM guest configuration extension version 1.26.24 or later, or Arc agent 1.10.0 or later, is required.
+⁉️ Azure Arc servers are supported.  
+
+
+## Step 2: Author and compile the DSC configuration
 
 Guest Configuration packages use a compiled DSC MOF. The following configuration writes a title and body for the Windows interactive logon message.
 
@@ -112,7 +132,9 @@ Compilation creates `SetupLogonMessage.mof` in the output folder. Keep the confi
 
 ---
 
-## Step 2: Create the Guest Configuration package
+## Step 3: Create the Guest Configuration package
+
+> Note: PowerShell 7 need to be running as local administrator 
 
 Choose the package type deliberately:
 
@@ -122,6 +144,8 @@ Choose the package type deliberately:
 | `AuditAndSet` | Reports compliance and applies the DSC configuration when the machine is non-compliant. |
 
 For the logon-message configuration, create an `AuditAndSet` package:
+
+> Note: Packed name need to excaly the same sa configurartion file.  
 
 ```powershell
 $params = @{
@@ -135,22 +159,11 @@ $params = @{
 New-GuestConfigurationPackage @params
 ```
 
-The command produces `SetupLogonMessage.zip`. For an audit-only configuration, change only the `Type` value:
-
-```powershell
-$params = @{
-    Name          = 'UserExample'
-    Configuration = './UserExample/UserExample.mof'
-    Type          = 'Audit'
-    Force         = $true
-}
-
-New-GuestConfigurationPackage @params
-```
+Zip file will contain resources and config file.  
 
 ---
 
-## Step 3: Validate the package before publishing
+## Step 4: Validate the package before publishing
 
 Validate locally before you place the ZIP in storage or create a policy definition. This catches packaging errors and gives you the hash that Azure Policy uses to identify the exact package version.
 
@@ -163,7 +176,7 @@ The compliance command should return a result instead of a packaging or resource
 
 ---
 
-## Step 4: Publish the ZIP to a stable HTTPS URI
+## Step 5: Publish the ZIP to a stable HTTPS URI
 
 Upload the ZIP to Azure Blob Storage. The policy definition must reference a URI that every target machine can reach over HTTPS. A blob URI with a time-limited SAS token is useful for testing, but production packages should use an access method and renewal process that will not unexpectedly expire.
 
@@ -171,57 +184,9 @@ After upload, keep the content URI and the SHA-256 value from `Get-FileHash` ava
 
 ---
 
-## Step 5: Generate the Azure Policy definition
+## Step 6: Publish the ZIP to a stable HTTPS URI
 
-`New-GuestConfigurationPolicy` creates Azure Policy artifacts from the package metadata. Provide a unique policy ID, the hosted package URI, platform, and version. The generated files can then be deployed at the management group or subscription scope that matches your governance model.
-
-```powershell
-$contentUri = 'https://<storage-account>.blob.core.windows.net/guest-configuration/SetupLogonMessage.zip?<sas-token>'
-
-$policyConfig = @{
-    PolicyId      = '<new-guid>'
-    ContentUri    = $contentUri
-    DisplayName   = 'Configure Windows logon message'
-    Description   = 'Audits and configures the Windows interactive logon message.'
-    Path          = './policies/setup-logon-message.json'
-    Platform      = 'Windows'
-    PolicyVersion = '1.0.0'
-}
-
-New-GuestConfigurationPolicy @policyConfig
-```
-
-Review the generated JSON before deployment. In particular, verify the package URI, platform, package type, version, and hash. These details determine what the Guest Configuration extension downloads and evaluates.
-
----
-
-## Step 6: Deploy and assign the policy
-
-Deploy the generated policy definition, then create an assignment scoped to the resource group, subscription, or management group containing the target machines. A Bicep deployment is a convenient way to keep the definition and assignment under source control:
-
-```powershell
-New-AzResourceGroupDeployment `
-    -ResourceGroupName 'D-AZDPL2026-WIN-RG02' `
-    -TemplateFile ..\bicep\main-security-policy.bicep
-```
-
-For an `AuditAndSet` policy, make sure the policy assignment and Guest Configuration extension deployment are allowed for the target scope. Azure Policy will install or update the required extension according to the policy definition, then the guest reports compliance after its next evaluation cycle.
-
----
-
-## Verify compliance in Azure
-
-Open **Azure Policy** and inspect the assignment's compliance results. Select a non-compliant machine to see the Guest Configuration assignment and remediation details. On the machine, confirm that the configured registry values appear under:
-
-```text
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
-```
-
-Expect a delay between assignment, extension installation, package download, and the first compliance result. Do not use an immediate policy result as proof that the configuration failed.
-
----
-
-## Common problems
+# Common problems
 
 | Symptom | What to check |
 |---|---|
@@ -234,6 +199,6 @@ Expect a delay between assignment, extension installation, package download, and
 
 ---
 
-## Summary
+# Summary
 
 Custom Guest Configuration turns a DSC configuration into an Azure Policy control that can be measured across a fleet. The reliable loop is simple: compile the MOF, package it, validate it locally, publish it to a durable HTTPS location, generate the policy, and assign it to a limited test scope before expanding the rollout.
