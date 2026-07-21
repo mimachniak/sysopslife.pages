@@ -261,7 +261,7 @@ Guest Configuration assignment can be check globally for all resources in sectio
 
 ---
 
-# DSC (Guest Configuration) custom packed authoring and deploying process
+# DSC (Guest Configuration) custom package authoring and deploying process
 
 ![](/assets/images/guest-config-p7.png)  
 
