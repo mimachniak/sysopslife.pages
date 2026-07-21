@@ -13,8 +13,8 @@ tags:
   - Guest Configuration
   - PowerShell DSC
   - IaaC
-published: false
-hidden: true
+published: true
+hidden: false
 ---
 
 # Azure Custom Guest Configuration with PowerShell DSC
@@ -31,7 +31,7 @@ This article walks through a Windows example that enforces a legal logon message
 
 Machine configuration policy definitions are inclusive of new versions. Older versions of operating systems available in Azure Marketplace are excluded if the Guest Configuration client isn't compatible. Additionally, Linux server versions that are out of lifetime support by their respective publishers are excluded from the support matrix.  
 
-
+![](/assets/images/guest-config-p2.png)  
 
 ---
 
@@ -89,12 +89,18 @@ Set-AzContext -Subscription '<subscription-id-or-name>'
 
 ## Step 1: Virtual Machine need to have those perquisites 
 
-⁉️ Resource provider: Microsoft.GuestConfiguration
-⁉️System Assigne Identity / User Managed Idenity
-⁉️Virtual machine extension is enabled, To use machine configuration packages that apply configurations, Azure VM guest configuration extension version 1.26.24 or later, or Arc agent 1.10.0 or later, is required.
-⁉️ Azure Arc servers are supported.  
+⁉️ Resource provider on subscription need to be registred: Microsoft.GuestConfiguration
+⁉️ System Assigne Identity / User Managed Idenity 
+⁉️ Virtual machine extension is enabled, To use machine configuration packages that apply configurations, Azure VM guest configuration extension version 1.26.24 or later, or Arc agent 1.10.0 or later, is required.
+⁉️ Azure Arc servers are supported. 
+
+You can add this by Azure policy to all servers on diffrent scope:   
 
 
+![](/assets/images/guest-config-p5.png)  
+
+
+---
 ## Step 2: Author and compile the DSC configuration
 
 Guest Configuration packages use a compiled DSC MOF. The following configuration writes a title and body for the Windows interactive logon message.
@@ -145,7 +151,7 @@ Choose the package type deliberately:
 
 For the logon-message configuration, create an `AuditAndSet` package:
 
-> Note: Packed name need to excaly the same sa configurartion file.  
+> Note: Packed name need to exactly the same as configuration file.  
 
 ```powershell
 $params = @{
@@ -160,6 +166,10 @@ New-GuestConfigurationPackage @params
 ```
 
 Zip file will contain resources and config file.  
+
+![](/assets/images/guest-config-p3.png)  
+
+![](/assets/images/guest-config-p4.png)  
 
 ---
 
@@ -184,7 +194,75 @@ After upload, keep the content URI and the SHA-256 value from `Get-FileHash` ava
 
 ---
 
-## Step 6: Publish the ZIP to a stable HTTPS URI
+## Step 6: Deploy guest configuration to one virtual machine
+
+For a single test VM, create a Guest Configuration assignment directly on the VM. This does not create an Azure Policy definition or policy assignment. Azure installs or updates the Guest Configuration extension as part of processing the assignment.
+
+Install the Azure PowerShell module that provides the assignment cmdlets:
+
+```powershell
+Install-Module -Name Az.GuestConfiguration -Scope CurrentUser
+```
+
+Set the values for the target VM and the published ZIP. The content hash must be the SHA-256 value returned in Step 4 for the exact ZIP file at `$contentUri`.
+
+```powershell
+$resourceGroupName = '<resource-group-name>'
+$vmName            = '<virtual-machine-name>'
+$contentUri        = 'https://<storage-account>.blob.core.windows.net/<container>/SetupLogonMessage.zip?<sas-token>'
+$contentHash       = (Get-FileHash -Path '.\SetupLogonMessage.zip' -Algorithm SHA256).Hash
+
+$assignmentParams = @{
+    GuestConfigurationAssignmentName = 'SetupLogonMessage'
+    ResourceGroupName                = $resourceGroupName
+    VMName                           = $vmName
+    GuestConfigurationName           = 'SetupLogonMessage'
+    GuestConfigurationVersion        = '1.0.0'
+    GuestConfigurationContentUri     = $contentUri
+    GuestConfigurationContentHash    = $contentHash
+    GuestConfigurationAssignmentType = 'ApplyAndAutoCorrect'
+    GuestConfigurationKind           = 'DSC'
+}
+
+New-AzGuestConfigurationAssignment @assignmentParams
+```
+
+`ApplyAndAutoCorrect` applies the `AuditAndSet` package and corrects drift. To use an `Audit` package instead, set `GuestConfigurationAssignmentType` to `Audit`; the extension reports compliance but does not change the VM.  
+
+Configuration can be added by Azure portal, as well from Virtual machine management resources. 
+
+![](/assets/images/guest-config-p6.png)  
+
+
+Check the assignment status and verify the expected values on the VM:
+
+```powershell
+Get-AzGuestConfigurationAssignment `
+    -ResourceGroupName $resourceGroupName `
+    -VMName $vmName `
+    -GuestConfigurationAssignmentName 'SetupLogonMessage'
+
+Get-ItemProperty `
+    -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System' `
+    -Name legalnoticecaption, legalnoticetext
+```
+
+Check assignment is also available  form Azure portal from Virtual Machine resource management plane.  
+
+![](/assets/images/guest-config-p8.png)  
+![](/assets/images/guest-config-p9.png)  
+
+>Note: The assignment must show a successful provisioning state before the configuration can report compliance. Ensure the VM can reach the package URI over HTTPS and that the SAS token remains valid for the test.
+
+Guest Configuration assignment can be check globally for all resources in section **Guest Assignments** in Azure Portal 
+
+![](/assets/images/guest-config-p10.png)
+
+---
+
+# DSC (Guest Configuration) custom packed authoring and deploying process
+
+![](/assets/images/guest-config-p7.png)  
 
 # Common problems
 
@@ -201,4 +279,8 @@ After upload, keep the content URI and the SHA-256 value from `Get-FileHash` ava
 
 # Summary
 
-Custom Guest Configuration turns a DSC configuration into an Azure Policy control that can be measured across a fleet. The reliable loop is simple: compile the MOF, package it, validate it locally, publish it to a durable HTTPS location, generate the policy, and assign it to a limited test scope before expanding the rollout.
+Custom Guest Configuration turns a DSC configuration into a control that can be measured across a fleet. The reliable loop is simple: compile the MOF, package it, validate it locally, publish it to a durable HTTPS location, generate the policy, and assign it to a limited test scope before expanding the rollout.
+
+# Examples of code
+
+Code examples of configuration can be found on this repo in GitHub - [Blog code examples Github](https://github.com/mimachniak/sysopslife-scripts/tree/master/DSC/2_0) 
