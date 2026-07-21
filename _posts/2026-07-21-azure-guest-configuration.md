@@ -35,7 +35,7 @@ Machine configuration policy definitions are inclusive of new versions. Older ve
 ---
 
 
-## How the pieces fit together
+# How the pieces fit together
 
 The workflow has five parts:
 
@@ -43,13 +43,12 @@ The workflow has five parts:
 2. Package the MOF with the Guest Configuration module.
 3. Validate the package locally and calculate its content hash.
 4. Upload the ZIP package to HTTPS-accessible blob storage.
-5. Generate and assign an Azure Policy definition that references the package.
+5. Assignee configuration package to Virtual Machine.
 
-Azure Policy evaluates compliance through the Guest Configuration extension on the machine. The extension downloads the package, evaluates the DSC resources, and reports the result back to Azure Policy.
 
 ---
 
-## Prerequisites
+# Prerequisites
 
 Before creating a custom package, prepare the authoring workstation and Azure environment.
 
@@ -150,7 +149,7 @@ Choose the package type deliberately:
 
 For the logon-message configuration, create an `AuditAndSet` package:
 
-> Note: Packed name need to exactly the same as configuration file.  
+> Note: Package name need to exactly the same as configuration file.  
 
 ```powershell
 $params = @{
