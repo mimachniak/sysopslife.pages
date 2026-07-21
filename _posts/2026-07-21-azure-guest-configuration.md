@@ -9,7 +9,6 @@ categories:
   - DSC
   - PowerShell
 tags:
-  - Azure Policy
   - Guest Configuration
   - PowerShell DSC
   - IaaC
@@ -89,12 +88,12 @@ Set-AzContext -Subscription '<subscription-id-or-name>'
 
 ## Step 1: Virtual Machine need to have those perquisites 
 
-⁉️ Resource provider on subscription need to be registred: Microsoft.GuestConfiguration
-⁉️ System Assigne Identity / User Managed Idenity 
-⁉️ Virtual machine extension is enabled, To use machine configuration packages that apply configurations, Azure VM guest configuration extension version 1.26.24 or later, or Arc agent 1.10.0 or later, is required.
-⁉️ Azure Arc servers are supported. 
+⁉️ Resource provider on subscription need to be registred: Microsoft.GuestConfiguration.   
+⁉️ System Assigne Identity / User Managed Idenity.  
+⁉️ Virtual machine extension is enabled, To use machine configuration packages that apply configurations, Azure VM guest configuration extension version 1.26.24 or later, or Arc agent 1.10.0 or later, is required.  
+⁉️ Azure Arc servers are supported.  
 
-You can add this by Azure policy to all servers on diffrent scope:   
+Prerequisites can be added by Azure policy to all servers on different scope:   
 
 
 ![](/assets/images/guest-config-p5.png)  
@@ -250,6 +249,9 @@ Get-ItemProperty `
 Check assignment is also available  form Azure portal from Virtual Machine resource management plane.  
 
 ![](/assets/images/guest-config-p8.png)  
+
+  
+
 ![](/assets/images/guest-config-p9.png)  
 
 >Note: The assignment must show a successful provisioning state before the configuration can report compliance. Ensure the VM can reach the package URI over HTTPS and that the SAS token remains valid for the test.
