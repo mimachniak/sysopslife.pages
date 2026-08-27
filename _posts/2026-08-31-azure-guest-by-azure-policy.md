@@ -68,6 +68,8 @@ The target environment also needs:
 - Permissions to register the provider, upload to the storage account, create policy definitions, and assign policies at the chosen scope.
 - A package URI reachable by the target machines. A blob SAS URL is convenient for testing; use a durable, controlled access design for production.
 
+For the Azure-side VM preparation, including the required Guest Configuration extension, identity, and resource provider setup, see [Azure Custom Guest Configuration with PowerShell DSC and Azure Guest Configuration](https://mmachniak.net/2026/07/21/azure-guest-configuration/). Complete that setup before assigning the deployment policy described in this article.
+
 Register the provider once per subscription:
 
 ```powershell
