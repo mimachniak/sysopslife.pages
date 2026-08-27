@@ -279,6 +279,8 @@ You can also inspect the result in the Azure portal under **Policy > Compliance*
 
 ![](/assets/images/policy-guest-config/policy-guest-config-7.png)  
 
+![](/assets/images/policy-guest-config/policy-guest-config-8.png) 
+
 ## Troubleshooting checklist
 
 | Symptom | Check |
