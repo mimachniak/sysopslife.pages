@@ -143,7 +143,10 @@ New-GuestConfigurationPackage @packageParameters
 $packageHash = Get-FileHash -Path '.\web_iis_install.zip' -Algorithm SHA256
 $packageHash
 Get-GuestConfigurationPackageComplianceStatus -Path '.\web_iis_install.zip'
+
 ```
+
+![](/assets/images/policy-guest-config/policy-guest-config-1.png)  
 
 The command creates `web_iis_install.zip`. The ZIP contains the MOF and the DSC resource files needed by the Guest Configuration extension. Keep the SHA-256 hash: it identifies the exact package that the policy is allowed to download.
 
@@ -226,6 +229,10 @@ New-AzPolicyDefinition `
 	-Policy '.\policies\web_iis_install_DeployIfNotExists.json'
 ```
 
+![](/assets/images/policy-guest-config/policy-guest-config-2.png)  
+
+![](/assets/images/policy-guest-config/policy-guest-config-4.png)  
+
 The generated files in `Policy\policies` are ARM policy definition documents. `Mode` controls the guest behavior. `ExcludeArcMachines = $true` means the generated policy targets Azure VMs and excludes Azure Arc machines; set it according to your intended scope and test the resulting JSON before publishing it broadly.
 
 The original example uses a generated GUID for each policy. Keep each `PolicyId` stable when updating an existing definition, or deliberately create a new definition when introducing a separate policy. Do not reuse one policy ID for both audit and deployment modes.
@@ -245,7 +252,12 @@ New-AzPolicyAssignment `
 	-Scope $scope
 ```
 
+
 Use the audit definition first when you need visibility without remediation:
+
+![](/assets/images/policy-guest-config/policy-guest-config-5.png)  
+
+![](/assets/images/policy-guest-config/policy-guest-config-6.png)  
 
 ```powershell
 $auditPolicy = Get-AzPolicyDefinition -Name 'IIS Audit policy'
@@ -264,6 +276,8 @@ Get-AzPolicyState -PolicyDefinitionName 'IIS Deployment policy' -Scope $scope
 ```
 
 You can also inspect the result in the Azure portal under **Policy > Compliance** and inspect the Guest Configuration assignment on the virtual machine. A policy assignment may show no result while the extension is still being installed or while the machine cannot reach the package URI.
+
+![](/assets/images/policy-guest-config/policy-guest-config-7.png)  
 
 ## Troubleshooting checklist
 
