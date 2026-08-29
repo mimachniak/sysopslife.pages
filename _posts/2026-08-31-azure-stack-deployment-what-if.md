@@ -86,6 +86,12 @@ az stack sub create `
 
 `--action-on-unmanage detachAll` is significant. When a resource that was previously managed by the stack is removed from a later template, the stack stops managing it but leaves the resource in Azure.
 
+> Documentation is describing retention policy between 1 dot 30 days but CLI will show error that is between hours.
+
+![](/assets/images/az-stack-what-if/az-stack-whatif-3.png)  
+
+![](/assets/images/az-stack-what-if/az-stack-whatif-4.png)  
+
 To preview the stack with no changes you can run this command:
 
 ```powershell
