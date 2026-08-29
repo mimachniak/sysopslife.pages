@@ -86,6 +86,24 @@ az stack sub create `
 
 `--action-on-unmanage detachAll` is significant. When a resource that was previously managed by the stack is removed from a later template, the stack stops managing it but leaves the resource in Azure.
 
+To preview the stack with no changes you can run this command:
+
+```powershell
+az stack-whatif sub create `
+	--name CoreStack `
+	--stack-id /subscriptions/<subscription-id>/providers/Microsoft.Resources/deploymentStacks/CoreStack `
+	--location WestEurope `
+	--template-file core-main.bicep `
+	--parameters .parameters\core-main.bicepparam `
+	--action-on-unmanage detachAll `
+	--deny-settings-mode None `
+	--retention-interval PT1H # {"code": "DeploymentStackInvalidRetentionInterval", "message": "The retention interval '5.00:00:00' is invalid. It must be between 1 hour and 3 hours."}
+```
+
+The result if will don't create any additional information if there non changes event made by azure: 
+
+[](/assets/images/az-stack-what-if/az-stack-whatif-5.png)  
+
 ## Preview a stack update with stack what-if
 
 Stack what-if updates the question to: **what will this template do to the resources and lifecycle ownership of this existing stack?**
@@ -106,14 +124,8 @@ az stack-whatif sub create `
 
 For this subnet scenario, the stack preview should include the same planned virtual-network update seen in normal what-if. It is also evaluated against the inventory managed by `CoreStack`.
 
-```text
-Deployment stack: CoreStack
-Action on unmanage: detachAll
-
-Resource changes:
-	~ Microsoft.Network/virtualNetworks/<vnet-name>
-			... the new subnet is added ...
-```
+[](/assets/images/az-stack-what-if/az-stack-whatif-6.png)  
+[](/assets/images/az-stack-what-if/az-stack-whatif-7.png)  
 
 Exact property output varies by Azure CLI, Bicep version, and the current state of the virtual network. Review the command output before applying the stack update.
 
