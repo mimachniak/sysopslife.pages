@@ -49,6 +49,9 @@ az deployment sub what-if `
 	--template-file core-main.bicep `
 	--parameters .parameters\core-main.bicepparam
 ```
+The result show changes alle the time to resources, event if noting was added or removed:
+
+![](/assets/images/az-stack-what-if/az-stack-whatif-1.png)  
 
 To preview the version that adds the subnet, use the second template and parameter file:
 
@@ -61,22 +64,15 @@ az deployment sub what-if `
 
 The result is a resource-level diff. For a subnet addition, the meaningful part of the output typically looks like this:
 
+![](/assets/images/az-stack-what-if/az-stack-whatif-2.png)  
 
 
 `~` means an existing resource is modified. Depending on the Bicep implementation, Azure can instead show the subnet as a distinct resource operation. The key point is that normal what-if evaluates only the requested deployment and current Azure state.
 
-Apply the initial template with a normal subscription deployment:
-
-```powershell
-az deployment sub create `
-	--location WestEurope `
-	--template-file core-main.bicep `
-	--parameters .parameters\core-main.bicepparam
-```
 
 ## Create the deployment stack
 
-A Deployment Stack records the resources it manages. Create the initial stack with the same template:
+A Deployment Stack records the resources it manages. Create the initial stack with the same template, it converts existing deployment to Stack:
 
 ```powershell
 az stack sub create `
