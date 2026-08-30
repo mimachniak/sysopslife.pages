@@ -132,10 +132,7 @@ az stack-whatif sub create `
 ```
 
 For this subnet scenario, the stack preview should include the same planned virtual-network update seen in normal what-if. It is also evaluated against the inventory managed by `CoreStack`.
-
-[](/assets/images/az-stack-what-if/az-stack-whatif-6.png)   
-
-[](/assets/images/az-stack-what-if/az-stack-whatif-7.png)   
+ 
 
 
 Exact property output varies by Azure CLI, Bicep version, and the current state of the virtual network. Review the command output before applying the stack update.
