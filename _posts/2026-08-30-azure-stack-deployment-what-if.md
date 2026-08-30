@@ -1,7 +1,7 @@
 ---
 title: "Azure Deployment Stack What-If: Previewing Template and Lifecycle Changes"
 classes: wide
-date: 2026-08-03
+date: 2026-08-30
 excerpt: "Compare standard ARM what-if with Azure Deployment Stack what-if, including nmanage actions."
 toc: true
 categories:
