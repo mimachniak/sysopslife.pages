@@ -110,7 +110,7 @@ az stack-whatif sub create `
 
 The result if will don't create any additional information if there non changes event made by azure: 
 
-
+![](/assets/images/az-stack-what-if/az-stack-whatif-5.png)   
 
 
 ## Preview a stack update with stack what-if
