@@ -110,7 +110,8 @@ az stack-whatif sub create `
 
 The result if will don't create any additional information if there non changes event made by azure: 
 
-[](/assets/images/az-stack-what-if/az-stack-whatif-5.png)  
+[](/assets/images/az-stack-what-if/az-stack-whatif-5.png)   
+
 
 ## Preview a stack update with stack what-if
 
@@ -132,8 +133,10 @@ az stack-whatif sub create `
 
 For this subnet scenario, the stack preview should include the same planned virtual-network update seen in normal what-if. It is also evaluated against the inventory managed by `CoreStack`.
 
-[](/assets/images/az-stack-what-if/az-stack-whatif-6.png)  
-[](/assets/images/az-stack-what-if/az-stack-whatif-7.png)  
+[](/assets/images/az-stack-what-if/az-stack-whatif-6.png)   
+
+[](/assets/images/az-stack-what-if/az-stack-whatif-7.png)   
+
 
 Exact property output varies by Azure CLI, Bicep version, and the current state of the virtual network. Review the command output before applying the stack update.
 
