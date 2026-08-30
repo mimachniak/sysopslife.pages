@@ -5,14 +5,14 @@ date: 2026-08-30
 excerpt: "Compare standard ARM what-if with Azure Deployment Stack what-if, including nmanage actions."
 toc: true
 categories:
-	- Azure
-	- Bicep
-	- IaaC
+  - Azure
+  - Bicep
+  - IaaC
 tags:
-	- Azure CLI
-	- Deployment Stacks
-	- What-If
-	- Bicep
+  - Azure CLI
+  - Deployment Stacks
+  - What-If
+  - Bicep
 published: true
 hidden: false
 ---
