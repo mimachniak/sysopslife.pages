@@ -113,9 +113,7 @@ The result if will don't create any additional information if there non changes 
 ![](/assets/images/az-stack-what-if/az-stack-whatif-5.png)   
 
 
-## Preview a stack update with stack what-if
-
-Stack what-if updates the question to: **what will this template do to the resources and lifecycle ownership of this existing stack?**
+## Preview a stack update with stack what-if with changes
 
 Use the same stack name and provide the existing stack ID:
 
@@ -133,7 +131,7 @@ az stack-whatif sub create `
 
 For this subnet scenario, the stack preview should include the same planned virtual-network update seen in normal what-if. It is also evaluated against the inventory managed by `CoreStack`.
  
-
+![](/assets/images/az-stack-what-if/az-stack-whatif-6.png)  
 
 Exact property output varies by Azure CLI, Bicep version, and the current state of the virtual network. Review the command output before applying the stack update.
 
