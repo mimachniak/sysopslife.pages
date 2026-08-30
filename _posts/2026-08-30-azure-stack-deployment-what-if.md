@@ -133,6 +133,8 @@ For this subnet scenario, the stack preview should include the same planned virt
  
 ![](/assets/images/az-stack-what-if/az-stack-whatif-6.png)  
 
+![](/assets/images/az-stack-what-if/az-stack-whatif-7.png) 
+
 Exact property output varies by Azure CLI, Bicep version, and the current state of the virtual network. Review the command output before applying the stack update.
 
 ## The difference at a glance
