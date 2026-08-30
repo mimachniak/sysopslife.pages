@@ -20,6 +20,8 @@ hidden: false
 
 # Azure Deployment Stack What-If: Previewing Template and Lifecycle Changes
 
+![](/assets/images/az-stack-what-if/az-stack-whatif-banner.jpg)  
+
 Azure Resource Manager (ARM) what-if is a familiar safety check before deployment. It compares a Bicep template with the current Azure state and previews the resource operations ARM expects to make. 
 
 Deployment Stacks introduce a second kind of preview: stack what-if. It evaluates the template change, but it also knows which resources are managed by the named stack and which lifecycle action applies when a resource is no longer defined. That ownership context is the important difference.

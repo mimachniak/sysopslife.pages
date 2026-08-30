@@ -16,9 +16,11 @@ published: true
 hidden: false
 ---
 
-![](/assets/images/policy-guest-config/policy-guest-config-0.jpg)  
+
 
 # Build and Deploy an Azure Guest Configuration Policy
+
+![](/assets/images/policy-guest-config/policy-guest-config-0.jpg)  
 
 Azure Guest Configuration extends Azure Policy into the operating system of an Azure virtual machine or an Azure Arc-enabled server. Azure Policy can therefore check a Windows feature, registry value, service, or other DSC-managed setting inside the guest operating system.
 
