@@ -1,5 +1,5 @@
 ---
-title: "Build and Deploy an Azure Guest Configuration (DSC) using Azure Policy"
+title: "Build and Deploy an Azure Guest Configuration (DSC) using Azure Policy."
 classes: wide
 date: 2026-09-03
 excerpt: "Use the AzureDay Guest Configuration example to package a DSC configuration and deploy it with Azure Policy for Enterprise scale."
