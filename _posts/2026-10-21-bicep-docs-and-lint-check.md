@@ -141,7 +141,8 @@ Newer analyzer rules require a Bicep CLI version that recognizes those rule name
 
 The built-in template is a quick way to get started, but teams often want their README to match an existing format. The docs command supports custom [Scriban](https://github.com/scriban/scriban) templates. For example, a template can render the module's parameters and outputs as tables:
 
-```powershell
+{% raw %}
+```scriban
 # {{ module.name }}
 
 {{ module.description }}
@@ -162,6 +163,7 @@ The built-in template is a quick way to get started, but teams often want their 
 | `{{ output.name }}` | `{{ output.type }}` | {{ output.description }} |
 {{~ end ~}}
 ```
+{% endraw %}
 
 Point `documentation.template.file` to the template in `bicepconfig.json`. The configured template path is relative to the directory containing that config file. `includeRoot` can provide a shared location for template fragments:
 
@@ -183,7 +185,8 @@ The custom-template example in my [Bicep docs demo](https://github.com/sysopslif
 
 ![Generated README using a custom Scriban template, including version and OCI URL](/assets/images/bicep-docs/custom-tempete.png)
 
-```text
+{% raw %}
+```scriban
 # {{ module.name }}
 
 {{ module.description }}
@@ -237,6 +240,7 @@ The custom-template example in my [Bicep docs demo](https://github.com/sysopslif
 | `{{ output.name }}` | `{{ output.type }}` | {{ output.description }} |
 {{~ end ~}}
 ```
+{% endraw %}
 Generate document
 
 ```powershell
