@@ -19,6 +19,8 @@ hidden: false
 
 # Bicep Module Documentation and Description Linting
 
+![Bicep module CI/CD and automatic documentation workflow](/assets/images/bicep-docs/blog.png)
+
 Bicep modules are easier to consume when their inputs, outputs, and examples are documented consistently. Keeping that documentation in sync by hand is repetitive, though, and missing descriptions in the Bicep source can leave generated READMEs incomplete.
 
 Bicep now has an experimental `docs` command group that generates module documentation from the compiled Bicep model. With a custom Scriban template and a few analyzer rules in `bicepconfig.json`, a repository can generate its own README format and flag declarations that have no useful description.
@@ -34,6 +36,8 @@ bicep docs generate .\modules\storage\main.bicep
 ```
 
 By default, Bicep writes a `README.md` next to the input module. The generated content is based on the compiled module: it can include resource types, parameters, exported types and variables, outputs, referenced modules, and usage examples. Descriptions in the Bicep source become descriptions in the documentation.
+
+![Example README generated with Bicep's built-in documentation template](/assets/images/bicep-docs/builtin-template.png)
 
 To generate docs for multiple modules, use a glob pattern:
 
@@ -177,7 +181,7 @@ Point `documentation.template.file` to the template in `bicepconfig.json`. The c
 
 The custom-template example in my [Bicep docs demo](https://github.com/sysopslife/sysopslife-scripts/tree/main/Azure/bicep/bicep-docs-demo) uses this approach. Its Scriban template adds a version and OCI URL from custom values, then renders resource types, parameter details, and outputs. Custom values can be passed at generation time:
 
-Custom 
+![Generated README using a custom Scriban template, including version and OCI URL](/assets/images/bicep-docs/custom-tempete.png)
 
 ```scriban
 # {{ module.name }}
@@ -233,7 +237,7 @@ Custom
 | `{{ output.name }}` | `{{ output.type }}` | {{ output.description }} |
 {{~ end ~}}
 ```
-
+Generate document
 
 ```powershell
 bicep docs generate .\modules\storage\main.bicep `
