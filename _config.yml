@@ -23,14 +23,14 @@ name                     : "Michal Machniak"
 description              : "Michal Machniak blog dedicated to Microsoft technologies, based on my daily experience of working as sysOps / devOps / System Architect."
 url                      : https://mimachniak.github.io/sysopslife # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "mimachniak/sysopslife.pages"
 teaser                   : /assets/images/teaser-main-v1.png #path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : /assets/images/logo-88x90.png # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : true  # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "facebook" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "staticman_v2" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -44,10 +44,10 @@ comments:
     theme                : "github-dark" # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
   staticman:
-    branch               : # "master"
+    branch               : "gh-pages"
     endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
 reCaptcha:
-  siteKey                :
+  siteKey                : "6LdRBykTAAAAAFB46MnIu6ixuxwu9W1ihFF8G60Q"
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
@@ -278,7 +278,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       share: true
       related: true
       sitemap: true

@@ -23,6 +23,8 @@ I have been passionate about information technology for over 20 years, it is my 
 ## Public Speaking
 
 
+* Azure Global Bootcamp
+* Azure Day Poland
 * Microsoft 365 User Group Poland: [Microsoft 365 User Group Poland](https://www.meetup.com/pl-PL/Microsoft-365-User-Group-Poland/?_locale=pl-PL "Microsoft 365 User Group Poland")  
 * Microsoft 365 User Group Poland: [Microsoft Azure User Group Poland](https://www.meetup.com/Microsoft-Azure-Users-Group-Poland/?eventOrigin=your_groups "Microsoft Azure User Group Poland")  
 * The HackSummit : [The HackSummit](https://thehacksummit.com/ "The HackSummit")  
