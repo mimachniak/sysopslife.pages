@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "AzOps Engineer"
+title                    : "AzOps Engineer - MVP/MCT"
 title_separator          : "-"
 # subtitle                 : "Daily life with Microsoft Technology and not only ... witch Michal Machniak" # site tagline that appears below site title in masthead
 name                     : "Michal Machniak"
@@ -96,7 +96,7 @@ analytics:
 author:
   name             : "Michal Machniak"
   avatar           : /assets/images/michal-machniak.jpg # path of avatar image, e.g. "/assets/images/michal-machniak.PNG"
-  bio              : "MCT/MCSE/MCSA SysOps and DevOps working in IT over 15 years."
+  bio              : "Microsoft MVP/MCT/MCSE/MCSA SysOps and DevOps working in IT over 15 years."
   location         : "Poland"
   email            : mmachniak@outlook.com
   links:
