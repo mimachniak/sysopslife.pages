@@ -6,6 +6,8 @@ main:
     url: /about/
   - title: "Tools"
     url: /tools/
+  - title: "Services"
+    url: /services/
   - title: "Year archive"
     url: /year-archive/
   - title: "Tags"
