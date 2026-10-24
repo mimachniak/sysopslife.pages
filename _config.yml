@@ -12,13 +12,13 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
 title                    : "AzOps Engineer"
 title_separator          : "-"
-subtitle                 : "Daily life with Microsoft Technology and not only ... witch Michal Machniak" # site tagline that appears below site title in masthead
+# subtitle                 : "Daily life with Microsoft Technology and not only ... witch Michal Machniak" # site tagline that appears below site title in masthead
 name                     : "Michal Machniak"
 description              : "Michal Machniak blog dedicated to Microsoft technologies, based on my daily experience of working as sysOps / devOps / System Architect."
 url                      : https://mimachniak.github.io/sysopslife # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
