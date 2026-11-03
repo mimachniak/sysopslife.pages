@@ -22,7 +22,7 @@ hidden: false
 
 # From WinGet Export to DSCv3: Repeatable Package Configuration
 
-![DSC document](./assets/images/dsc/winget-to-dsc.jpg)
+![DSC document](/assets/images/DSC/winget-to-dsc.jpg)
 
 Keeping a standard set of applications on multiple Windows devices is easier when the package list is written down and can be tested before it is applied. WinGet can export installed package IDs and versions to JSON, and its import command can use that file to install packages on another device.
 
@@ -149,6 +149,8 @@ dsc config set --file .\packages.dsc.yaml
 
 `test` reports whether the machine matches the configuration; `set` makes the requested changes. Applying a package configuration can install or modify software, so test and review it in a representative environment before using it broadly.
 
+![DSCv3 test output showing the Microsoft.WindowsTerminal package in the desired state](/assets/images/DSC/dsc-v3-output.png)
+
 ## Which package resource format should you use?
 
 The module can write either a native DSCv3 configuration or a configuration for WinGet's configuration workflow:
@@ -168,6 +170,8 @@ Convert-WinGetExportToDsc `
 
 winget configure test --file .\packages.winget.yaml
 ```
+
+![WinGet Configuration test output showing the Microsoft.WindowsTerminal package in the desired state](/assets/images/DSC/winget-dsc-output.png)
 
 This output uses the WinGet configuration document schema, the `Microsoft.WinGet.DSC/WinGetPackage` resource type, and `ensure: Present`. The default DSCv3 output uses `Microsoft.WinGet/Package` and the DSCv3 document schema. Choose the format supported by the configuration runner and resource set used in your environment; the two formats are not interchangeable just because both describe WinGet packages.
 
